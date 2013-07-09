@@ -1,6 +1,6 @@
 <div>
 <?php $form=$this->beginWidget('CActiveForm', array(
-    'id'=>'events-form',
+    'id'=>'lunchproducts-form',
     'enableAjaxValidation'=>false,
 )); ?>
 <p class="note">Поля, отмеченные <span class="required">*</span> обязательны для заполнения.</p>
@@ -12,93 +12,39 @@
                 <?php echo $form->labelEx($model,'title'); ?>
             </td>
             <td>
-                <?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>255)); ?>
+                <?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>500)); ?>
                 <?php echo $form->error($model,'title'); ?>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-
-                    <?php echo $form->labelEx($model,'description'); ?>
-                    <?php
-                    $this->widget('ext.redactor.ERedactorWidget',array(
-                        'model'=>$model,
-                        'attribute'=>'description',
-                        'options'=>array(
-                            'allowedTags' => Yii::app()->params['redactor']['allowedTags'],
-                            'convertDivs' => Yii::app()->params['redactor']['convertDivs'],
-                            'lang'=>'ru',
-                            'fileUpload'=>Yii::app()->createUrl('events/admin/index/fileUpload/attr'),
-                            'fileUploadErrorCallback'=>new CJavaScriptExpression(
-                                'function(obj,json) { alert(json.error); }'
-                            ),
-                            'imageUpload'=>Yii::app()->createUrl('events/admin/index/imageUpload/attr'),
-                            'imageGetJson'=>Yii::app()->createUrl('events/admin/index/imageList/attr'),
-                            'imageUploadErrorCallback'=>new CJavaScriptExpression(
-                                'function(obj,json) { alert(json.error); }'),
-                        ),
-                    ));
-                    ?>
+                <?php echo $form->labelEx($model,'description'); ?>
+                <?php echo $form->textarea($model,'description',array('cols'=>80,'rows'=>5,'style'=>'width:99%')); ?>
+                <?php echo $form->error($model,'description'); ?>
             </td>
         </tr>
         <tr>
-            <td class="cartlbl">
-                <?php echo $form->labelEx($model, 'date_start'); ?>
+            <td>
+                <?php echo $form->labelEx($model,'weight'); ?>
             </td>
             <td>
-                <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                    'model' => $model,
-                    'attribute' => 'date_start',
-                    'language' => 'ru',
-                    'options' => array(
-                        'showAnim' => 'fold',
-                    ),
-                    'htmlOptions' => array(
-                        'style' => 'height:20px;'
-                    ),
-                ));?>
-                <?php echo $form->error($model,'shipping_date'); ?>
+                <?php echo $form->textField($model,'weight',array('size'=>60,'maxlength'=>500)); ?>
+                <?php echo $form->error($model,'weight'); ?>
             </td>
         </tr>
         <tr>
-            <td class="cartlbl">
-                <?php echo $form->labelEx($model, 'date_end'); ?>
+            <td>
+                <?php echo $form->labelEx($model,'price'); ?>
             </td>
             <td>
-                <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                    'model' => $model,
-                    'attribute' => 'date_end',
-                    'language' => 'ru',
-                    'options' => array(
-                        'showAnim' => 'fold',
-                    ),
-                    'htmlOptions' => array(
-                        'style' => 'height:20px;'
-                    ),
-                ));?>
-                <?php echo $form->error($model,'shipping_date'); ?>
-            </td>
-        </tr>
-        <tr>
-            <td class="cartlbl">
-                <?php echo $form->labelEx($model, 'color'); ?>
-            </td>
-            <td>
-                <div class="input-append color colorpicker-default" data-color="<?php echo $model->color ? $model->color : '#3865a8'; ?>" data-color-format="rgba">
-                    <?php echo $form->textField($model,'color',array('class'=>'m-wrap','readonly'=>'')); ?>
-                    <span class="add-on"><i style="background-color: <?php echo $model->color ? $model->color : '#3865a8'; ?>"></i></span>
-                </div>
-                <?php echo $form->error($model,'color'); ?>
+                <?php echo $form->textField($model,'price',array('size'=>60,'maxlength'=>500)); ?>
+                <?php echo $form->error($model,'price'); ?>
             </td>
         </tr>
         </tbody>
     </table>
-<div class="buttons">
-    <?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить'); ?>
-</div>
-
+    <div class="buttons">
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить'); ?>
+    </div>
 <?php $this->endWidget(); ?>
-    <?php Yii::app()->clientScript->registerCssFile('/backend/assets/bootstrap-colorpicker/css/colorpicker.css', CClientScript::POS_HEAD); ?>
-    <?php Yii::app()->clientScript->registerScriptFile('/backend/assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js', CClientScript::POS_END); ?>
-
 </div><!-- form -->

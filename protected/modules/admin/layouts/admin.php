@@ -172,6 +172,17 @@
                 </ul>
             </li>
         <?php endif; ?>
+        <?php if (Yii::app()->hasModule('lunch')): ?>
+        <li class="has-sub">
+            <a href="javascript:;" class="">
+                <i class="icon-glass"></i></i> Бизнес-ланч
+                <span class="arrow"></span>
+            </a>
+            <ul class="sub">
+                <li><a class="" href="/lunch/admin/index">Настройки</a></li>
+            </ul>
+        </li>
+        <?php endif; ?>
         <li><a class="" href="/user/logout"><i class="icon-user"></i> Выйти</a></li>
     </ul>
     <!-- END SIDEBAR MENU -->

@@ -71,6 +71,7 @@ return array(
         'shop',
         'gallery',
         'events',
+        'lunch',
 
 	),
 
@@ -100,7 +101,6 @@ return array(
 			'rules'=>array(
                 '<controller:\w+>/index'=>'<controller>/index',
                 '/shop/admin'=>'shop/admin/index',
-                '/about-us' => 'page/view/id/1',
                 '/contacts' => 'site/contact',
                 '/login' => '/user/login',
                 'shop/category/<id:1>/<alias:.*?>'=>'shop/',
@@ -110,12 +110,15 @@ return array(
                 'shop/category/<id:\d+>/<alias:.*?>'=>'shop/category/view',
                 'shop/category/<alias_url:.*?>'=>'shop/category/view',
                 'shop/category/<id:\d+>'=>'shop/category/view',
+                'shop/'=>'shop/default',
                 'gallery/album/<id:\d+>/<alias:.*?>'=>'gallery/album/view',
                 'page/<id:\d+>/<alias:.*?>'=>'page/view',
                 'page/<alias_url:.*?>'=>'page/view',
                 'news/blog/<id:\d+>/<alias:.*?>'=>'news/blog',
                 'news/<id:\d+>/<alias:.*?>'=>'news/view',
                 'news/<alias_url:.*?>'=>'news/view',
+                'news/'=>'news/index',
+                '<alias_url:\w+>'=>'page/view',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

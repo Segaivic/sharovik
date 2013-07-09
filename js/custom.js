@@ -259,4 +259,9 @@ jQuery(document).ready(function($) {
         }                   
     });
 
-});                         
+    if ($('#lunchWidget').length ) {
+        $('#lunchWidget').load('/lunch/default/lunch');
+    }
+
+
+});

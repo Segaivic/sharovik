@@ -145,18 +145,23 @@ class News extends CActiveRecord
     }
 
     public function hasDuplicated($alias) {
+        $criteria = new CDbCriteria();
+        $criteria->condition = "alias_url = :alias";
+        $criteria->params = array('alias' => $alias);
+        if (!$this->isNewRecord){
+            $criteria->addCondition('id <>'.$this->id);
+        }
+        $m = self::model()->findAll($criteria);
 
-        $m = self::model()->findAll(
-            'alias_url = :alias', array(
-            'alias' => $alias,
-        ));
-        if(count($m) > 1){
+        if($m != null){
             return true;
+        }
+        elseif(!$this->isNewRecord && count($m) == 1) {
+            return false;
         }
         else {
             return false;
         }
-
     }
 
     public static function getStatus($status) {

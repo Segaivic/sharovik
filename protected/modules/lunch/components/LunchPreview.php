@@ -1,16 +1,12 @@
 <?php
 
-class NewOrders extends CWidget
+class LunchPreview extends CWidget
 {
 
 	public function run()
 	{
-        Yii::import('application.modules.shop.models.*');
-        $model = SOrders::model()->cache(100)->findAll(array(
-            'select'=>'id, visited',
-            'condition'=>'visited = '.SOrders::STATUS_DISABLED,
-        ));
-
-    	$this->render('newOrders', array('model' => $model));
+        Yii::import('application.modules.lunch.models.LunchMain');
+        $model = LunchMain::model()->cache(100)->findByPk(1);
+    	$this->render('lunchPreview', array('model' => $model));
   	}
 }

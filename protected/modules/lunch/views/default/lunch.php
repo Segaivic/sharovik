@@ -1,7 +1,1 @@
-<?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Sega
- * Date: 03.07.13
- * Time: 17:28
- */
+<?php $this->widget('application.modules.lunch.components.lunchPreview'); ?>

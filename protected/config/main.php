@@ -103,6 +103,7 @@ return array(
                 '/shop/admin'=>'shop/admin/index',
                 '/contacts' => 'site/contact',
                 '/login' => '/user/login',
+                'lunch/'=>'lunch/default',
                 'shop/category/<id:1>/<alias:.*?>'=>'shop/',
                 'shop/product/<id:\d+>/<alias:.*?>'=>'shop/product/view',
                 'shop/product/<alias_url:.*?>'=>'shop/product/view',

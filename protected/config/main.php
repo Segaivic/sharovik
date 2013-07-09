@@ -103,6 +103,8 @@ return array(
                 '/shop/admin'=>'shop/admin/index',
                 '/contacts' => 'site/contact',
                 '/login' => '/user/login',
+                'admin/'=>'admin/default',
+                'gallery/'=>'gallery/default',
                 'events/'=>'events/default',
                 'lunch/'=>'lunch/default',
                 'shop/category/<id:1>/<alias:.*?>'=>'shop/',

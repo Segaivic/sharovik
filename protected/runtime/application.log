@@ -2175,3 +2175,70 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2013/07/09 09:00:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in F:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 F:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/lunch
+---
+2013/07/09 09:00:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in F:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/09 09:00:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in F:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 F:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/search/search?q=image
+---
+2013/07/09 09:00:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/product/thumb/5191a23badb649104697shop_items_catalog_image273.jpg".' in F:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/pr...')
+#1 F:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/product/thumb/5191a23badb649104697shop_items_catalog_image273.jpg
+HTTP_REFERER=http://comfort.local/shop/search/search?q=image
+---
+2013/07/09 09:00:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in F:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/09 09:01:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in F:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/07/09 09:01:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/favicon.ico".' in F:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/favicon.i...')
+#1 F:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/favicon.ico
+---
+2013/07/09 09:01:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/favicon.ico".' in F:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/favicon.i...')
+#1 F:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 F:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/favicon.ico
+---

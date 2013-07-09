@@ -1,17 +1,17 @@
-# --------------------------------------------------------
-# Host:                         127.0.0.1
-# Server version:               5.5.8
-# Server OS:                    Win32
-# HeidiSQL version:             6.0.0.3603
-# Date/time:                    2013-06-28 13:16:41
-# --------------------------------------------------------
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               5.5.8 - MySQL Community Server (GPL)
+-- Server OS:                    Win32
+-- HeidiSQL version:             7.0.0.4170
+-- Date/time:                    2013-07-09 12:54:11
+-- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-# Dumping structure for table comfort.tbl_categories
+-- Dumping structure for table comfort.tbl_categories
 CREATE TABLE IF NOT EXISTS `tbl_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(300) DEFAULT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `tbl_categories` (
   KEY `title` (`title`(255))
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_categories: ~2 rows (approximately)
+-- Dumping data for table comfort.tbl_categories: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_categories` DISABLE KEYS */;
 INSERT INTO `tbl_categories` (`id`, `title`, `is_enabled`, `is_inbloglist`) VALUES
 	(1, 'Новости компании', '1', '1'),
@@ -29,7 +29,7 @@ INSERT INTO `tbl_categories` (`id`, `title`, `is_enabled`, `is_inbloglist`) VALU
 /*!40000 ALTER TABLE `tbl_categories` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_events_events
+-- Dumping structure for table comfort.tbl_events_events
 CREATE TABLE IF NOT EXISTS `tbl_events_events` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(150) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `tbl_events_events` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_events_events: ~3 rows (approximately)
+-- Dumping data for table comfort.tbl_events_events: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_events_events` DISABLE KEYS */;
 INSERT INTO `tbl_events_events` (`id`, `title`, `date_start`, `date_end`, `description`, `color`) VALUES
 	(1, 'Бухаем в Тамбове', '2013-06-11', '2013-06-11', '<p>Подскажите куда можно сходить/съездить в Тамбове на новогодних выходных. Хочу спланировать отдых с парнем. Может есть какие-нибудь лыжные базы, может горки - где можно поучиться на горных лыжах или сноуборде. есть ли катки? и где лучше всего кататься(хороший лед и не битком народу). Чем можно еще заняться в тамбове итересным? Видела есть улица Ипподромная? Можно ли покататься на лошадях?? ))<p><img src="/uploads/admin/index//b96d4e6c273bfc478cdfe4e70104b734.jpg" style="width: 231.0528967254408px; height: 208px; float: right; margin: 0px 0px 10px 10px;" alt=""></p></p><p>tyurturturtutyu</p><p></p><p></p><p></p>\r\n', '#3aa838'),
@@ -49,7 +49,7 @@ INSERT INTO `tbl_events_events` (`id`, `title`, `date_start`, `date_end`, `descr
 /*!40000 ALTER TABLE `tbl_events_events` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_gallery
+-- Dumping structure for table comfort.tbl_gallery
 CREATE TABLE IF NOT EXISTS `tbl_gallery` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `thumbnail` varchar(500) DEFAULT NULL,
@@ -57,17 +57,16 @@ CREATE TABLE IF NOT EXISTS `tbl_gallery` (
   `is_published` enum('1','0') NOT NULL DEFAULT '1',
   `created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_gallery: ~2 rows (approximately)
+-- Dumping data for table comfort.tbl_gallery: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_gallery` DISABLE KEYS */;
 INSERT INTO `tbl_gallery` (`id`, `thumbnail`, `title`, `is_published`, `created`) VALUES
-	(11, '/uploads/gallery/title/5128c6aed5c14a_d756d98c.jpg', 'Хз', '1', '2013-02-22 10:51:40'),
-	(16, '/uploads/gallery/title/5128c4afde4e5916500537.jpg', 'Джессика Альба', '1', '2013-02-23 15:27:49');
+	(17, '/uploads/gallery/title/51dbb132a738b07-06_present-ronaldo_press_15.jpg', 'ХЗ', '1', '2013-07-09 12:43:46');
 /*!40000 ALTER TABLE `tbl_gallery` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_galleryphotos
+-- Dumping structure for table comfort.tbl_galleryphotos
 CREATE TABLE IF NOT EXISTS `tbl_galleryphotos` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` char(255) DEFAULT NULL,
@@ -77,26 +76,60 @@ CREATE TABLE IF NOT EXISTS `tbl_galleryphotos` (
   `created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `gallery_id` (`gallery_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=176 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=186 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_galleryphotos: ~11 rows (approximately)
+-- Dumping data for table comfort.tbl_galleryphotos: ~11 rows (approximately)
 /*!40000 ALTER TABLE `tbl_galleryphotos` DISABLE KEYS */;
 INSERT INTO `tbl_galleryphotos` (`id`, `title`, `thumb`, `image`, `gallery_id`, `created`) VALUES
-	(161, 'Джессика Альба 111', '/uploads/gallery/thumb/5128cf45751f6jessica_alba_in_conf.jpg', '/uploads/gallery/original/5128cf45751f6jessica_alba_in_conf.jpg', 16, '2013-02-23 20:16:37'),
-	(162, 'ываываыва АВАВЫАЫВ ыва', '/uploads/gallery/thumb/5128cf45b4156jessica_alba_main.jpg', '/uploads/gallery/original/5128cf45b4156jessica_alba_main.jpg', 16, '2013-02-23 20:16:37'),
-	(163, 'ВВЛВОЫЗЩВШо щшыва ыв9щашг д', '/uploads/gallery/thumb/5128cf45e61b0jessica-alba-4.jpg', '/uploads/gallery/original/5128cf45e61b0jessica-alba-4.jpg', 16, '2013-02-23 20:16:37'),
-	(164, NULL, '/uploads/gallery/thumb/5128cf461e657jessica-alba-011-1920x1200.jpg', '/uploads/gallery/original/5128cf461e657jessica-alba-011-1920x1200.jpg', 16, '2013-02-23 20:16:38'),
-	(165, NULL, '/uploads/gallery/thumb/5128cf464e96fjessica-alba11.jpg', '/uploads/gallery/original/5128cf464e96fjessica-alba11.jpg', 16, '2013-02-23 20:16:38'),
-	(169, NULL, '/uploads/gallery/thumb/5129d6462c2093.jpg', '/uploads/gallery/original/5129d6462c2093.jpg', 11, '2013-02-24 14:58:46'),
-	(170, NULL, '/uploads/gallery/thumb/5129d6469369404-04-06_1557.jpg', '/uploads/gallery/original/5129d6469369404-04-06_1557.jpg', 11, '2013-02-24 14:58:46'),
-	(172, NULL, '/uploads/gallery/thumb/5129d647097ed05uv2.jpg', '/uploads/gallery/original/5129d647097ed05uv2.jpg', 11, '2013-02-24 14:58:47'),
-	(173, 'Сальников', '/uploads/gallery/thumb/5129d647466995.jpg', '/uploads/gallery/original/5129d647466995.jpg', 11, '2013-02-24 14:58:47'),
-	(174, NULL, '/uploads/gallery/thumb/5129d6476c1ec6ef61ab53d06.jpg', '/uploads/gallery/original/5129d6476c1ec6ef61ab53d06.jpg', 11, '2013-02-24 14:58:47'),
-	(175, '', '/uploads/gallery/thumb/5129d6479e7cf07_pics_30446.jpg', '/uploads/gallery/original/5129d6479e7cf07_pics_30446.jpg', 11, '2013-02-24 14:58:47');
+	(176, NULL, '/uploads/gallery/thumb/51dbb149f1da801043_lakemapourikanewzealand_1280x800.jpg', '/uploads/gallery/original/51dbb149f1da801043_lakemapourikanewzealand_1280x800.jpg', 17, '2013-07-09 12:44:26'),
+	(177, NULL, '/uploads/gallery/thumb/51dbb14a653cd01045_macrosun_1280x800.jpg', '/uploads/gallery/original/51dbb14a653cd01045_macrosun_1280x800.jpg', 17, '2013-07-09 12:44:26'),
+	(178, NULL, '/uploads/gallery/thumb/51dbb14aacf5101050_doubtfullsoundnewzealand_1280x800.jpg', '/uploads/gallery/original/51dbb14aacf5101050_doubtfullsoundnewzealand_1280x800.jpg', 17, '2013-07-09 12:44:26'),
+	(179, NULL, '/uploads/gallery/thumb/51dbb14b03fe301051_purplemood_1280x800.jpg', '/uploads/gallery/original/51dbb14b03fe301051_purplemood_1280x800.jpg', 17, '2013-07-09 12:44:27'),
+	(180, NULL, '/uploads/gallery/thumb/51dbb14b490b801075_goodbyebluesky_1280x800.jpg', '/uploads/gallery/original/51dbb14b490b801075_goodbyebluesky_1280x800.jpg', 17, '2013-07-09 12:44:27'),
+	(181, NULL, '/uploads/gallery/thumb/51dbb14b8e5a801077_spidersweb_1280x800.jpg', '/uploads/gallery/original/51dbb14b8e5a801077_spidersweb_1280x800.jpg', 17, '2013-07-09 12:44:27'),
+	(182, NULL, '/uploads/gallery/thumb/51dbb14bd7e1d01082_januarynightsky_1280x800.jpg', '/uploads/gallery/original/51dbb14bd7e1d01082_januarynightsky_1280x800.jpg', 17, '2013-07-09 12:44:27'),
+	(183, NULL, '/uploads/gallery/thumb/51dbb14c2f74601083_venturabeachdriftwood_1280x800.jpg', '/uploads/gallery/original/51dbb14c2f74601083_venturabeachdriftwood_1280x800.jpg', 17, '2013-07-09 12:44:28'),
+	(184, NULL, '/uploads/gallery/thumb/51dbb14c76b9101037_aloneinthepark_1280x800.jpg', '/uploads/gallery/original/51dbb14c76b9101037_aloneinthepark_1280x800.jpg', 17, '2013-07-09 12:44:28'),
+	(185, NULL, '/uploads/gallery/thumb/51dbb14cbfb3101041_skyabovechina_1280x800.jpg', '/uploads/gallery/original/51dbb14cbfb3101041_skyabovechina_1280x800.jpg', 17, '2013-07-09 12:44:28');
 /*!40000 ALTER TABLE `tbl_galleryphotos` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_menu
+-- Dumping structure for table comfort.tbl_lunch_main
+CREATE TABLE IF NOT EXISTS `tbl_lunch_main` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `description` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table comfort.tbl_lunch_main: ~1 rows (approximately)
+/*!40000 ALTER TABLE `tbl_lunch_main` DISABLE KEYS */;
+INSERT INTO `tbl_lunch_main` (`id`, `description`) VALUES
+	(1, 'Бизнес-ланч - это комплексный обед деловых людей в середине рабочего дня, когда можно за доступную цену быстро и вкусно поесть.');
+/*!40000 ALTER TABLE `tbl_lunch_main` ENABLE KEYS */;
+
+
+-- Dumping structure for table comfort.tbl_lunch_products
+CREATE TABLE IF NOT EXISTS `tbl_lunch_products` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(1000) NOT NULL,
+  `description` text,
+  `weight` varchar(50) DEFAULT NULL,
+  `price` float DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table comfort.tbl_lunch_products: ~5 rows (approximately)
+/*!40000 ALTER TABLE `tbl_lunch_products` DISABLE KEYS */;
+INSERT INTO `tbl_lunch_products` (`id`, `title`, `description`, `weight`, `price`) VALUES
+	(1, 'Суп гороховый!', '400г свинины, 300г картофеля (4-5 шт.), 200г лука (2 шт. среднего размера), 150г моркови (2 шт. среднего размера), 250г.', '300', 100),
+	(4, 'Пельмени с щавелем', 'тыц тыц тыц', '300', 150),
+	(5, 'rty', '', '56465', 0),
+	(6, 'ryrety', 'tyetyrty', 'yrty', 651),
+	(8, 'werwer', '3fef', '123', 324.43);
+/*!40000 ALTER TABLE `tbl_lunch_products` ENABLE KEYS */;
+
+
+-- Dumping structure for table comfort.tbl_menu
 CREATE TABLE IF NOT EXISTS `tbl_menu` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `lft` int(10) unsigned NOT NULL,
@@ -111,27 +144,30 @@ CREATE TABLE IF NOT EXISTS `tbl_menu` (
   KEY `rgt` (`rgt`),
   KEY `level` (`level`),
   KEY `root` (`root`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_menu: ~5 rows (approximately)
+-- Dumping data for table comfort.tbl_menu: ~5 rows (approximately)
 /*!40000 ALTER TABLE `tbl_menu` DISABLE KEYS */;
 INSERT INTO `tbl_menu` (`id`, `lft`, `rgt`, `access`, `root`, `level`, `title`, `link`) VALUES
-	(1, 1, 10, '3', 1, 1, 'Корень', '#'),
+	(1, 1, 16, '3', 1, 1, 'Корень', '#'),
 	(21, 2, 3, '1', NULL, 2, 'Главная', '/'),
-	(22, 8, 9, '1', NULL, 2, 'Каталог', '/shop'),
-	(24, 6, 7, '1', NULL, 2, 'О компании', '/page/1/o-kompanii'),
-	(25, 4, 5, '1', NULL, 2, 'Новости', '/news');
+	(22, 6, 7, '1', NULL, 2, 'Каталог', '/shop'),
+	(24, 8, 9, '1', NULL, 2, 'О компании', '/about'),
+	(25, 4, 5, '1', NULL, 2, 'Новости', '/news'),
+	(26, 10, 11, '1', NULL, 2, 'События', '/events'),
+	(27, 12, 13, '1', NULL, 2, 'Ланч', '/lunch'),
+	(28, 14, 15, '1', NULL, 2, 'Фото', '/gallery');
 /*!40000 ALTER TABLE `tbl_menu` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_migration
+-- Dumping structure for table comfort.tbl_migration
 CREATE TABLE IF NOT EXISTS `tbl_migration` (
   `version` varchar(255) NOT NULL,
   `apply_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_migration: ~3 rows (approximately)
+-- Dumping data for table comfort.tbl_migration: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_migration` DISABLE KEYS */;
 INSERT INTO `tbl_migration` (`version`, `apply_time`) VALUES
 	('m000000_000000_base', 1360126042),
@@ -140,7 +176,7 @@ INSERT INTO `tbl_migration` (`version`, `apply_time`) VALUES
 /*!40000 ALTER TABLE `tbl_migration` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_news
+-- Dumping structure for table comfort.tbl_news
 CREATE TABLE IF NOT EXISTS `tbl_news` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT '',
@@ -160,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `tbl_news` (
   KEY `title` (`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_news: ~17 rows (approximately)
+-- Dumping data for table comfort.tbl_news: ~17 rows (approximately)
 /*!40000 ALTER TABLE `tbl_news` DISABLE KEYS */;
 INSERT INTO `tbl_news` (`id`, `title`, `alias`, `introtext`, `fulltext`, `is_published`, `is_onfrontpage`, `user_id`, `catid`, `created`, `modified`, `metakey`, `metadesc`, `alias_url`) VALUES
 	(1, 'Заголовок 1', 'test', '<img alt="" src="/images/demo/demonews.jpg" style="padding: 4px; border: 1px solid rgb(206, 205, 205); margin: 0px 10px 8px 0px; float: left;" width:150px;=""><span style="line-height: 1.45em;">Сочетание киноа с творогом и фруктами бесподобно. Полезное и вкусное блюдо подойдет и детям и взрослым. Этот вкусный десерт посвящаю всем женщинам связавшим свою жизнь с армией и боевым подругам. Так случилось, что сегодня год с момента моей регистрации на сайте, угощайтесь! rs</span><p><img src="/uploads/news//064cedee0bbd42b05cb2511018f91a3b.jpg" alt="" style="cursor: nw-resize;"><br></p>\r\n<div class="clear"></div>\r\n', '<pre>&lt;p&gt;&lt;?php  echo "Salut" ?&gt;&lt;/p&gt;r</pre><p><img src="/uploads/news//0e68cc03000a73c194a09fa6efa308ff.jpg" style="width: 289px; height: 289px;"></p><br>', '1', '1', 1, 1, '2012-12-12 12:12:12', '2013-06-25 09:53:25', '', '', '1-zagolovok'),
@@ -175,7 +211,7 @@ INSERT INTO `tbl_news` (`id`, `title`, `alias`, `introtext`, `fulltext`, `is_pub
 /*!40000 ALTER TABLE `tbl_news` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_page
+-- Dumping structure for table comfort.tbl_page
 CREATE TABLE IF NOT EXISTS `tbl_page` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(300) NOT NULL,
@@ -189,17 +225,17 @@ CREATE TABLE IF NOT EXISTS `tbl_page` (
   KEY `title` (`title`(255))
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_page: ~4 rows (approximately)
+-- Dumping data for table comfort.tbl_page: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tbl_page` DISABLE KEYS */;
 INSERT INTO `tbl_page` (`id`, `title`, `content`, `metakey`, `metadesc`, `updated_at`, `is_published`, `alias_url`) VALUES
-	(1, 'О компании', '<p>Текст о компании<p><img src="/uploads/page//efdb4e02b2163bd93ad26f9db01dd668.jpg"></p></p>\r\n', '', '', '2013-02-11 10:05:05', '1', 'about'),
+	(1, 'О компании', '<p>Текст о компании</p>', '', '', '2013-02-11 10:05:05', '1', 'about'),
 	(2, 'Новая страница6', '<p>yi</p>', 'tyi', 'tyi', '2013-03-26 15:30:43', '1', 'sdf'),
-	(4, 'fghfgh', '<p>fghfgh</p>', '', '', '2013-03-26 15:46:22', '1', 'gfhdfh'),
+	(4, 'fghfgh', '<p>fghfgh</p>', '', '', '2013-03-26 15:46:22', '1', '4-about'),
 	(5, 'Просто новая страница', '<h2 style="text-align: center;">Заголовок</h2><div>Салют</div>', '', '', '2013-04-17 15:36:25', '1', 'newpage');
 /*!40000 ALTER TABLE `tbl_page` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_profiles
+-- Dumping structure for table comfort.tbl_profiles
 CREATE TABLE IF NOT EXISTS `tbl_profiles` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(255) DEFAULT NULL,
@@ -208,7 +244,7 @@ CREATE TABLE IF NOT EXISTS `tbl_profiles` (
   CONSTRAINT `user_profile_id` FOREIGN KEY (`user_id`) REFERENCES `tbl_users` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_profiles: ~2 rows (approximately)
+-- Dumping data for table comfort.tbl_profiles: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_profiles` DISABLE KEYS */;
 INSERT INTO `tbl_profiles` (`user_id`, `first_name`, `last_name`) VALUES
 	(1, 'Administrator', 'Admin'),
@@ -216,7 +252,7 @@ INSERT INTO `tbl_profiles` (`user_id`, `first_name`, `last_name`) VALUES
 /*!40000 ALTER TABLE `tbl_profiles` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_profiles_fields
+-- Dumping structure for table comfort.tbl_profiles_fields
 CREATE TABLE IF NOT EXISTS `tbl_profiles_fields` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `varname` varchar(50) NOT NULL DEFAULT '',
@@ -237,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `tbl_profiles_fields` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_profiles_fields: ~2 rows (approximately)
+-- Dumping data for table comfort.tbl_profiles_fields: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_profiles_fields` DISABLE KEYS */;
 INSERT INTO `tbl_profiles_fields` (`id`, `varname`, `title`, `field_type`, `field_size`, `field_size_min`, `required`, `match`, `range`, `error_message`, `other_validator`, `default`, `widget`, `widgetparams`, `position`, `visible`) VALUES
 	(1, 'first_name', 'First Name', 'VARCHAR', 255, 3, 2, '', '', 'Incorrect First Name (length between 3 and 50 characters).', '', '', '', '', 1, 3),
@@ -245,7 +281,7 @@ INSERT INTO `tbl_profiles_fields` (`id`, `varname`, `title`, `field_type`, `fiel
 /*!40000 ALTER TABLE `tbl_profiles_fields` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_accessories
+-- Dumping structure for table comfort.tbl_shop_accessories
 CREATE TABLE IF NOT EXISTS `tbl_shop_accessories` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `product_id` int(50) unsigned NOT NULL,
@@ -255,7 +291,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_accessories` (
   CONSTRAINT `FK_tbl_shop_accessories_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_accessories: ~26 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_accessories: ~26 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_accessories` DISABLE KEYS */;
 INSERT INTO `tbl_shop_accessories` (`id`, `product_id`, `acc_id`) VALUES
 	(42, 5, 20),
@@ -287,7 +323,7 @@ INSERT INTO `tbl_shop_accessories` (`id`, `product_id`, `acc_id`) VALUES
 /*!40000 ALTER TABLE `tbl_shop_accessories` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_attribute_titles
+-- Dumping structure for table comfort.tbl_shop_attribute_titles
 CREATE TABLE IF NOT EXISTS `tbl_shop_attribute_titles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(300) NOT NULL,
@@ -300,7 +336,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_attribute_titles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_attribute_titles: ~5 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_attribute_titles: ~5 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_attribute_titles` DISABLE KEYS */;
 INSERT INTO `tbl_shop_attribute_titles` (`id`, `title`, `category_id`, `measure`, `default_value`, `type`, `in_search`, `pos`) VALUES
 	(6, 'Глубина', 14, 'См', '', 2, '1', 0),
@@ -311,7 +347,7 @@ INSERT INTO `tbl_shop_attribute_titles` (`id`, `title`, `category_id`, `measure`
 /*!40000 ALTER TABLE `tbl_shop_attribute_titles` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_attrs
+-- Dumping structure for table comfort.tbl_shop_attrs
 CREATE TABLE IF NOT EXISTS `tbl_shop_attrs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(10) unsigned NOT NULL,
@@ -323,7 +359,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_attrs` (
   KEY `product_id` (`product_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_attrs: ~15 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_attrs: ~15 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_attrs` DISABLE KEYS */;
 INSERT INTO `tbl_shop_attrs` (`id`, `product_id`, `attribute_id`, `attr_valueid`) VALUES
 	(5, 1, 6, 1142),
@@ -344,7 +380,7 @@ INSERT INTO `tbl_shop_attrs` (`id`, `product_id`, `attribute_id`, `attr_valueid`
 /*!40000 ALTER TABLE `tbl_shop_attrs` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_attr_value
+-- Dumping structure for table comfort.tbl_shop_attr_value
 CREATE TABLE IF NOT EXISTS `tbl_shop_attr_value` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `attr_id` int(10) NOT NULL,
@@ -353,7 +389,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_attr_value` (
   KEY `value` (`value`(255))
 ) ENGINE=InnoDB AUTO_INCREMENT=1151 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_attr_value: ~225 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_attr_value: ~225 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_attr_value` DISABLE KEYS */;
 INSERT INTO `tbl_shop_attr_value` (`id`, `attr_id`, `value`) VALUES
 	(716, 90, '280'),
@@ -584,7 +620,7 @@ INSERT INTO `tbl_shop_attr_value` (`id`, `attr_id`, `value`) VALUES
 /*!40000 ALTER TABLE `tbl_shop_attr_value` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_categories
+-- Dumping structure for table comfort.tbl_shop_categories
 CREATE TABLE IF NOT EXISTS `tbl_shop_categories` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `lft` int(10) unsigned NOT NULL,
@@ -603,7 +639,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_categories` (
   KEY `level` (`level`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_categories: ~12 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_categories: ~12 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_categories` DISABLE KEYS */;
 INSERT INTO `tbl_shop_categories` (`id`, `lft`, `thumbnail`, `rgt`, `level`, `title`, `meta_description`, `meta_keywords`, `description`, `active`, `alias_url`) VALUES
 	(1, 1, NULL, 24, 1, 'Каталог', NULL, NULL, NULL, '1', NULL),
@@ -621,7 +657,7 @@ INSERT INTO `tbl_shop_categories` (`id`, `lft`, `thumbnail`, `rgt`, `level`, `ti
 /*!40000 ALTER TABLE `tbl_shop_categories` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_gallery
+-- Dumping structure for table comfort.tbl_shop_gallery
 CREATE TABLE IF NOT EXISTS `tbl_shop_gallery` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(10) NOT NULL,
@@ -630,7 +666,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_gallery` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_gallery: ~38 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_gallery: ~38 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_gallery` DISABLE KEYS */;
 INSERT INTO `tbl_shop_gallery` (`id`, `product_id`, `thumbnail`, `image`) VALUES
 	(17, 17, '/uploads/shop/gallery/thumb/512cb32394847916500537.jpg', '/uploads/shop/gallery/title/512cb32394847916500537.jpg'),
@@ -674,7 +710,7 @@ INSERT INTO `tbl_shop_gallery` (`id`, `product_id`, `thumbnail`, `image`) VALUES
 /*!40000 ALTER TABLE `tbl_shop_gallery` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_orders
+-- Dumping structure for table comfort.tbl_shop_orders
 CREATE TABLE IF NOT EXISTS `tbl_shop_orders` (
   `id` int(25) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
@@ -690,7 +726,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_orders` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_orders: ~8 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_orders: ~8 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_orders` DISABLE KEYS */;
 INSERT INTO `tbl_shop_orders` (`id`, `user_id`, `name`, `address`, `comments`, `created`, `active`, `visited`, `email`, `shipping_date`, `phone`) VALUES
 	(8, 1, '547', '5647', '', '2013-05-06 11:24:01', '1', '1', '546', '2013-05-28', NULL),
@@ -704,7 +740,7 @@ INSERT INTO `tbl_shop_orders` (`id`, `user_id`, `name`, `address`, `comments`, `
 /*!40000 ALTER TABLE `tbl_shop_orders` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_orders_items
+-- Dumping structure for table comfort.tbl_shop_orders_items
 CREATE TABLE IF NOT EXISTS `tbl_shop_orders_items` (
   `id` int(25) unsigned NOT NULL AUTO_INCREMENT,
   `order_id` int(25) unsigned NOT NULL,
@@ -719,7 +755,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_orders_items` (
   CONSTRAINT `FK_tbl_shop_orders_items_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_orders_items: ~12 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_orders_items: ~12 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_orders_items` DISABLE KEYS */;
 INSERT INTO `tbl_shop_orders_items` (`id`, `order_id`, `product_id`, `quantity`, `price`, `sum`) VALUES
 	(4, 8, 1, 1, 100, 100),
@@ -737,7 +773,7 @@ INSERT INTO `tbl_shop_orders_items` (`id`, `order_id`, `product_id`, `quantity`,
 /*!40000 ALTER TABLE `tbl_shop_orders_items` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_products
+-- Dumping structure for table comfort.tbl_shop_products
 CREATE TABLE IF NOT EXISTS `tbl_shop_products` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -755,7 +791,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_products` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_products: ~15 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_products: ~15 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_products` DISABLE KEYS */;
 INSERT INTO `tbl_shop_products` (`id`, `title`, `description`, `characters`, `price`, `created_at`, `updated_at`, `category_id`, `in_stock`, `active`, `meta_description`, `meta_keywords`, `alias_url`) VALUES
 	(1, 'Товар 1', 'Описание!!!', 'Хрень какаято\r\n<div><p><p><img src="/uploads/admin/index//9ddf11e264d8ac56e9d9fdc9c4e00164.jpg" style="width: 250px; height: 250px; float: left; margin: 0px 10px 10px 0px;" alt=""></p><br></p></div>\r\n', 100, '2013-02-25 20:18:36', '2013-06-25 09:51:51', 14, 0, '1', '', '', 'tovarchik'),
@@ -776,7 +812,7 @@ INSERT INTO `tbl_shop_products` (`id`, `title`, `description`, `characters`, `pr
 /*!40000 ALTER TABLE `tbl_shop_products` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_productsimg
+-- Dumping structure for table comfort.tbl_shop_productsimg
 CREATE TABLE IF NOT EXISTS `tbl_shop_productsimg` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(10) unsigned NOT NULL,
@@ -787,7 +823,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_productsimg` (
   CONSTRAINT `FK_tbl_shop_productsimg_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_productsimg: ~14 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_productsimg: ~14 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_productsimg` DISABLE KEYS */;
 INSERT INTO `tbl_shop_productsimg` (`id`, `product_id`, `thumbnail`, `image`) VALUES
 	(6, 19, '/uploads/shop/product/thumb/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg', '/uploads/shop/product/title/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg'),
@@ -807,7 +843,7 @@ INSERT INTO `tbl_shop_productsimg` (`id`, `product_id`, `thumbnail`, `image`) VA
 /*!40000 ALTER TABLE `tbl_shop_productsimg` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_shop_products_rating
+-- Dumping structure for table comfort.tbl_shop_products_rating
 CREATE TABLE IF NOT EXISTS `tbl_shop_products_rating` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(10) unsigned NOT NULL,
@@ -815,9 +851,9 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_products_rating` (
   PRIMARY KEY (`id`),
   KEY `FK_tbl_shop_products_rating_tbl_shop_products` (`product_id`),
   CONSTRAINT `FK_tbl_shop_products_rating_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_products_rating: ~30 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_products_rating: ~31 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_products_rating` DISABLE KEYS */;
 INSERT INTO `tbl_shop_products_rating` (`id`, `product_id`, `rating`) VALUES
 	(1, 33, 10),
@@ -849,11 +885,12 @@ INSERT INTO `tbl_shop_products_rating` (`id`, `product_id`, `rating`) VALUES
 	(46, 38, 9),
 	(47, 38, 10),
 	(48, 36, 10),
-	(49, 36, 10);
+	(49, 36, 10),
+	(50, 37, 10);
 /*!40000 ALTER TABLE `tbl_shop_products_rating` ENABLE KEYS */;
 
 
-# Dumping structure for table comfort.tbl_users
+-- Dumping structure for table comfort.tbl_users
 CREATE TABLE IF NOT EXISTS `tbl_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL DEFAULT '',
@@ -869,12 +906,12 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
   UNIQUE KEY `user_email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_users: ~2 rows (approximately)
+-- Dumping data for table comfort.tbl_users: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_users` DISABLE KEYS */;
 INSERT INTO `tbl_users` (`id`, `username`, `password`, `email`, `activkey`, `superuser`, `status`, `create_at`, `lastvisit_at`) VALUES
 	(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'webmaster@example.com', '9b94c7be573c22b9d4f7f8caccd5043d', 1, 1, '2013-02-06 10:47:38', '2013-06-13 09:41:53'),
 	(2, 'sega', '81dc9bdb52d04dc20036dbd8313ed055', 'esrde@rty.rt', 'af40cbe01b5936d62d8b947c7bf9140f', 0, 1, '2013-02-12 17:06:06', '2013-02-24 16:35:43');
 /*!40000 ALTER TABLE `tbl_users` ENABLE KEYS */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

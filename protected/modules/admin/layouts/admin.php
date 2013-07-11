@@ -49,6 +49,11 @@
 <!-- END RESPONSIVE MENU TOGGLER -->
 <!-- BEGIN TOP NAVIGATION MENU -->
 <ul class="nav pull-right">
+    <?php if (Yii::app()->hasModule('events')): ?>
+    <!-- BEGIN TODO DROPDOWN -->
+    <?php $this->widget('events.components.NewReserves'); ?>
+    <!-- END TODO DROPDOWN -->
+    <?php endif; ?>
     <?php if (Yii::app()->hasModule('shop')): ?>
         <!-- BEGIN TODO DROPDOWN -->
         <?php $this->widget('shop.components.NewOrders'); ?>
@@ -169,6 +174,7 @@
                 <ul class="sub">
                     <li><a class="" href="/events/admin/index">Список</a></li>
                     <li><a class="" href="/events/admin/index/create">Добавить</a></li>
+                    <li><a class="" href="/events/admin/reserve/index">Заявки</a></li>
                 </ul>
             </li>
         <?php endif; ?>

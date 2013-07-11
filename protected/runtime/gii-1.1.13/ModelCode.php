@@ -3,7 +3,7 @@ return array (
   'template' => 'default',
   'connectionId' => 'db',
   'tablePrefix' => 'tbl_',
-  'modelPath' => 'application.modules.lunch.models',
+  'modelPath' => 'application.modules.events.models',
   'baseClass' => 'CActiveRecord',
   'buildRelations' => '1',
 );

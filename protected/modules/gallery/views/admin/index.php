@@ -27,7 +27,7 @@ $this->header = 'Альбомы'
                 'created',
                 array(
                     'class'=>'CButtonColumn',
-                    'template'=>'{view}{update}{delete}',
+                    'template'=>'{update}{delete}',
                     'htmlOptions'=>array('width'=>'70px'),
                 ),
             ),

@@ -33,3 +33,5 @@ $this->widget('ext.EFullCalendar.EFullCalendar', array(
 
     )
     ));
+?>
+<p> <?php echo CHtml::link('Зарезервировать день',Yii::app()->createUrl('/events/reserve')); ?> </p>

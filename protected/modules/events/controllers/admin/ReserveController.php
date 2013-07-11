@@ -1,30 +1,14 @@
 <?php
 
-class IndexController extends Controller
+class ReserveController extends Controller
 {
     public $layout = 'application.modules.admin.layouts.admin';
 
-    public function actions()
-    {
-        return array(
-            'fileUpload'=>array(
-                'class'=>'application.extensions.redactor.actions.FileUpload',
-                'uploadCreate'=>true,
-            ),
-            'imageUpload'=>array(
-                'class'=>'application.extensions.redactor.actions.ImageUpload',
-                'uploadCreate'=>true,
-            ),
-            'imageList'=>array(
-                'class'=>'application.extensions.redactor.actions.ImageList',
-            ),
-        );
-    }
+
     public function filters()
     {
         return array(
             'accessControl', // perform access control for CRUD operations
-            'ajaxOnly + Delete',
             'ajaxOnly + Add',
 
         );
@@ -34,7 +18,7 @@ class IndexController extends Controller
     {
         return array(
             array('allow',  // allow all users to perform 'index' and 'view' actions
-                'actions'=>array('index','create','update','fileUpload','imageUpload','imageList'),
+                'actions'=>array('index','create','update','view','delete'),
                 'users'=>Yii::app()->getModule('user')->getAdmins(),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -51,10 +35,10 @@ class IndexController extends Controller
 
 	public function actionIndex()
 	{
-        $model= new Events('search');
+        $model= new EventsReserve('search');
         $model->unsetAttributes();  // clear any index values
-        if(isset($_GET['Events']))
-            $model->attributes=$_GET['Events'];
+        if(isset($_GET['EventsReserve']))
+            $model->attributes=$_GET['EventsReserve'];
         $this->render('index', array(
             'model' => $model
         ));
@@ -63,6 +47,10 @@ class IndexController extends Controller
     public function actionView($id)
     {
         $model= $this->loadModel($id);
+        if($model->visited == 0){
+            $model->visited = EventsReserve::STATUS_ACTIVE;
+            $model->save();
+        }
         $this->render('view', array(
             'model' => $model
         ));
@@ -71,11 +59,11 @@ class IndexController extends Controller
     public function actionUpdate($id)
     {
         $model=$this->loadModel($id);
-        if(isset($_POST['Events']))
+        if(isset($_POST['EventsReserve']))
         {
-            $model->attributes=$_POST['Events'];
+            $model->attributes=$_POST['EventsReserve'];
             if($model->save()){
-                Yii::app()->user->setFlash('event_success_edited', "Событие успешно отредактировано");
+                Yii::app()->user->setFlash('eventreserve_success_edited', "Событие успешно отредактировано");
                 $this->redirect($model->id);
             }
 
@@ -85,25 +73,18 @@ class IndexController extends Controller
         ));
     }
 
-    public function actionCreate()
+    public function actionDelete($id)
     {
-        $model = new Events();
-        if(isset($_POST['Events']))
-        {
-            $model->attributes=$_POST['Events'];
-
-            if ($model->save()){
-                $this->redirect(array($model->id));
-            }
-        }
-        $this->render('create' , array(
-            'model'=>$model,
-        ));
+        $this->loadModel($id)->delete();
+        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+        if(!isset($_GET['ajax']))
+            Yii::app()->user->setFlash('success_deleted', "Удаление выполнено успешно");
+        $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('/events/admin/reserve/index'));
     }
 
     public function loadModel($id)
     {
-        $model=Events::model()->findByPk($id);
+        $model=EventsReserve::model()->findByPk($id);
         if($model===null)
             throw new CHttpException(404,'Страница не существует');
         return $model;

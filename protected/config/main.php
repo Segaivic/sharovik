@@ -175,7 +175,9 @@ return array(
         'YiiMailer' => array(),
         'meta_description' => 'Сайт компании',
         'meta_keywords' => 'компания, cms',
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'fenton@localhost',
+        'adminName' =>'Company',
+		'emailFrom'=>'fenton@localhost',
         'newsPerPage'=>5,
         'redactor' => array(
                 'allowedTags' => array("code", "span", "div", "label", "a", "br", "p", "b", "i", "del", "strike", "u",

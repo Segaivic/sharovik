@@ -31,13 +31,6 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the index layout 'protected/views/layouts/main.php'
 		$this->render('index');
-        $mail = new YiiMailer();
-        $mail->setView('test');
-        $mail->setFrom('fenton@localhost', 'John Doe');
-        $mail->setTo('fenton@localhost');
-        $mail->setSubject('Mail subject');
-        $mail->setData(array('message' => 'Message to send', 'name' => 'John Doe', 'description' => 'Contact form'));
-        $mail->send();
 	}
 
 	/**

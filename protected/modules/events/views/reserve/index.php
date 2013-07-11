@@ -1,4 +1,5 @@
 <?php
+$this->pageTitle = 'Сделать заявку - '.Yii::app()->name;
 $this->breadcrumbs = array(
     'События' => '/events',
     'Заказать'

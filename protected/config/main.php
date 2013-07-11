@@ -23,6 +23,7 @@ return array(
         'application.modules.user.components.*',
         'application.modules.admin.*',
         'application.modules.shop.extensions.shoppingCart.*',
+        'ext.YiiMailer.YiiMailer',
 	),
 
 	'modules'=>array(
@@ -171,6 +172,7 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
+        'YiiMailer' => array(),
         'meta_description' => 'Сайт компании',
         'meta_keywords' => 'компания, cms',
 		'adminEmail'=>'webmaster@example.com',

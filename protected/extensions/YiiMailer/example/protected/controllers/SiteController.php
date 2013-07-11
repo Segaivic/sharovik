@@ -2,7 +2,6 @@
 
 class SiteController extends Controller
 {
-    public $layout = '//layouts/frontpage';
 	/**
 	 * Declares class-based actions.
 	 */
@@ -23,21 +22,14 @@ class SiteController extends Controller
 	}
 
 	/**
-	 * This is the index 'index' action that is invoked
+	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex()
 	{
 		// renders the view file 'protected/views/site/index.php'
-		// using the index layout 'protected/views/layouts/main.php'
+		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
-        $mail = new YiiMailer();
-        $mail->setView('test');
-        $mail->setFrom('fenton@localhost', 'John Doe');
-        $mail->setTo('fenton@localhost');
-        $mail->setSubject('Mail subject');
-        $mail->setData(array('message' => 'Message to send', 'name' => 'John Doe', 'description' => 'Contact form'));
-        $mail->send();
 	}
 
 	/**
@@ -45,14 +37,13 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
-        $this->layout = '//layouts/error';
-		if($error=Yii::app()->errorHandler->error)
-		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
-		}
+	    if($error=Yii::app()->errorHandler->error)
+	    {
+	    	if(Yii::app()->request->isAjaxRequest)
+	    		echo $error['message'];
+	    	else
+	        	$this->render('error', $error);
+	    }
 	}
 
 	/**
@@ -66,15 +57,20 @@ class SiteController extends Controller
 			$model->attributes=$_POST['ContactForm'];
 			if($model->validate())
 			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-type: text/plain; charset=UTF-8";
-
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Спасибо! Сообщение было успешно отпралено. Мы постараемся вам ответить как можно скорее!');
+				//use 'contact' view from views/mail
+				$mail = new YiiMailer('contact', array('message' => $model->body, 'name' => $model->name, 'description' => 'Contact form'));
+				
+				//set properties
+				$mail->setFrom($model->email, $model->name);
+				$mail->setSubject($model->subject);
+				$mail->setTo(Yii::app()->params['adminEmail']);
+				//send
+				if ($mail->send()) {
+					Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				} else {
+					Yii::app()->user->setFlash('error','Error while sending email: '.$mail->getError());
+				}
+				
 				$this->refresh();
 			}
 		}

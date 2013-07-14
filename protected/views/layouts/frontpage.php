@@ -48,9 +48,9 @@
     </div>
     <div class="main-wrapper">
         <div class="main-content">
-        <div class="container">
-		<?php echo $content; ?>
-        </div>
-    </div>
+			<div class="container">
+			<?php echo $content; ?>
+			</div>
+		</div>
 <?php $this->endContent(); ?>
 

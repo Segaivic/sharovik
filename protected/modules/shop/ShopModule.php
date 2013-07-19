@@ -2,6 +2,7 @@
 
 class ShopModule extends CWebModule
 {
+    public $productsInPage = 20;
     public $defaultController = 'default';
 	public function init()
 	{

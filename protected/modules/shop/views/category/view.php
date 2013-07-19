@@ -78,6 +78,10 @@ $this->header = $model->title;
             <?php endforeach; ?>
         </ul>
     </div>
+    <?php $this->widget('CLinkPager', array(
+    'pages' => $pages,
+    )); ?>
+
 </div>
 <?php Yii::app()->clientScript->registerScriptFile('/js/bootstrap-dropdown.js',CClientScript::POS_END) ?>
 <?php Yii::app()->clientScript->registerScriptFile('dd','$(function(){

@@ -32,6 +32,7 @@ class CategoryController extends Controller
         $this->render('index');
 	}
 
+
     public function actionView($id = false , $alias_url = false, $sort = 'created_asc')
     {
         if($id !== false){
@@ -47,11 +48,26 @@ class CategoryController extends Controller
         $order = SCategories::getSort($sort);
         $criteria->order = $order['value'];
         $criteria->params = array(':category_id' => $model->id);
+
+        //pager
+        $count = SProducts::model()->count($criteria);
+        $pages=new CPagination($count);
+        $pages->pageSize= Yii::app()->getModule('shop')->productsInPage;;
+        $pages->applyLimit($criteria);
+
         $products = SProducts::model()
                         ->activeOnly()
                         ->showByAdded()
                         ->findAll($criteria);
-        $this->render('view' , array('model' => $model , 'children' => $children , 'products' => $products , 'order' => $order));
+
+
+
+        $this->render('view' , array(
+            'model' => $model ,
+            'children' => $children ,
+            'products' => $products ,
+            'pages'=>$pages,
+            'order' => $order));
     }
 
     public function loadModel($id)

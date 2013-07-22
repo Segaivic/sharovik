@@ -158,7 +158,7 @@ class SProducts extends CActiveRecord implements IECartPosition
 
     public static function getLink($id){
         $model = self::model()->find(array(
-           'select' => 'id, title',
+           'select' => 'id, title, alias_url',
            'condition' => 'id = :id',
            'params' => array(':id' => $id),
         ));
@@ -218,11 +218,13 @@ class SProducts extends CActiveRecord implements IECartPosition
             else
                 $this->updated_at=date( "Y-m-d H:i:s" );
 
+            Yii::app()->runController('/shop/search/create');
             return true;
         }
         else
             return false;
     }
+
 
     protected  function afterDelete() {
         parent::afterDelete();
@@ -242,6 +244,9 @@ class SProducts extends CActiveRecord implements IECartPosition
            'condition' => 'product_id = :id',
            'params' => array(':id' => $this->id),
         ));
+
+//        Удаление из индекса
+        Yii::app()->runController('/shop/search/create');
     }
 
     public static function getTitleById($id){
@@ -268,5 +273,16 @@ class SProducts extends CActiveRecord implements IECartPosition
             ->queryAll();
 
         return $accessories;
+    }
+
+    public static function getRandomProducts($quantity){
+        $model = self::model()->find(array(
+            'select' => 'id, title, alias_url, rand() as rand',
+            'condition'=>'active = '.SProducts::STATUS_ACTIVE,
+            'limit'=> $quantity,
+            'order'=>'rand',
+        ));
+
+        return $model;
     }
 }

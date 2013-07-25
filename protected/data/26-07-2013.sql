@@ -3,7 +3,7 @@
 -- Server version:               5.5.8 - MySQL Community Server (GPL)
 -- Server OS:                    Win32
 -- HeidiSQL version:             7.0.0.4170
--- Date/time:                    2013-07-11 14:48:15
+-- Date/time:                    2013-07-26 00:14:44
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `tbl_events_reserve` (
   `description` text,
   `visited` enum('1','0') NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table comfort.tbl_events_reserve: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_events_reserve` DISABLE KEYS */;
@@ -310,9 +310,9 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_accessories` (
   PRIMARY KEY (`id`),
   KEY `product_id` (`product_id`),
   CONSTRAINT `FK_tbl_shop_accessories_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_accessories: ~26 rows (approximately)
+-- Dumping data for table comfort.tbl_shop_accessories: ~27 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_accessories` DISABLE KEYS */;
 INSERT INTO `tbl_shop_accessories` (`id`, `product_id`, `acc_id`) VALUES
 	(42, 5, 20),
@@ -340,7 +340,8 @@ INSERT INTO `tbl_shop_accessories` (`id`, `product_id`, `acc_id`) VALUES
 	(113, 38, 1),
 	(114, 38, 2),
 	(115, 38, 32),
-	(116, 38, 35);
+	(116, 38, 35),
+	(117, 33, 21);
 /*!40000 ALTER TABLE `tbl_shop_accessories` ENABLE KEYS */;
 
 
@@ -772,8 +773,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_orders_items` (
   PRIMARY KEY (`id`),
   KEY `order_id` (`order_id`),
   KEY `product_id` (`product_id`),
-  CONSTRAINT `FK_tbl_shop_orders_items_tbl_shop_orders` FOREIGN KEY (`order_id`) REFERENCES `tbl_shop_orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_tbl_shop_orders_items_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `FK_tbl_shop_orders_items_tbl_shop_orders` FOREIGN KEY (`order_id`) REFERENCES `tbl_shop_orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table comfort.tbl_shop_orders_items: ~12 rows (approximately)
@@ -824,7 +824,7 @@ INSERT INTO `tbl_shop_products` (`id`, `title`, `description`, `characters`, `pr
 	(25, 'нке', '', '', 0, '2013-03-05 14:14:35', NULL, 1, 0, '1', 'нукн', '', NULL),
 	(31, 'Джессика Альба 2', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim!</span></p>', 1800, '2013-04-29 05:13:13', '2013-05-17 04:32:50', 3, 0, '1', '', '', '31-albanochka'),
 	(32, 'Джессика Альба 3', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim.</span></p>', 1600, '2013-04-29 05:15:14', '2013-05-16 07:38:57', 3, 0, '1', '', '', NULL),
-	(33, 'Samsung Galaxy S III i9300 16Gb Black', 'GSM, 3G, смартфон, Android 4.0, вес 133 г, ШхВхТ 70.6x136.6x8.6 мм, экран 4.8", 720x1280, FM-радио, Bluetooth, NFC, Wi-Fi, GPS, ГЛОНАСС, фотокамера 8 МП, память 16 Гб,', '<p><b style="line-height: 1.45em;">Достоинства:&nbsp;</b><span style="line-height: 1.45em;">Экран,самый качественный корые я когда то видел!!!!Большое разрешение, фотографии получаются естественными,яркими!!! Процессор: шустрый,ни где не тормозит, не зависал еще ни разу!!!Аккумулятор держит очень долго, зарядил утром на 68%, продержался 2 дня!!!... Все писать не буду, выделил главное т.к все ни раз упоминалось!!!</span></p><p><b style="line-height: 1.45em;">Недостатки:&nbsp;</b><span style="line-height: 1.45em;">Пока не заметил!!!</span></p><p><b>Комментарий:&nbsp;</b>Ребята, если кто то затрудняется в выборе, то скажу,пока нет ничего лучшего, кроме Note 2!!</p><p></p>', 17680, '2013-05-07 06:23:47', '2013-05-30 06:06:27', 18, 0, '1', 'Samsung Galaxy S III i9300 16Gb Black', 'Samsung', 'samsung-galaxy-s3'),
+	(33, 'Samsung Galaxy S III i9300 16Gb Black', 'GSM, 3G, смартфон, Android 4.0, вес 133 г, ШхВхТ 70.6x136.6x8.6 мм, экран 4.8", 720x1280, FM-радио, Bluetooth, NFC, Wi-Fi, GPS, ГЛОНАСС, фотокамера 8 МП, память 16 Гб,', '<p><b style="line-height: 1.45em;">Достоинства:&nbsp;</b><span style="line-height: 1.45em;">Экран,самый качественный корые я когда то видел!!!!Большое разрешение, фотографии получаются естественными,яркими!!! Процессор: шустрый,ни где не тормозит, не зависал еще ни разу!!!Аккумулятор держит очень долго, зарядил утром на 68%, продержался 2 дня!!!... Все писать не буду, выделил главное т.к все ни раз упоминалось!!!</span></p><p><b style="line-height: 1.45em;">Недостатки:&nbsp;</b><span style="line-height: 1.45em;">Пока не заметил!!!</span></p><p><b>Комментарий:&nbsp;</b>Ребята, если кто то затрудняется в выборе, то скажу,пока нет ничего лучшего, кроме Note 2!!</p><p></p>', 17680, '2013-05-07 06:23:47', '2013-07-17 10:38:35', 18, 0, '1', 'Samsung Galaxy S III i9300 16Gb Black', 'Samsung', 'samsung-galaxy-s3'),
 	(34, 'Самсунг', '', '', 234, '2013-05-14 04:32:27', NULL, 18, 0, '1', '', '', '-samsung-galaxy-s3'),
 	(35, 'HTC ONE X', 'GSM, 3G, смартфон, Android 4.0, вес 130 г, ШхВхТ 69.9x134.36x8.9 мм, экран 4.7", 720x1280, FM-радио, Bluetooth, NFC, Wi-Fi, GPS, фотокамера 8 МП, память 32 Гб, аккумулятор ...', '<p>yr</p>', 123324, '2013-05-14 04:35:03', '2013-05-15 10:37:18', 18, 0, '1', '', '', '3578-samsung-galaxy-s3'),
 	(36, 'Ещё Уан икс', 'цуацуа', '<p>фывапвыап</p>', 234, '2013-05-14 06:34:47', '2013-05-20 09:24:10', 18, 0, '1', '', '', '36--samsung-galaxy-s3'),
@@ -930,7 +930,7 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 -- Dumping data for table comfort.tbl_users: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_users` DISABLE KEYS */;
 INSERT INTO `tbl_users` (`id`, `username`, `password`, `email`, `activkey`, `superuser`, `status`, `create_at`, `lastvisit_at`) VALUES
-	(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'webmaster@example.com', '9b94c7be573c22b9d4f7f8caccd5043d', 1, 1, '2013-02-06 10:47:38', '2013-06-13 09:41:53'),
+	(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'webmaster@example.com', '9b94c7be573c22b9d4f7f8caccd5043d', 1, 1, '2013-02-06 10:47:38', '2013-07-17 10:18:26'),
 	(2, 'sega', '81dc9bdb52d04dc20036dbd8313ed055', 'esrde@rty.rt', 'af40cbe01b5936d62d8b947c7bf9140f', 0, 1, '2013-02-12 17:06:06', '2013-02-24 16:35:43');
 /*!40000 ALTER TABLE `tbl_users` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

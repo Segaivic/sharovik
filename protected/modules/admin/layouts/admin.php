@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="/backend/assets/bootstrap-daterangepicker/daterangepicker.css" />
     <link href="/backend/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
     <link href="/backend/assets/jqvmap/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?subset=cyrillic&family=Open+Sans:400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="favicon.ico" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
     <?php $this->widget('application.extensions.fancybox.EFancyBox', array(

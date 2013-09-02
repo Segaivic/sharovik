@@ -2,7 +2,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-form',
-	'enableAjaxValidation'=>true,
+	'enableAjaxValidation'=>false,
 	'htmlOptions' => array('enctype'=>'multipart/form-data'),
 ));
 ?>
@@ -11,41 +11,51 @@
 
 	<?php echo $form->errorSummary(array($model,$profile)); ?>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'superuser'); ?>
 		<?php echo $form->dropDownList($model,'superuser',User::itemAlias('AdminStatus')); ?>
 		<?php echo $form->error($model,'superuser'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php echo $form->dropDownList($model,'status',User::itemAlias('UserStatus')); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
+    <div>
+        <?php if(!$model->isNewRecord) {
+            echo CHtml::image($model->userpic);
+            echo "<br />";
+        }
+        ?>
+        <?php echo $form->labelEx($model,'userpic'); ?>
+        <?php echo $form->fileField($model,'userpic'); ?>
+        <?php echo $form->error($model,'userpic'); ?>
+    </div>
 <?php 
 		$profileFields=$profile->getFields();
 		if ($profileFields) {
 			foreach($profileFields as $field) {
 			?>
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($profile,$field->varname); ?>
 		<?php 
 		if ($widgetEdit = $field->widgetEdit($profile)) {
@@ -64,7 +74,7 @@
 			}
 		}
 ?>
-	<div class="row buttons">
+	<div class="buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? UserModule::t('Create') : UserModule::t('Save')); ?>
 	</div>
 

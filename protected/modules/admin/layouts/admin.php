@@ -63,7 +63,7 @@
 <!-- BEGIN USER LOGIN DROPDOWN -->
 <li class="dropdown user">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <img alt="" src="/backend/assets/img/avatar1_small.jpg" />
+        <img alt="" src="<?php echo Yii::app()->getModule('user')->user()->userpic; ?>" style="width: 30px; height: 30px"/>
         <span class="username"><?php echo $userObject = Yii::app()->getModule('user')->user()->username; ?></span>
         <i class="icon-angle-down"></i>
     </a>
@@ -190,6 +190,18 @@
             </ul>
         </li>
         <?php endif; ?>
+        <?php if (Yii::app()->hasModule('slider')): ?>
+            <li class="has-sub">
+                <a href="javascript:;" class="">
+                    <i class="icon-glass"></i></i> Слайдер
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub">
+                    <li><a class="" href="/slider">Все слайды</a></li>
+                    <li><a class="" href="/slider/default/create">Добавить</a></li>
+                </ul>
+            </li>
+        <?php endif; ?>
         <li><a class="" href="/user/logout"><i class="icon-user"></i> Выйти</a></li>
     </ul>
     <!-- END SIDEBAR MENU -->
@@ -238,6 +250,16 @@
         </div>
         <!-- END PAGE HEADER-->
         <div class="row-fluid">
+            <?php
+            $this->beginWidget('zii.widgets.CPortlet', array(
+                'title'=>'Operations',
+            ));
+            $this->widget('zii.widgets.CMenu', array(
+                'items'=>$this->menu,
+                'htmlOptions'=>array('class'=>'operations'),
+            ));
+            $this->endWidget();
+            ?>
             <?php echo $content; ?>
         </div>
     </div>

@@ -80,13 +80,30 @@ class AdminController extends Controller
 		$this->performAjaxValidation(array($model,$profile));
 		if(isset($_POST['User']))
 		{
+            $uniqid = uniqid();
 			$model->attributes=$_POST['User'];
+            $img = CUploadedFile::getInstance($model,'userpic');
+            if ($img){
+                $model->userpic = '/uploads/user/'.$uniqid.CTranslit::translit($img);
+            }
 			$model->activkey=Yii::app()->controller->module->encrypting(microtime().$model->password);
 			$profile->attributes=$_POST['Profile'];
 			$profile->user_id=0;
 			if($model->validate()&&$profile->validate()) {
 				$model->password=Yii::app()->controller->module->encrypting($model->password);
+
+
 				if($model->save()) {
+                    if ($img){
+                        CImageHandler::upload($img , User::TMP_PATH.$uniqid.CTranslit::translit($img));
+                        CImageHandler::resizeAndSave(
+                            User::TMP_PATH.$uniqid.CTranslit::translit($img),
+                            $model->userpic,
+                            'width',
+                            200
+                        );
+                        CImageHandler::delete(User::TMP_PATH.$uniqid.CTranslit::translit($img));
+                    }
 					$profile->user_id=$model->id;
 					$profile->save();
 				}
@@ -107,14 +124,31 @@ class AdminController extends Controller
 	public function actionUpdate()
 	{
 		$model=$this->loadModel();
+        $oldimg = $model->userpic;
 		$profile=$model->profile;
 		$this->performAjaxValidation(array($model,$profile));
 		if(isset($_POST['User']))
 		{
+            $uniqid = uniqid();
 			$model->attributes=$_POST['User'];
+            $img = CUploadedFile::getInstance($model,'userpic');
+            if ($img){
+                $model->userpic = '/uploads/user/'.$uniqid.CTranslit::translit($img);
+            }
 			$profile->attributes=$_POST['Profile'];
 			
 			if($model->validate()&&$profile->validate()) {
+                if ($img){
+                    CImageHandler::delete($oldimg);
+                    CImageHandler::upload($img , User::TMP_PATH.$uniqid.CTranslit::translit($img));
+                    CImageHandler::resizeAndSave(
+                        User::TMP_PATH.$uniqid.CTranslit::translit($img),
+                        $model->userpic,
+                        'width',
+                        200
+                    );
+                    CImageHandler::delete(User::TMP_PATH.$uniqid.CTranslit::translit($img));
+                }
 				$old_password = User::model()->notsafe()->findByPk($model->id);
 				if ($old_password->password!=$model->password) {
 					$model->password=Yii::app()->controller->module->encrypting($model->password);

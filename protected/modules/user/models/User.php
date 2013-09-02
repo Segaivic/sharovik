@@ -5,6 +5,7 @@ class User extends CActiveRecord
 	const STATUS_NOACTIVE=0;
 	const STATUS_ACTIVE=1;
 	const STATUS_BANNED=-1;
+    const TMP_PATH = '/uploads/tmp/';
 	
 	//TODO: Delete for next version (backward compatibility)
 	const STATUS_BANED=-1;
@@ -69,6 +70,7 @@ class User extends CActiveRecord
 			array('username', 'unique', 'message' => UserModule::t("This user's name already exists.")),
 			array('username', 'match', 'pattern' => '/^[A-Za-z0-9_]+$/u','message' => UserModule::t("Incorrect symbols (A-z0-9).")),
 			array('email', 'unique', 'message' => UserModule::t("This user's email address already exists.")),
+            array('userpic' , 'file', 'types'=>'jpg, jpeg, gif, png' , 'allowEmpty' => true),
 		):array()));
 	}
 
@@ -98,10 +100,10 @@ class User extends CActiveRecord
 			'activkey' => UserModule::t("activation key"),
 			'createtime' => UserModule::t("Registration date"),
 			'create_at' => UserModule::t("Registration date"),
-			
 			'lastvisit_at' => UserModule::t("Last visit"),
 			'superuser' => UserModule::t("Superuser"),
 			'status' => UserModule::t("Status"),
+            'userpic' => 'Аватар',
 		);
 	}
 	
@@ -121,7 +123,7 @@ class User extends CActiveRecord
                 'condition'=>'superuser=1',
             ),
             'notsafe'=>array(
-            	'select' => 'id, username, password, email, activkey, create_at, lastvisit_at, superuser, status',
+            	'select' => 'id, username, password, email, activkey, create_at, lastvisit_at, superuser, status, userpic',
             ),
         );
     }
@@ -130,7 +132,7 @@ class User extends CActiveRecord
     {
         return CMap::mergeArray(Yii::app()->getModule('user')->defaultScope,array(
             'alias'=>'user',
-            'select' => 'user.id, user.username, user.email, user.create_at, user.lastvisit_at, user.superuser, user.status',
+            'select' => 'user.id, user.username, user.email, user.create_at, user.lastvisit_at, user.superuser, user.status, user.userpic',
         ));
     }
 	

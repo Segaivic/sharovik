@@ -105,7 +105,8 @@ class UserModule extends CWebModule
 	static private $_userByName=array();
 	static private $_admin;
 	static private $_admins;
-	
+	static private $_activeUsers;
+
 	/**
 	 * @var array
 	 * @desc Behaviors for models
@@ -214,7 +215,21 @@ class UserModule extends CWebModule
 		}
 		return self::$_admins;
 	}
-	
+
+    /**
+     * Return admins.
+     * @return array syperusers names
+     */
+    public static function getActiveUsers() {
+        if (!self::$_activeUsers) {
+            $activeUsers = User::model()->active()->findAll();
+            $return_name = array();
+            foreach ($activeUsers as $activeUser)
+                $return_name[$activeUser->id] = $activeUser->username;
+            self::$_activeUsers = ($return_name)?$return_name:array('');
+        }
+        return self::$_activeUsers;
+    }
 	/**
 	 * Send mail method
 	 */

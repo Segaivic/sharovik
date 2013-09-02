@@ -54,11 +54,20 @@ class Profile extends UActiveRecord
 					array_push($decimal,$field->varname);
 				if ($field->field_type=='INTEGER')
 					array_push($numerical,$field->varname);
-				if ($field->field_type=='VARCHAR'||$field->field_type=='TEXT') {
+				if ($field->field_type=='VARCHAR') {
 					$field_rule = array($field->varname, 'length', 'max'=>$field->field_size, 'min' => $field->field_size_min);
 					if ($field->error_message) $field_rule['message'] = UserModule::t($field->error_message);
 					array_push($rules,$field_rule);
 				}
+                if ($field->field_type=='TEXT'){
+                    $field_rule = array($field->varname,
+                        'length',
+                        'min' => $field->field_size_min);
+
+                    if ($field->error_message)
+                        $field_rule['message'] = Yii::t("UserModule.user", $field->error_message);
+                    array_push($rules,$field_rule);
+                }
 				if ($field->other_validator) {
 					if (strpos($field->other_validator,'{')===0) {
 						$validator = (array)CJavaScript::jsonDecode($field->other_validator);

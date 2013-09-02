@@ -14,6 +14,7 @@ class ProfileController extends Controller
 	 */
 	public function actionProfile()
 	{
+        $this->layout = '//layouts/news';
 		$model = $this->loadUser();
 	    $this->render('profile',array(
 	    	'model'=>$model,

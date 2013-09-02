@@ -1,17 +1,17 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               5.5.8 - MySQL Community Server (GPL)
--- Server OS:                    Win32
--- HeidiSQL version:             7.0.0.4170
--- Date/time:                    2013-07-26 00:14:44
--- --------------------------------------------------------
+# --------------------------------------------------------
+# Host:                         127.0.0.1
+# Server version:               5.5.32
+# Server OS:                    Win32
+# HeidiSQL version:             6.0.0.3603
+# Date/time:                    2013-09-02 11:18:03
+# --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Dumping structure for table comfort.tbl_categories
+# Dumping structure for table comfort.tbl_categories
 CREATE TABLE IF NOT EXISTS `tbl_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(300) DEFAULT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `tbl_categories` (
   KEY `title` (`title`(255))
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_categories: ~2 rows (approximately)
+# Dumping data for table comfort.tbl_categories: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_categories` DISABLE KEYS */;
 INSERT INTO `tbl_categories` (`id`, `title`, `is_enabled`, `is_inbloglist`) VALUES
 	(1, 'Новости компании', '1', '1'),
@@ -29,7 +29,7 @@ INSERT INTO `tbl_categories` (`id`, `title`, `is_enabled`, `is_inbloglist`) VALU
 /*!40000 ALTER TABLE `tbl_categories` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_events_events
+# Dumping structure for table comfort.tbl_events_events
 CREATE TABLE IF NOT EXISTS `tbl_events_events` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(150) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `tbl_events_events` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_events_events: ~3 rows (approximately)
+# Dumping data for table comfort.tbl_events_events: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_events_events` DISABLE KEYS */;
 INSERT INTO `tbl_events_events` (`id`, `title`, `date_start`, `date_end`, `description`, `color`) VALUES
 	(1, 'Бухаем в Тамбове', '2013-06-11', '2013-06-11', '<p>Подскажите куда можно сходить/съездить в Тамбове на новогодних выходных. Хочу спланировать отдых с парнем. Может есть какие-нибудь лыжные базы, может горки - где можно поучиться на горных лыжах или сноуборде. есть ли катки? и где лучше всего кататься(хороший лед и не битком народу). Чем можно еще заняться в тамбове итересным? Видела есть улица Ипподромная? Можно ли покататься на лошадях?? ))<p><img src="/uploads/admin/index//b96d4e6c273bfc478cdfe4e70104b734.jpg" style="width: 231.0528967254408px; height: 208px; float: right; margin: 0px 0px 10px 10px;" alt=""></p></p><p>tyurturturtutyu</p><p></p><p></p><p></p>\r\n', '#3aa838'),
@@ -49,7 +49,7 @@ INSERT INTO `tbl_events_events` (`id`, `title`, `date_start`, `date_end`, `descr
 /*!40000 ALTER TABLE `tbl_events_events` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_events_reserve
+# Dumping structure for table comfort.tbl_events_reserve
 CREATE TABLE IF NOT EXISTS `tbl_events_reserve` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `tbl_events_reserve` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_events_reserve: ~3 rows (approximately)
+# Dumping data for table comfort.tbl_events_reserve: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_events_reserve` DISABLE KEYS */;
 INSERT INTO `tbl_events_reserve` (`id`, `name`, `contacts`, `date_start`, `date_end`, `description`, `visited`) VALUES
 	(4, 'Шпак Антон Семёнович', 'ewf', '2013-07-19', '2013-07-16', 'fergferg', '1'),
@@ -70,7 +70,7 @@ INSERT INTO `tbl_events_reserve` (`id`, `name`, `contacts`, `date_start`, `date_
 /*!40000 ALTER TABLE `tbl_events_reserve` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_gallery
+# Dumping structure for table comfort.tbl_gallery
 CREATE TABLE IF NOT EXISTS `tbl_gallery` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `thumbnail` varchar(500) DEFAULT NULL,
@@ -80,14 +80,14 @@ CREATE TABLE IF NOT EXISTS `tbl_gallery` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_gallery: ~1 rows (approximately)
+# Dumping data for table comfort.tbl_gallery: ~1 rows (approximately)
 /*!40000 ALTER TABLE `tbl_gallery` DISABLE KEYS */;
 INSERT INTO `tbl_gallery` (`id`, `thumbnail`, `title`, `is_published`, `created`) VALUES
 	(17, '/uploads/gallery/title/51dbb132a738b07-06_present-ronaldo_press_15.jpg', 'ХЗ', '1', '2013-07-09 12:43:46');
 /*!40000 ALTER TABLE `tbl_gallery` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_galleryphotos
+# Dumping structure for table comfort.tbl_galleryphotos
 CREATE TABLE IF NOT EXISTS `tbl_galleryphotos` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` char(255) DEFAULT NULL,
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `tbl_galleryphotos` (
   KEY `gallery_id` (`gallery_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=186 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_galleryphotos: ~10 rows (approximately)
+# Dumping data for table comfort.tbl_galleryphotos: ~10 rows (approximately)
 /*!40000 ALTER TABLE `tbl_galleryphotos` DISABLE KEYS */;
 INSERT INTO `tbl_galleryphotos` (`id`, `title`, `thumb`, `image`, `gallery_id`, `created`) VALUES
 	(176, NULL, '/uploads/gallery/thumb/51dbb149f1da801043_lakemapourikanewzealand_1280x800.jpg', '/uploads/gallery/original/51dbb149f1da801043_lakemapourikanewzealand_1280x800.jpg', 17, '2013-07-09 12:44:26'),
@@ -115,21 +115,21 @@ INSERT INTO `tbl_galleryphotos` (`id`, `title`, `thumb`, `image`, `gallery_id`, 
 /*!40000 ALTER TABLE `tbl_galleryphotos` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_lunch_main
+# Dumping structure for table comfort.tbl_lunch_main
 CREATE TABLE IF NOT EXISTS `tbl_lunch_main` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `description` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_lunch_main: ~1 rows (approximately)
+# Dumping data for table comfort.tbl_lunch_main: ~1 rows (approximately)
 /*!40000 ALTER TABLE `tbl_lunch_main` DISABLE KEYS */;
 INSERT INTO `tbl_lunch_main` (`id`, `description`) VALUES
 	(1, 'Бизнес-ланч - это комплексный обед деловых людей в середине рабочего дня, когда можно за доступную цену быстро и вкусно поесть.');
 /*!40000 ALTER TABLE `tbl_lunch_main` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_lunch_products
+# Dumping structure for table comfort.tbl_lunch_products
 CREATE TABLE IF NOT EXISTS `tbl_lunch_products` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(1000) NOT NULL,
@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `tbl_lunch_products` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_lunch_products: ~5 rows (approximately)
+# Dumping data for table comfort.tbl_lunch_products: ~5 rows (approximately)
 /*!40000 ALTER TABLE `tbl_lunch_products` DISABLE KEYS */;
 INSERT INTO `tbl_lunch_products` (`id`, `title`, `description`, `weight`, `price`) VALUES
 	(1, 'Суп гороховый!', '400г свинины, 300г картофеля (4-5 шт.), 200г лука (2 шт. среднего размера), 150г моркови (2 шт. среднего размера), 250г.', '300', 100),
@@ -150,7 +150,7 @@ INSERT INTO `tbl_lunch_products` (`id`, `title`, `description`, `weight`, `price
 /*!40000 ALTER TABLE `tbl_lunch_products` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_menu
+# Dumping structure for table comfort.tbl_menu
 CREATE TABLE IF NOT EXISTS `tbl_menu` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `lft` int(10) unsigned NOT NULL,
@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `tbl_menu` (
   KEY `root` (`root`)
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_menu: ~8 rows (approximately)
+# Dumping data for table comfort.tbl_menu: ~8 rows (approximately)
 /*!40000 ALTER TABLE `tbl_menu` DISABLE KEYS */;
 INSERT INTO `tbl_menu` (`id`, `lft`, `rgt`, `access`, `root`, `level`, `title`, `link`) VALUES
 	(1, 1, 16, '3', 1, 1, 'Корень', '#'),
@@ -181,14 +181,14 @@ INSERT INTO `tbl_menu` (`id`, `lft`, `rgt`, `access`, `root`, `level`, `title`, 
 /*!40000 ALTER TABLE `tbl_menu` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_migration
+# Dumping structure for table comfort.tbl_migration
 CREATE TABLE IF NOT EXISTS `tbl_migration` (
   `version` varchar(255) NOT NULL,
   `apply_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_migration: ~3 rows (approximately)
+# Dumping data for table comfort.tbl_migration: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_migration` DISABLE KEYS */;
 INSERT INTO `tbl_migration` (`version`, `apply_time`) VALUES
 	('m000000_000000_base', 1360126042),
@@ -197,7 +197,7 @@ INSERT INTO `tbl_migration` (`version`, `apply_time`) VALUES
 /*!40000 ALTER TABLE `tbl_migration` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_news
+# Dumping structure for table comfort.tbl_news
 CREATE TABLE IF NOT EXISTS `tbl_news` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT '',
@@ -215,24 +215,14 @@ CREATE TABLE IF NOT EXISTS `tbl_news` (
   `alias_url` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `title` (`title`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_news: ~17 rows (approximately)
+# Dumping data for table comfort.tbl_news: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_news` DISABLE KEYS */;
-INSERT INTO `tbl_news` (`id`, `title`, `alias`, `introtext`, `fulltext`, `is_published`, `is_onfrontpage`, `user_id`, `catid`, `created`, `modified`, `metakey`, `metadesc`, `alias_url`) VALUES
-	(1, 'Заголовок 1', 'test', '<img alt="" src="/images/demo/demonews.jpg" style="padding: 4px; border: 1px solid rgb(206, 205, 205); margin: 0px 10px 8px 0px; float: left;" width:150px;=""><span style="line-height: 1.45em;">Сочетание киноа с творогом и фруктами бесподобно. Полезное и вкусное блюдо подойдет и детям и взрослым. Этот вкусный десерт посвящаю всем женщинам связавшим свою жизнь с армией и боевым подругам. Так случилось, что сегодня год с момента моей регистрации на сайте, угощайтесь! rs</span><p><img src="/uploads/news//064cedee0bbd42b05cb2511018f91a3b.jpg" alt="" style="cursor: nw-resize;"><br></p>\r\n<div class="clear"></div>\r\n', '<pre>&lt;p&gt;&lt;?php  echo "Salut" ?&gt;&lt;/p&gt;r</pre><p><img src="/uploads/news//0e68cc03000a73c194a09fa6efa308ff.jpg" style="width: 289px; height: 289px;"></p><br>', '1', '1', 1, 1, '2012-12-12 12:12:12', '2013-06-25 09:53:25', '', '', '1-zagolovok'),
-	(2, 'Заголовок 2', 'test2', '<p><span>Делать этот&nbsp;</span>плов<span>&nbsp;надо на природе, на даче или где имеется «очаг», так называют&nbsp;</span>узбеки<span>&nbsp;кухню, приспособленную для готовки&nbsp;</span>плова<span>. Но этот плов можно готовить и в домашних условиях, лучше на газе, но и на электричестве он так же не становится хуже.</span><br><span>Вы просто соотносите технологию варения в <span style="color: #0099ff;"><a title="казаны и печи под казаны" href="http://metallpark96.ru/shop/16/kazany-chugunnaya-i-alyuminievaya-posuda?sort=title-asc"><span style="color: #0099ff;">казане</span></a></span> на открытом огне к домашним источникам приготовления пищи. Какая разница, каким образом увеличить или же уменьшить огонь. Под казаном надо убрать или добавить дровишки, а на кухне легким поворотом регулятора пламени газа или силы тока делается то же - верно же ?!!!!</span></p>', '<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://lh5.googleusercontent.com/-UJNW5bjCt6c/UC3K0DlvOoI/AAAAAAAAAwM/BlvgBy0KBk8/s800/26_04_2011_9.jpg" alt="" width="451" height="338"></p>\n<p>Для начала, обмойте мясо проточной водой и высушите его салфеточным полотенцем. Кто его знает, как и кто его лапал до вас, а влага в мариновке не нужна, абсолютно. Если мясо купите на базаре рано утром, замариновав по этому рецепту сразу, то вечером можете смело уже вертеть его на мангале!</p>\n<p>С мясом мы разобрались, кстати, еще вкуснее будет барашек, и я не раз в этом убеждался и, всегда, буду это утверждать. Довелось как-то готовить шашлык для чисто турецкого общества, мясо они купили мне сами. Каково было мо. удивление, что они выхватывали куски мяса чуть ли не изо рта даже у других! Баранина была маринована именно, по этому рецепту! Поэтому, дорогих и уважаемых гостей я, все-таки, стараюсь угощать свежей бараниной!</p>\n<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://lh3.googleusercontent.com/-Zu6nz6Uo0Xc/UC3KyGvBGJI/AAAAAAAAAvg/1DsgGXbisr4/s800/26_04_2011_10.jpg" alt="" width="476" height="357"></p>\n<p>Таким методом, разрезаем мясо на поперечные шайбы по 3-4 см. шириной, потом на одинаковые кусочки, удаляя планку и сухожилия. Сильно не увлекайтесь удалением сала, это придаст некую сочность. После хорошей тренировки у вас может получиться также как у меня, где каждая полочка с мясом выходит с разницей от двух- до пяти граммов!!! При нежирной баранине рекомендуют надевать между мясом еще и курдючный жир. Оставим эту тему для любителей баранины.</p>\n<p>Теперь ингредиенты для мариновки и весь секрет моего блюда. Берем с расчета, скажем так, на 3-4 килограмма. Главная система для мариновки мяса не в том, какие ингредиенты туда положить, очень важно даже - в какой последовательности!</p>\n<p>1. Соль (примерно 4-5 ч.л.). Вкусы, скажу сразу, у всех разные, я лично ничего на столе не досаливаю, даже яйца или помидоры никогда не солю. Два химических состава, натрий и хлор, составляющие соль, хорошего для организма ничего не дают, а косточки до артрозов подпортят. Не будем говорить о том, что соль просто необходима, без нее никак нельзя и т. д. А вот недосоленный шашлык будет очень некстати, поэтому его нужно хорошо и правильно посолить.</p>\n<p>2. Перец черный и, особо подчеркну, КРУПНО молотый, как на картинке. Никакой «пыли» из перечницы! А еще лучше, раздавить горошины плоскостью ножа и потом, порезать немного острием. Когда Вы будете мясо жевать, то эти крупинки будут давать Вам приятные вкусовые ощущения. Сколько? 15 – 20 горошин!!! Хотите больше, на любителя! Кстати, черный перец очень полезен для организма!!! Вам знакома водка с перцем от простуды? Так вот, выздоровительную реакцию дает, в первую очередь, не водка, а сам черный перец!</p>\n<p>3. Кориандр. Она же и – кинза. Думаю, знакомо Вам это название. Опять же вопрос – сколько? Считаю, что тоже 15-20 горошин будет достаточно. Их нужно растолочь в ступе, сначала слегка прожарив. Может уже продаваться и молотый. Но, ни в коем случае, может быть я, и повторюсь, перебарщивать с приправами – НЕЛЬЗЯ! Иначе настоящего вкуса мяса не получите. Если кориандр уже молотый: чуть больше половины ч.л. А точнее будет как на фотографии. Я видел, как маринуют шашлык с зеленой кинзой, но чтобы такое вам посоветовать, необходимо самому на этом проверить. Не пробовал – не знаю, хотя обязательно, как только появится возможность, попробую так замариновать.</p>\n<p>4. Базилик. У меня он в баночке, сухой. Продается почти во всех магазинах. Берите столько же сколько и молотого кориандра. В чайно-ложечном размере это 1/2 , можно чуть больше! Эта трава не имеет такого резкого и острого вкуса.</p>\n<p>5. Тимьян. Он же Чабрец. Одна из азиатских приправ, от которого применяется зелень тимьяна в засушенном виде. В небольших количествах хорошо дополняет овощные и мясные блюда, а также различные салаты. Использование тимьяна восходит к древней Греции, где он символизировал смелость. Римские солдаты купались в воде, настоянной на тимьяне, чтобы набраться сил, энергии и смелости. В Средних веках девушки вышивали веточку тимьяна на шарфах рыцарей для отваги. Сколько? На килограмм – одну, две щепотки, перетирая слегка пальцами.</p>\n<p>6. Зира, она же Зра, она же Кумин. Не спутайте с тмином или укропом. Такие вещи в шашлык не идут вообще. Ищите в магазинах, у друзей и вам это окупится! В магазинах Германии я его не видел, а вот в русских магазинах есть точно! Количество? Очень специфическая приправа, будет достаточно чуть меньше половины ч.л. Зира, очень специфическая на вкус, поэтому будьте осторожны в ее количестве. Зира очень похожа на укроп, не спутайте!</p>\n<p>7. Лавровый лист, пару штук. Пусть он там даже разломается на мелкие кусочки при перемешивании. Когда будете надевать мясо на шампуры, заметив его, просто уберите в сторону. Его не кушают!!!</p>\n<p>8. Красный перец, паприка. Молотый, сладкий. Можно чайную ложку без «горки». Он даст немного нужный аромат и красивый цвет при жарке. Хотите добавить остроту? Один зубок раздавленного чеснока, добавьте острый, стручковый перец, но я предупреждаю, что вкус мяса может сильно перебиться, я думаю, что вам это не надо, ведь вы хотели настоящий шашлык, не так ли?</p>\n<p>9. Лук репчатый. Готовим двумя способами: луковицы, что помельче – в мясо, покрупнее луковицы – на закуску. Сначала режем крупные луковицы и только кольцами. Кольца нужно отделить друг от друга. Перебираем аккуратненько и отдельно в дозу складываем колечки, а все остальное перемешиваем с мясом. Закусывайте шашлык кольцами! А не какими-нибудь отходами или хвостиками, нарезанными, как попало. Эстетическая культура и аккуратность должна присутствовать в первую очередь! Примерно 5-6 луковиц хватит. Как пишут некоторые, что лука 1:1, мне кажется, будет много, просто режьте правильно, чтоб он сок отдал. Для удобства, вторым способом, можно лук пропустить через мясорубку, а потом отжать полученную массу через марлю. Этим я и пользуюсь, очень удобно и не нужно возиться с отходами от лука. Еще проще пропустить через соковыжималку, будет практичней, но хлопот с мытьем аппарата будет больше. На следующий день кольца лука можно сбрызнуть уксусом, разведенным с водой и посыпать красным или черным перцем, кому как нравится!</p>\n<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://lh4.googleusercontent.com/-f2rh7mXPDzQ/UC3KyTcFPYI/AAAAAAAAAvk/AcDBhMRS1k0/s800/26_04_2011_13.jpg" alt=""></p>\n<p>10. Масло подсолнечное, не спутайте с оливковым маслом, 5-6 столовых ложек. Да-да, Вы, абсолютно не ослышались, именно подсолнечное масло! Представьте сами, что Вы бросили мясо на сковородку, без масла. И, какой бы непригораемой сковородка она у вас не была, любое мясо просто начнет гореть. Вот это и получается на картинках у других шашлычников, где торчат обугленные краешки, а тебе нужно их жевать, потому что выплюнуть некрасиво, да и просто неудобно. Масло добавлять после всех добавленных, перемешанных припав, именно в такой последовательности, как написано.</p>\n<p style="text-align: center;"><img src="https://lh4.googleusercontent.com/-ytqiweTOcCk/UC3KyKOG6CI/AAAAAAAAAv0/WnIOPeZXdhY/s800/26_04_2011_14.jpg" alt="" width="460" height="345"></p>\n<p>Так выглядит, кем-то, жареное, на картинке, мясо: а. маринованное без масла;<br>б. слишком мелко нарезанный лук и его весь не убрали;<br>в. это и есть то мясо, которое идет по шейному обрезку,<br>слегка розового цвета, не меняет своей формы после мариновки и не имеет настоящего, сочного вкуса. А сгорел-то как? Разве можно такое назвать шашлыком?</p>\n<p>11. И вот теперь, положив в мясо все, что написано выше, пропуская между пальцами, начинаем все хорошенько перемешивать, добавляя не менее важный и, даже скажу, эффективный продукт, это – ЛИМОН. Хорошего размера лимона хватит и половины. Только будьте осторожны, выдавливать только тогда, когда все будет уже перемешано приправами и маслом. Попадая лимон на чистое мясо, оно тут же станет «колом», как после уксуса, поэтому уксус в шашлык просто не идет.</p>\n<p>Уксусом можете полить уже жареный шашлык.</p>\n<p>12. Четверть, можно и половинку, натурального гранатового сока добавит вам еще больше комплиментов и еще надежней спрячет разгадку Вашего рецепта! Гранат, в летнее время, вряд ли вы где-то его найдете, а соками в магазине лучше пренебрегать. Многие тесты показывают, что гранат там даже рядом не лежал. Так что, оставим ваш эксперимент до глубокой осени.</p>\n<p>Все это тщательно перемешиваем и оставляем плотно накрытым в кастрюле, придавив сверху подходящим, примерно, по диаметру тарелкой. Сверху поставьте что-нибудь тяжелое и так оставляем до завтра. Хотя, как я упоминал выше, если мясо свежее, то за весь день оно тоже промаринуется. Утром все перемешайте, наслаждаясь теперь запахом, который будет уже исходить от мяса. Можете даже лизнуть его или откусить, страшного теперь в этом мясе уже ничего нет.</p>\n<p>А вот так должно выглядеть свежее, мягкое, ядреное, замаринованное мясо. Его можно сразу отличить от нехорошего мяса. Вывод: дружите с мясником, хотя бы, узнайте, в какие дни у него происходит забой. Исключительный случай, если вы сами этим занимаетесь. Уделю внимание теперь еще и мангалу. Он тоже должен соответствовать кое-каким параметрам. Лучше всего иметь железный, а еще лучше с нержавеющей стали, чем толще будут его стенки, тем лучше. Он будет лучше сохранять жар и прожаривать крайние кусочки.</p>\n<p>И не надо пытать себя голодом, делая шашлык на кирпичах или где-то на висячих цепях.</p>\n<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://lh6.googleusercontent.com/-Ilzq092T42U/UC3Ky70tCHI/AAAAAAAAAv8/yCcSr49ftyM/s800/26_04_2011_16.jpg" alt="" width="449" height="337"></p>\n<p>Мой мангал выглядит так: длина – 60 см., высота 15 (от решетки) и ширина 22 см. Главная ошибка тех, кто делает мангалы: решетка не должна иметь большое количество дыр. Пусть лучше четверть дна мангала будет вовсе только из решетки, остальное цельное железо. Вы увидите, как мясо будет просто румяниться, и прожариваться на всю глубину. А главное, оно не будет вспыхивать под пламенем огня, где мясо сразу примет закопченный цвет и потеряет, всеми нам необходимый, вкус. Хотите кушать сажу??? Я – нет!!! Копчение – это совсем другая тема и в этом деле она просто будет не уместна.</p>\n<p>Теперь, когда уже всё позади и мясо съедено, могу с уверенностью сказать, что тест он прошел не на все 100% и есть теперь свои недостатки: по краю бездырочного дна, вдоль, я проделал отверстия, через пять сантиметров и теперь все отлично! Да, не было еще заслонки для поддувала, поэтому приходилось убирать мясо с того места где решетка, мой сварщик сказал, что поправит это дело.</p>\n<p>Также, не буду заострять внимание на том, что мясо должно жариться на хорошем жару все время, поворачивая и, ни в коем случае, не должно обдаваться языками пламени. Пусть угли хорошенько прогорят, обмахать пепел, и только потом делать самое прекрасное в этом искусстве – жарить шашлык! Это должен знать каждый, уважающий себя, шашлычник!</p>\n<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://lh5.googleusercontent.com/-CtOM4x7LzBo/UC3KzcP-zWI/AAAAAAAAAvw/C3Gy14P9z6Q/s800/26_04_2011_17.jpg" alt="" width="441" height="331"></p>\n<p><br>На счет баранины: будьте особо внимательны! Если Вы его пережарите, мясо превратится в сухие и черствые шарики. Хорошее, свежее мясо готовится быстро, достаточно каких-то пару минут. Особенно женщинам нужно усвоить одну истину, т.к. они часто путают сок из жареного мяса с кровью, поэтому просят поджарить еще. Хотя мясо уже вполне готово.</p>\n<p>А еще открою всем свою традицию. Когда разгорятся угли, я всегда сначала жарю только одну палочку. За успех мероприятия налью бокал хорошего красного вина и оценю качество будущего шашлыка. Дам попробовать гостям, пусть хоть и не всем, раздразнив их до предела. А уж потом пошло – поехало!</p>\n<p>У меня, лично, были случаи, что близкие друзья, один даже мясник по образованию, теряли дар речи во время еды. А после 5-6 палочек выдохнув, сказал, что такого шашлыка он еще не ел! Теперь, кстати, маринует только так!</p>\n<p>Не надо делать шампуры метровые. Пока, кушая, доберетесь до последнего кусочка, он будет уже холодным. Во-вторых, махая за столом «шпагой», приговаривая какой вкусный шашлык, можно хорошему другу выколоть глаз. А как прекрасно есть шашлык именно с шампура, когда он еще горячий. В этом случае я пользуюсь своими, короткими, общая длина 37 см, шампурами. Если у вас их всего 20 штук, значит, у вас нет друзей, и вы не можете кого-то позвать в гости. Мясо должно быть надето на шампуры до последнего кусочка. Или вы делаете так: –Эй, Вован, давай, доедай, шампур давай, мне Кольке надо пожарить!</p>\n<p>У меня их штук 90–100, не ржавеют, кушать не просят, если только чтоб на них мясо надели, и на всех хватит. А на природу беру все мясо уже надетое и только на шампурах. В специальной емкости и от всяких насекомых спрятано. Маринованное мясо надеваю на шампуры только сам и только дома. Этой работой своих дам я не утруждаю, уж если взялся за дело, то и доведу его до конца. Не хочу обижать наш милый и прекрасный пол, но мясо не должно прокручиваться на шампурах или свисать до самых углей.</p>\n<p>Что касается размера палочек, то во время еды, лучше ведь, взять другую, свеженькую, горячую палочку, поэтому я насаживаю по 5-6 кусочков. Для милых дам бывает достаточно и один шампур, она бы и второй хотела бы попробовать, но при огромных шампурах она боится, что вдруг не справится. При моих размерах можно спокойно регулировать количеством съеденного шашлыка. Мы ведь не в каменном веке у крутящегося мамонта или на соревновании: «Кто больше съест!» Хотя, при хорошем шашлыке, любая мысль о диете просто пропадает! И уж два – три шампурчика, ваша дамочка может съесть всегда с удовольствием!</p>\n<p>Опять же случай из жизни. День затянулся всякими делами, был поздний вечер, сауна и, соответственно, шашлычок. Одна дама из родственного круга, уж очень возмутилась, типа, на ночь, глядя и такое блюдо!? С юности знала правила питания, присматривала за своей фигуркой, а сама, между прочим, три палочки и проглотила, да еще и кружку пива наверх!!!…</p>\n<p>Последнее условие и немаловажное: гостей всегда сажайте за стол, пусть они пропустят одну рюмку с салатами. Никакой ходьбы вокруг мангала, все должны сидеть за столом! Пусть втягивают ноздрями, что Вы там готовите. Ваше место только у огня!!! Вот тут Вы и начинайте подавать им Ваш шашлычок!</p>\n<p>Шашлык необходимо есть только горячим! И ещ., если угощаете шашлыком, пусть это будет только шашлык. Что-то из закуски, типа: соленые огурцы, помидоры, патиссоны. Сладкий перец, оливки черные, лук, темный хлеб и, конечно – хорошая водочка! Никаких мантов и пирогов быть не должно, ведь Вы угощаете только ШАШЛЫКОМ!</p>\n<p>Не знаю, куда потом Вас будут целовать за это, но первым шашлычником на деревне Вы точно будете! Вот так выглядит первый шампур, скворчащий, поджаривающийся и, не сгорая на жарком огне. А сок, какой сок бежит, Вы только посмотрите! Если он капнет на огонь, то эта капля сразу вспыхнет огнем, а при дне мангала с наименьшей вентиляцией, этого не произойдет.</p>\n<p>Ниже вы увидите, что все партии прожаренного мной шашлыка у меня выглядят примерно одинаково, так что и у вас получится, я в этом уверен!</p>\n<p>А вот она первая партия, народ ждет, все налито, только подавай!</p>\n<p>Источник:&nbsp;<a href="http://www.shashlik.spb.ru/">http://www.shashlik.spb.ru</a></p>', '1', '1', 1, 1, '0000-00-00 00:00:00', '2013-04-19 04:56:28', 'вап', 'енг', 'hz'),
-	(3, 'Заголовок 3', 'test2', '<p><span>Делать этот&nbsp;</span>плов<span>&nbsp;надо на природе, на даче или где имеется &laquo;очаг&raquo;, так называют&nbsp;</span>узбеки<span>&nbsp;кухню, приспособленную для готовки&nbsp;</span>плова<span>. Но этот плов можно готовить и в домашних условиях, лучше на газе, но и на электричестве он так же не становится хуже.</span><br /><span>Вы просто соотносите технологию варения в <span style="color: #0099ff;"><a title="казаны и печи под казаны" href="http://metallpark96.ru/shop/16/kazany-chugunnaya-i-alyuminievaya-posuda?sort=title-asc"><span style="color: #0099ff;">казане</span></a></span> на открытом огне к домашним источникам приготовления пищи. Какая разница, каким образом увеличить или же уменьшить огонь. Под казаном надо убрать или добавить дровишки, а на кухне легким поворотом регулятора пламени газа или силы тока делается то же - верно же ?!</span></p>', 'Полный текст цуквыдлаодвлп', '1', '1', 1, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL, NULL, NULL),
-	(4, 'Заголовок 4', 'test2', '<p><span>Делать этот&nbsp;</span>плов<span>&nbsp;надо на природе, на даче или где имеется &laquo;очаг&raquo;, так называют&nbsp;</span>узбеки<span>&nbsp;кухню, приспособленную для готовки&nbsp;</span>плова<span>. Но этот плов можно готовить и в домашних условиях, лучше на газе, но и на электричестве он так же не становится хуже.</span><br /><span>Вы просто соотносите технологию варения в <span style="color: #0099ff;"><a title="казаны и печи под казаны" href="http://metallpark96.ru/shop/16/kazany-chugunnaya-i-alyuminievaya-posuda?sort=title-asc"><span style="color: #0099ff;">казане</span></a></span> на открытом огне к домашним источникам приготовления пищи. Какая разница, каким образом увеличить или же уменьшить огонь. Под казаном надо убрать или добавить дровишки, а на кухне легким поворотом регулятора пламени газа или силы тока делается то же - верно же ?!</span></p>', 'Полный текст цуквыдлаодвлп', '1', '1', 1, 1, '0000-00-00 00:00:00', '2013-03-26 06:42:18', '', '', ''),
-	(5, 'Заголовок 5', 'test2', '<p><span>Делать этот&nbsp;</span>плов<span>&nbsp;надо на природе, на даче или где имеется «очаг», так называют&nbsp;</span>узбеки<span>&nbsp;кухню, приспособленную для готовки&nbsp;</span>плова<span>. Но этот плов можно готовить и в домашних условиях, лучше на газе, но и на электричестве он так же не становится хуже.</span><br><span>Вы просто соотносите технологию варения в <span style="color: #0099ff;"><a title="казаны и печи под казаны" href="http://metallpark96.ru/shop/16/kazany-chugunnaya-i-alyuminievaya-posuda?sort=title-asc"><span style="color: #0099ff;">казане</span></a></span> на открытом огне к домашним источникам приготовления пищи. Какая разница, каким образом увеличить или же уменьшить огонь. Под казаном надо убрать или добавить дровишки, а на кухне легким поворотом регулятора пламени газа или силы тока делается то же - верно же ?!</span></p>', 'Полный текст цуквыдлаодвлп', '1', '1', 1, 1, '0000-00-00 00:00:00', '2013-04-02 09:22:21', '', '', '5-hz'),
-	(6, 'Заголовок 6', 'test2', '<p><span>Делать этот&nbsp;</span>плов<span>&nbsp;надо на природе, на даче или где имеется &laquo;очаг&raquo;, так называют&nbsp;</span>узбеки<span>&nbsp;кухню, приспособленную для готовки&nbsp;</span>плова<span>. Но этот плов можно готовить и в домашних условиях, лучше на газе, но и на электричестве он так же не становится хуже.</span><br /><span>Вы просто соотносите технологию варения в <span style="color: #0099ff;"><a title="казаны и печи под казаны" href="http://metallpark96.ru/shop/16/kazany-chugunnaya-i-alyuminievaya-posuda?sort=title-asc"><span style="color: #0099ff;">казане</span></a></span> на открытом огне к домашним источникам приготовления пищи. Какая разница, каким образом увеличить или же уменьшить огонь. Под казаном надо убрать или добавить дровишки, а на кухне легким поворотом регулятора пламени газа или силы тока делается то же - верно же ?!</span></p>', 'Полный текст цуквыдлаодвлп', '1', '1', 1, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL, NULL, NULL),
-	(7, 'Заголовок 7', 'test2', '<p><span>Делать этот&nbsp;</span>плов<span>&nbsp;надо на природе, на даче или где имеется &laquo;очаг&raquo;, так называют&nbsp;</span>узбеки<span>&nbsp;кухню, приспособленную для готовки&nbsp;</span>плова<span>. Но этот плов можно готовить и в домашних условиях, лучше на газе, но и на электричестве он так же не становится хуже.</span><br /><span>Вы просто соотносите технологию варения в <span style="color: #0099ff;"><a title="казаны и печи под казаны" href="http://metallpark96.ru/shop/16/kazany-chugunnaya-i-alyuminievaya-posuda?sort=title-asc"><span style="color: #0099ff;">казане</span></a></span> на открытом огне к домашним источникам приготовления пищи. Какая разница, каким образом увеличить или же уменьшить огонь. Под казаном надо убрать или добавить дровишки, а на кухне легким поворотом регулятора пламени газа или силы тока делается то же - верно же ?!</span></p>', 'Полный текст цуквыдлаодвлп', '1', '1', 1, 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL, NULL, NULL),
-	(8, 'Заголовок 8', 'test2', '<p><span>Делать этот&nbsp;</span>плов<span>&nbsp;надо на природе, на даче или где имеется «очаг», так называют&nbsp;</span>узбеки<span>&nbsp;кухню, приспособленную для готовки&nbsp;</span>плова<span>. Но этот плов можно готовить и в домашних условиях, лучше на газе, но и на электричестве он так же не становится хуже.</span><br><span>Вы просто соотносите технологию варения в <span style="color: #0099ff;"><a title="казаны и печи под казаны" href="http://metallpark96.ru/shop/16/kazany-chugunnaya-i-alyuminievaya-posuda?sort=title-asc"><span style="color: #0099ff;">казане</span></a></span> на открытом огне к домашним источникам приготовления пищи. Какая разница, каким образом увеличить или же уменьшить огонь. Под казаном надо убрать или добавить дровишки, а на кухне легким поворотом регулятора пламени газа или силы тока делается то же - верно же ?!</span></p>', 'Полный текст цуквыдлаодвлп', '1', '1', 1, 1, '0000-00-00 00:00:00', '2013-05-03 04:50:01', '', '', 'zagolovok'),
-	(9, 'Заголовок 9', 'test2', '<p><span>Делать этот&nbsp;</span>плов<span>&nbsp;надо на природе, на даче или где имеется &laquo;очаг&raquo;, так называют&nbsp;</span>узбеки<span>&nbsp;кухню, приспособленную для готовки&nbsp;</span>плова<span>. Но этот плов можно готовить и в домашних условиях, лучше на газе, но и на электричестве он так же не становится хуже.</span><br /><span>Вы просто соотносите технологию варения в <span style="color: #0099ff;"><a title="казаны и печи под казаны" href="http://metallpark96.ru/shop/16/kazany-chugunnaya-i-alyuminievaya-posuda?sort=title-asc"><span style="color: #0099ff;">казане</span></a></span> на открытом огне к домашним источникам приготовления пищи. Какая разница, каким образом увеличить или же уменьшить огонь. Под казаном надо убрать или добавить дровишки, а на кухне легким поворотом регулятора пламени газа или силы тока делается то же - верно же ?!</span></p>', 'Полный текст цуквыдлаодвлп', '1', '1', 1, 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', NULL, NULL, NULL);
 /*!40000 ALTER TABLE `tbl_news` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_page
+# Dumping structure for table comfort.tbl_page
 CREATE TABLE IF NOT EXISTS `tbl_page` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(300) NOT NULL,
@@ -246,7 +236,7 @@ CREATE TABLE IF NOT EXISTS `tbl_page` (
   KEY `title` (`title`(255))
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_page: ~4 rows (approximately)
+# Dumping data for table comfort.tbl_page: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tbl_page` DISABLE KEYS */;
 INSERT INTO `tbl_page` (`id`, `title`, `content`, `metakey`, `metadesc`, `updated_at`, `is_published`, `alias_url`) VALUES
 	(1, 'О компании', '<p>Текст о компании</p>', '', '', '2013-02-11 10:05:05', '1', 'about'),
@@ -256,24 +246,24 @@ INSERT INTO `tbl_page` (`id`, `title`, `content`, `metakey`, `metadesc`, `update
 /*!40000 ALTER TABLE `tbl_page` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_profiles
+# Dumping structure for table comfort.tbl_profiles
 CREATE TABLE IF NOT EXISTS `tbl_profiles` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
+  `aboutme` text NOT NULL,
   PRIMARY KEY (`user_id`),
   CONSTRAINT `user_profile_id` FOREIGN KEY (`user_id`) REFERENCES `tbl_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_profiles: ~2 rows (approximately)
+# Dumping data for table comfort.tbl_profiles: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tbl_profiles` DISABLE KEYS */;
-INSERT INTO `tbl_profiles` (`user_id`, `first_name`, `last_name`) VALUES
-	(1, 'Administrator', 'Admin'),
-	(2, '', '');
+INSERT INTO `tbl_profiles` (`user_id`, `first_name`, `last_name`, `aboutme`) VALUES
+	(1, 'Administrator', 'Admin', 'Администратор');
 /*!40000 ALTER TABLE `tbl_profiles` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_profiles_fields
+# Dumping structure for table comfort.tbl_profiles_fields
 CREATE TABLE IF NOT EXISTS `tbl_profiles_fields` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `varname` varchar(50) NOT NULL DEFAULT '',
@@ -292,17 +282,18 @@ CREATE TABLE IF NOT EXISTS `tbl_profiles_fields` (
   `position` int(3) NOT NULL DEFAULT '0',
   `visible` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_profiles_fields: ~2 rows (approximately)
+# Dumping data for table comfort.tbl_profiles_fields: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_profiles_fields` DISABLE KEYS */;
 INSERT INTO `tbl_profiles_fields` (`id`, `varname`, `title`, `field_type`, `field_size`, `field_size_min`, `required`, `match`, `range`, `error_message`, `other_validator`, `default`, `widget`, `widgetparams`, `position`, `visible`) VALUES
 	(1, 'first_name', 'First Name', 'VARCHAR', 255, 3, 2, '', '', 'Incorrect First Name (length between 3 and 50 characters).', '', '', '', '', 1, 3),
-	(2, 'last_name', 'Last Name', 'VARCHAR', 255, 3, 2, '', '', 'Incorrect Last Name (length between 3 and 50 characters).', '', '', '', '', 2, 3);
+	(2, 'last_name', 'Last Name', 'VARCHAR', 255, 3, 2, '', '', 'Incorrect Last Name (length between 3 and 50 characters).', '', '', '', '', 2, 3),
+	(5, 'aboutme', 'О пользователе', 'TEXT', 0, 10, 0, '', '', '', '', '', '', '', 3, 3);
 /*!40000 ALTER TABLE `tbl_profiles_fields` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_accessories
+# Dumping structure for table comfort.tbl_shop_accessories
 CREATE TABLE IF NOT EXISTS `tbl_shop_accessories` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `product_id` int(50) unsigned NOT NULL,
@@ -312,7 +303,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_accessories` (
   CONSTRAINT `FK_tbl_shop_accessories_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_accessories: ~27 rows (approximately)
+# Dumping data for table comfort.tbl_shop_accessories: ~27 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_accessories` DISABLE KEYS */;
 INSERT INTO `tbl_shop_accessories` (`id`, `product_id`, `acc_id`) VALUES
 	(42, 5, 20),
@@ -345,7 +336,7 @@ INSERT INTO `tbl_shop_accessories` (`id`, `product_id`, `acc_id`) VALUES
 /*!40000 ALTER TABLE `tbl_shop_accessories` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_attribute_titles
+# Dumping structure for table comfort.tbl_shop_attribute_titles
 CREATE TABLE IF NOT EXISTS `tbl_shop_attribute_titles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(300) NOT NULL,
@@ -358,7 +349,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_attribute_titles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_attribute_titles: ~5 rows (approximately)
+# Dumping data for table comfort.tbl_shop_attribute_titles: ~5 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_attribute_titles` DISABLE KEYS */;
 INSERT INTO `tbl_shop_attribute_titles` (`id`, `title`, `category_id`, `measure`, `default_value`, `type`, `in_search`, `pos`) VALUES
 	(6, 'Глубина', 14, 'См', '', 2, '1', 0),
@@ -369,7 +360,7 @@ INSERT INTO `tbl_shop_attribute_titles` (`id`, `title`, `category_id`, `measure`
 /*!40000 ALTER TABLE `tbl_shop_attribute_titles` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_attrs
+# Dumping structure for table comfort.tbl_shop_attrs
 CREATE TABLE IF NOT EXISTS `tbl_shop_attrs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(10) unsigned NOT NULL,
@@ -381,7 +372,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_attrs` (
   KEY `product_id` (`product_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_attrs: ~15 rows (approximately)
+# Dumping data for table comfort.tbl_shop_attrs: ~15 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_attrs` DISABLE KEYS */;
 INSERT INTO `tbl_shop_attrs` (`id`, `product_id`, `attribute_id`, `attr_valueid`) VALUES
 	(5, 1, 6, 1142),
@@ -402,7 +393,7 @@ INSERT INTO `tbl_shop_attrs` (`id`, `product_id`, `attribute_id`, `attr_valueid`
 /*!40000 ALTER TABLE `tbl_shop_attrs` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_attr_value
+# Dumping structure for table comfort.tbl_shop_attr_value
 CREATE TABLE IF NOT EXISTS `tbl_shop_attr_value` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `attr_id` int(10) NOT NULL,
@@ -411,7 +402,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_attr_value` (
   KEY `value` (`value`(255))
 ) ENGINE=InnoDB AUTO_INCREMENT=1151 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_attr_value: ~225 rows (approximately)
+# Dumping data for table comfort.tbl_shop_attr_value: ~225 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_attr_value` DISABLE KEYS */;
 INSERT INTO `tbl_shop_attr_value` (`id`, `attr_id`, `value`) VALUES
 	(716, 90, '280'),
@@ -642,7 +633,7 @@ INSERT INTO `tbl_shop_attr_value` (`id`, `attr_id`, `value`) VALUES
 /*!40000 ALTER TABLE `tbl_shop_attr_value` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_categories
+# Dumping structure for table comfort.tbl_shop_categories
 CREATE TABLE IF NOT EXISTS `tbl_shop_categories` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `lft` int(10) unsigned NOT NULL,
@@ -661,7 +652,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_categories` (
   KEY `level` (`level`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_categories: ~12 rows (approximately)
+# Dumping data for table comfort.tbl_shop_categories: ~12 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_categories` DISABLE KEYS */;
 INSERT INTO `tbl_shop_categories` (`id`, `lft`, `thumbnail`, `rgt`, `level`, `title`, `meta_description`, `meta_keywords`, `description`, `active`, `alias_url`) VALUES
 	(1, 1, NULL, 24, 1, 'Каталог', NULL, NULL, NULL, '1', NULL),
@@ -679,7 +670,7 @@ INSERT INTO `tbl_shop_categories` (`id`, `lft`, `thumbnail`, `rgt`, `level`, `ti
 /*!40000 ALTER TABLE `tbl_shop_categories` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_gallery
+# Dumping structure for table comfort.tbl_shop_gallery
 CREATE TABLE IF NOT EXISTS `tbl_shop_gallery` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(10) NOT NULL,
@@ -688,7 +679,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_gallery` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_gallery: ~38 rows (approximately)
+# Dumping data for table comfort.tbl_shop_gallery: ~38 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_gallery` DISABLE KEYS */;
 INSERT INTO `tbl_shop_gallery` (`id`, `product_id`, `thumbnail`, `image`) VALUES
 	(17, 17, '/uploads/shop/gallery/thumb/512cb32394847916500537.jpg', '/uploads/shop/gallery/title/512cb32394847916500537.jpg'),
@@ -732,7 +723,7 @@ INSERT INTO `tbl_shop_gallery` (`id`, `product_id`, `thumbnail`, `image`) VALUES
 /*!40000 ALTER TABLE `tbl_shop_gallery` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_orders
+# Dumping structure for table comfort.tbl_shop_orders
 CREATE TABLE IF NOT EXISTS `tbl_shop_orders` (
   `id` int(25) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
@@ -748,7 +739,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_orders` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_orders: ~8 rows (approximately)
+# Dumping data for table comfort.tbl_shop_orders: ~8 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_orders` DISABLE KEYS */;
 INSERT INTO `tbl_shop_orders` (`id`, `user_id`, `name`, `address`, `comments`, `created`, `active`, `visited`, `email`, `shipping_date`, `phone`) VALUES
 	(8, 1, '547', '5647', '', '2013-05-06 11:24:01', '1', '1', '546', '2013-05-28', NULL),
@@ -762,7 +753,7 @@ INSERT INTO `tbl_shop_orders` (`id`, `user_id`, `name`, `address`, `comments`, `
 /*!40000 ALTER TABLE `tbl_shop_orders` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_orders_items
+# Dumping structure for table comfort.tbl_shop_orders_items
 CREATE TABLE IF NOT EXISTS `tbl_shop_orders_items` (
   `id` int(25) unsigned NOT NULL AUTO_INCREMENT,
   `order_id` int(25) unsigned NOT NULL,
@@ -776,7 +767,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_orders_items` (
   CONSTRAINT `FK_tbl_shop_orders_items_tbl_shop_orders` FOREIGN KEY (`order_id`) REFERENCES `tbl_shop_orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_orders_items: ~12 rows (approximately)
+# Dumping data for table comfort.tbl_shop_orders_items: ~12 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_orders_items` DISABLE KEYS */;
 INSERT INTO `tbl_shop_orders_items` (`id`, `order_id`, `product_id`, `quantity`, `price`, `sum`) VALUES
 	(4, 8, 1, 1, 100, 100),
@@ -794,7 +785,7 @@ INSERT INTO `tbl_shop_orders_items` (`id`, `order_id`, `product_id`, `quantity`,
 /*!40000 ALTER TABLE `tbl_shop_orders_items` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_products
+# Dumping structure for table comfort.tbl_shop_products
 CREATE TABLE IF NOT EXISTS `tbl_shop_products` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -812,7 +803,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_products` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_products: ~15 rows (approximately)
+# Dumping data for table comfort.tbl_shop_products: ~15 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_products` DISABLE KEYS */;
 INSERT INTO `tbl_shop_products` (`id`, `title`, `description`, `characters`, `price`, `created_at`, `updated_at`, `category_id`, `in_stock`, `active`, `meta_description`, `meta_keywords`, `alias_url`) VALUES
 	(1, 'Товар 1', 'Описание!!!', 'Хрень какаято\r\n<div><p><p><img src="/uploads/admin/index//9ddf11e264d8ac56e9d9fdc9c4e00164.jpg" style="width: 250px; height: 250px; float: left; margin: 0px 10px 10px 0px;" alt=""></p><br></p></div>\r\n', 100, '2013-02-25 20:18:36', '2013-06-25 09:51:51', 14, 0, '1', '', '', 'tovarchik'),
@@ -833,7 +824,7 @@ INSERT INTO `tbl_shop_products` (`id`, `title`, `description`, `characters`, `pr
 /*!40000 ALTER TABLE `tbl_shop_products` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_productsimg
+# Dumping structure for table comfort.tbl_shop_productsimg
 CREATE TABLE IF NOT EXISTS `tbl_shop_productsimg` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(10) unsigned NOT NULL,
@@ -844,7 +835,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_productsimg` (
   CONSTRAINT `FK_tbl_shop_productsimg_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_productsimg: ~14 rows (approximately)
+# Dumping data for table comfort.tbl_shop_productsimg: ~14 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_productsimg` DISABLE KEYS */;
 INSERT INTO `tbl_shop_productsimg` (`id`, `product_id`, `thumbnail`, `image`) VALUES
 	(6, 19, '/uploads/shop/product/thumb/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg', '/uploads/shop/product/title/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg'),
@@ -864,7 +855,7 @@ INSERT INTO `tbl_shop_productsimg` (`id`, `product_id`, `thumbnail`, `image`) VA
 /*!40000 ALTER TABLE `tbl_shop_productsimg` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_shop_products_rating
+# Dumping structure for table comfort.tbl_shop_products_rating
 CREATE TABLE IF NOT EXISTS `tbl_shop_products_rating` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(10) unsigned NOT NULL,
@@ -874,7 +865,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_products_rating` (
   CONSTRAINT `FK_tbl_shop_products_rating_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_shop_products_rating: ~31 rows (approximately)
+# Dumping data for table comfort.tbl_shop_products_rating: ~31 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_products_rating` DISABLE KEYS */;
 INSERT INTO `tbl_shop_products_rating` (`id`, `product_id`, `rating`) VALUES
 	(1, 33, 10),
@@ -911,7 +902,7 @@ INSERT INTO `tbl_shop_products_rating` (`id`, `product_id`, `rating`) VALUES
 /*!40000 ALTER TABLE `tbl_shop_products_rating` ENABLE KEYS */;
 
 
--- Dumping structure for table comfort.tbl_users
+# Dumping structure for table comfort.tbl_users
 CREATE TABLE IF NOT EXISTS `tbl_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL DEFAULT '',
@@ -922,17 +913,17 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
   `status` int(1) NOT NULL DEFAULT '0',
   `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `lastvisit_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `userpic` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_username` (`username`),
   UNIQUE KEY `user_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
--- Dumping data for table comfort.tbl_users: ~2 rows (approximately)
+# Dumping data for table comfort.tbl_users: ~5 rows (approximately)
 /*!40000 ALTER TABLE `tbl_users` DISABLE KEYS */;
-INSERT INTO `tbl_users` (`id`, `username`, `password`, `email`, `activkey`, `superuser`, `status`, `create_at`, `lastvisit_at`) VALUES
-	(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'webmaster@example.com', '9b94c7be573c22b9d4f7f8caccd5043d', 1, 1, '2013-02-06 10:47:38', '2013-07-17 10:18:26'),
-	(2, 'sega', '81dc9bdb52d04dc20036dbd8313ed055', 'esrde@rty.rt', 'af40cbe01b5936d62d8b947c7bf9140f', 0, 1, '2013-02-12 17:06:06', '2013-02-24 16:35:43');
+INSERT INTO `tbl_users` (`id`, `username`, `password`, `email`, `activkey`, `superuser`, `status`, `create_at`, `lastvisit_at`, `userpic`) VALUES
+	(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'webmaster@example.com', '9b94c7be573c22b9d4f7f8caccd5043d', 1, 1, '2013-02-06 10:47:38', '2013-08-29 10:23:39', '/uploads/user/52241ea4d3b37cristiano_ronaldo.jpg');
 /*!40000 ALTER TABLE `tbl_users` ENABLE KEYS */;
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

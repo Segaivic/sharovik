@@ -11,7 +11,10 @@ return array(
     'language' => 'ru',
     'charset'=>'utf-8',
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array(
+        'log',
+        'debug'
+    ),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -78,6 +81,10 @@ return array(
 
 	// application components
 	'components'=>array(
+        'debug' => array(
+            'class' => 'ext.yii2-debug.Yii2Debug',
+            'enabled' => YII_DEBUG ? true : false,
+        ),
         'user'=>array(
             // enable cookie-based authentication
             'class' => 'WebUser',
@@ -135,6 +142,8 @@ return array(
 
 		'db'=>array(
                             'connectionString' => 'mysql:host=localhost;dbname=comfort',
+                            'enableProfiling' => true,
+                            'enableParamLogging' => true,
                             'emulatePrepare' => true,
                             'username' => 'root',
                             'password' => '',

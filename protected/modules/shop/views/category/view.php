@@ -84,13 +84,3 @@ $this->header = $model->title;
 
 </div>
 <?php Yii::app()->clientScript->registerScriptFile('/js/bootstrap-dropdown.js',CClientScript::POS_END) ?>
-<?php Yii::app()->clientScript->registerScriptFile('dd','$(function(){
-
-    $(".dropdown-menu li a").click(function(){
-
-      $(".btn:first-child").text($(this).text());
-      $(".btn:first-child").val($(this).text());
-
-   });
-
-});',CClientScript::POS_END) ?>

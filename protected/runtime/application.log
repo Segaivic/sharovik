@@ -765,3 +765,794 @@ Stack trace:
 REQUEST_URI=/css/shop.css
 HTTP_REFERER=http://comfort.local/user/profile
 ---
+2013/09/02 07:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "favicon.ico".' in D:\Dropbox\yii\comfort\framework\web\CController.php:483
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/menu/favi...')
+#3 D:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/menu/favicon.ico
+---
+2013/09/02 07:19:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "favicon.ico".' in D:\Dropbox\yii\comfort\framework\web\CController.php:483
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/page/favi...')
+#3 D:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/page/favicon.ico
+---
+2013/09/02 10:46:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "user/index.html".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index.html')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/user/index.html
+HTTP_REFERER=http://comfort.local/user/admin
+---
+2013/09/02 10:46:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/user/index.html
+---
+2013/09/02 10:47:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 10:48:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 10:49:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 10:49:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 10:49:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 10:53:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop
+---
+2013/09/02 10:53:18 [error] [php] Argument 3 passed to CClientScript::registerScriptFile() must be of the type array, integer given, called in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php on line 96 and defined (D:\Dropbox\yii\comfort\framework\web\CClientScript.php:642)
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CBaseController.php(95): CategoryController->renderInternal()
+#1 D:\Dropbox\yii\comfort\framework\web\CController.php(869): CategoryController->renderFile()
+#2 D:\Dropbox\yii\comfort\framework\web\CController.php(782): CategoryController->renderPartial()
+#3 D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php(70): CategoryController->render()
+#4 unknown(0): CategoryController->actionView()
+#5 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#12 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#15 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CategoryController->run()
+#16 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\Dropbox\yii\comfort\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/category/phones
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php (96)
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php (70)
+in D:\Dropbox\yii\comfort\www\index.php (13)
+2013/09/02 10:53:29 [error] [php] Argument 3 passed to CClientScript::registerScriptFile() must be of the type array, integer given, called in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php on line 96 and defined (D:\Dropbox\yii\comfort\framework\web\CClientScript.php:642)
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CBaseController.php(95): CategoryController->renderInternal()
+#1 D:\Dropbox\yii\comfort\framework\web\CController.php(869): CategoryController->renderFile()
+#2 D:\Dropbox\yii\comfort\framework\web\CController.php(782): CategoryController->renderPartial()
+#3 D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php(70): CategoryController->render()
+#4 unknown(0): CategoryController->actionView()
+#5 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#12 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#15 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CategoryController->run()
+#16 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\Dropbox\yii\comfort\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/category/hzche
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php (96)
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php (70)
+in D:\Dropbox\yii\comfort\www\index.php (13)
+2013/09/02 10:53:46 [error] [php] Argument 3 passed to CClientScript::registerScriptFile() must be of the type array, integer given, called in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php on line 96 and defined (D:\Dropbox\yii\comfort\framework\yiilite.php:6416)
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\yiilite.php(3398): CategoryController->renderInternal()
+#1 D:\Dropbox\yii\comfort\framework\yiilite.php(3822): CategoryController->renderFile()
+#2 D:\Dropbox\yii\comfort\framework\yiilite.php(3790): CategoryController->renderPartial()
+#3 D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php(70): CategoryController->render()
+#4 unknown(0): CategoryController->actionView()
+#5 D:\Dropbox\yii\comfort\framework\yiilite.php(4039): ReflectionMethod->invokeArgs()
+#6 D:\Dropbox\yii\comfort\framework\yiilite.php(4056): CInlineAction->runWithParamsInternal()
+#7 D:\Dropbox\yii\comfort\framework\yiilite.php(3570): CInlineAction->runWithParams()
+#8 D:\Dropbox\yii\comfort\framework\yiilite.php(6743): CategoryController->runAction()
+#9 D:\Dropbox\yii\comfort\framework\yiilite.php(6752): CFilterChain->run()
+#10 D:\Dropbox\yii\comfort\framework\yiilite.php(3948): CAccessControlFilter->filter()
+#11 D:\Dropbox\yii\comfort\framework\yiilite.php(6785): CategoryController->filterAccessControl()
+#12 D:\Dropbox\yii\comfort\framework\yiilite.php(6740): CInlineFilter->filter()
+#13 D:\Dropbox\yii\comfort\framework\yiilite.php(3560): CFilterChain->run()
+#14 D:\Dropbox\yii\comfort\framework\yiilite.php(3545): CategoryController->runActionWithFilters()
+#15 D:\Dropbox\yii\comfort\framework\yiilite.php(1746): CategoryController->run()
+#16 D:\Dropbox\yii\comfort\framework\yiilite.php(1666): CWebApplication->runController()
+#17 D:\Dropbox\yii\comfort\framework\yiilite.php(1191): CWebApplication->processRequest()
+#18 D:\Dropbox\yii\comfort\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/category/hzche
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php (96)
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php (70)
+in D:\Dropbox\yii\comfort\www\index.php (13)
+2013/09/02 10:53:49 [error] [php] Argument 3 passed to CClientScript::registerScriptFile() must be of the type array, integer given, called in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php on line 96 and defined (D:\Dropbox\yii\comfort\framework\yiilite.php:6416)
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\yiilite.php(3398): CategoryController->renderInternal()
+#1 D:\Dropbox\yii\comfort\framework\yiilite.php(3822): CategoryController->renderFile()
+#2 D:\Dropbox\yii\comfort\framework\yiilite.php(3790): CategoryController->renderPartial()
+#3 D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php(70): CategoryController->render()
+#4 unknown(0): CategoryController->actionView()
+#5 D:\Dropbox\yii\comfort\framework\yiilite.php(4039): ReflectionMethod->invokeArgs()
+#6 D:\Dropbox\yii\comfort\framework\yiilite.php(4056): CInlineAction->runWithParamsInternal()
+#7 D:\Dropbox\yii\comfort\framework\yiilite.php(3570): CInlineAction->runWithParams()
+#8 D:\Dropbox\yii\comfort\framework\yiilite.php(6743): CategoryController->runAction()
+#9 D:\Dropbox\yii\comfort\framework\yiilite.php(6752): CFilterChain->run()
+#10 D:\Dropbox\yii\comfort\framework\yiilite.php(3948): CAccessControlFilter->filter()
+#11 D:\Dropbox\yii\comfort\framework\yiilite.php(6785): CategoryController->filterAccessControl()
+#12 D:\Dropbox\yii\comfort\framework\yiilite.php(6740): CInlineFilter->filter()
+#13 D:\Dropbox\yii\comfort\framework\yiilite.php(3560): CFilterChain->run()
+#14 D:\Dropbox\yii\comfort\framework\yiilite.php(3545): CategoryController->runActionWithFilters()
+#15 D:\Dropbox\yii\comfort\framework\yiilite.php(1746): CategoryController->run()
+#16 D:\Dropbox\yii\comfort\framework\yiilite.php(1666): CWebApplication->runController()
+#17 D:\Dropbox\yii\comfort\framework\yiilite.php(1191): CWebApplication->processRequest()
+#18 D:\Dropbox\yii\comfort\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/category/hzche
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php (96)
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php (70)
+in D:\Dropbox\yii\comfort\www\index.php (13)
+2013/09/02 10:54:04 [error] [php] Argument 3 passed to CClientScript::registerScriptFile() must be of the type array, integer given, called in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php on line 96 and defined (D:\Dropbox\yii\comfort\framework\web\CClientScript.php:642)
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CBaseController.php(95): CategoryController->renderInternal()
+#1 D:\Dropbox\yii\comfort\framework\web\CController.php(869): CategoryController->renderFile()
+#2 D:\Dropbox\yii\comfort\framework\web\CController.php(782): CategoryController->renderPartial()
+#3 D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php(70): CategoryController->render()
+#4 unknown(0): CategoryController->actionView()
+#5 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#12 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#15 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CategoryController->run()
+#16 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\Dropbox\yii\comfort\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/category/hzche
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php (96)
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php (70)
+in D:\Dropbox\yii\comfort\www\index.php (13)
+2013/09/02 10:54:15 [error] [php] Argument 3 passed to CClientScript::registerScriptFile() must be of the type array, integer given, called in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php on line 96 and defined (D:\Dropbox\yii\comfort\framework\web\CClientScript.php:642)
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CBaseController.php(95): CategoryController->renderInternal()
+#1 D:\Dropbox\yii\comfort\framework\web\CController.php(869): CategoryController->renderFile()
+#2 D:\Dropbox\yii\comfort\framework\web\CController.php(782): CategoryController->renderPartial()
+#3 D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php(70): CategoryController->render()
+#4 unknown(0): CategoryController->actionView()
+#5 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#12 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#15 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CategoryController->run()
+#16 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\Dropbox\yii\comfort\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/category/hzche
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php (96)
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php (70)
+in D:\Dropbox\yii\comfort\www\index.php (13)
+2013/09/02 10:54:16 [error] [php] Argument 3 passed to CClientScript::registerScriptFile() must be of the type array, integer given, called in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php on line 96 and defined (D:\Dropbox\yii\comfort\framework\web\CClientScript.php:642)
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CBaseController.php(95): CategoryController->renderInternal()
+#1 D:\Dropbox\yii\comfort\framework\web\CController.php(869): CategoryController->renderFile()
+#2 D:\Dropbox\yii\comfort\framework\web\CController.php(782): CategoryController->renderPartial()
+#3 D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php(70): CategoryController->render()
+#4 unknown(0): CategoryController->actionView()
+#5 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#12 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#15 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CategoryController->run()
+#16 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\Dropbox\yii\comfort\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/category/hzche
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php (96)
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php (70)
+in D:\Dropbox\yii\comfort\www\index.php (13)
+2013/09/02 10:54:29 [error] [php] Argument 3 passed to CClientScript::registerScriptFile() must be of the type array, integer given, called in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php on line 96 and defined (D:\Dropbox\yii\comfort\framework\web\CClientScript.php:642)
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CBaseController.php(95): CategoryController->renderInternal()
+#1 D:\Dropbox\yii\comfort\framework\web\CController.php(869): CategoryController->renderFile()
+#2 D:\Dropbox\yii\comfort\framework\web\CController.php(782): CategoryController->renderPartial()
+#3 D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php(70): CategoryController->render()
+#4 unknown(0): CategoryController->actionView()
+#5 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#12 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#14 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#15 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CategoryController->run()
+#16 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\Dropbox\yii\comfort\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/shop/category/2/detskie
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\views\category\view.php (96)
+in D:\Dropbox\yii\comfort\www\protected\modules\shop\controllers\CategoryController.php (70)
+in D:\Dropbox\yii\comfort\www\index.php (13)
+2013/09/02 10:55:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/category/2/detskie
+---
+2013/09/02 10:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/product/thumb/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/pr...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/product/thumb/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg
+HTTP_REFERER=http://comfort.local/shop/category/2/detskie
+---
+2013/09/02 10:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/product/thumb/5131efbd38d8204-04-06_1557.jpg".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/pr...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/product/thumb/5131efbd38d8204-04-06_1557.jpg
+HTTP_REFERER=http://comfort.local/shop/category/2/detskie
+---
+2013/09/02 10:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/title/5135a0fb8b3c654c34e9ae4.jpg".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/ti...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/title/5135a0fb8b3c654c34e9ae4.jpg
+HTTP_REFERER=http://comfort.local/shop/category/2/detskie
+---
+2013/09/02 10:55:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/product/thumb/517a25ba43b8eTY2tnq2cWB0.jpg".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/pr...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/product/thumb/517a25ba43b8eTY2tnq2cWB0.jpg
+HTTP_REFERER=http://comfort.local/shop/category/2/detskie
+---
+2013/09/02 10:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/category/1/katalog
+---
+2013/09/02 10:55:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/category/17-kupeshka
+---
+2013/09/02 10:55:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/category/17-kupeshka?sort=price_asc
+---
+2013/09/02 10:55:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/category/17-kupeshka?sort=created_asc
+---
+2013/09/02 10:57:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/category/17-kupeshka?sort=created_asc
+---
+2013/09/02 10:57:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/about
+---
+2013/09/02 10:58:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop
+---
+2013/09/02 10:58:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/category/17-kupeshka
+---
+2013/09/02 10:58:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/gallery
+---
+2013/09/02 10:58:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/gallery/album/17/hz
+---
+2013/09/02 10:58:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop
+---
+2013/09/02 10:58:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/lunch
+---
+2013/09/02 10:59:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/index.php
+---
+2013/09/02 10:59:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/events
+---
+2013/09/02 11:00:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 11:01:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop
+---
+2013/09/02 11:01:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/about
+---
+2013/09/02 11:03:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 11:06:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/lunch
+---
+2013/09/02 11:06:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/gallery
+---
+2013/09/02 11:07:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop
+---
+2013/09/02 11:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/category/3-kupeshka
+---
+2013/09/02 11:07:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/title/5131d1de45fb9meshok.jpg".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/ti...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/title/5131d1de45fb9meshok.jpg
+HTTP_REFERER=http://comfort.local/shop/category/3-kupeshka
+---
+2013/09/02 11:07:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/product/thumb/5134650feb1538d31b779e3dc27748fbab31df16cef06.png".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/pr...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/product/thumb/5134650feb1538d31b779e3dc27748fbab31df16cef06.png
+HTTP_REFERER=http://comfort.local/shop/category/3-kupeshka
+---
+2013/09/02 11:07:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop/product/32/dzhessika-alba-3
+---
+2013/09/02 11:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/product/thumb/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/pr...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/product/thumb/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg
+HTTP_REFERER=http://comfort.local/shop/product/32/dzhessika-alba-3
+---
+2013/09/02 11:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/product/thumb/5135a88a842beTravel.png".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/pr...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/product/thumb/5135a88a842beTravel.png
+HTTP_REFERER=http://comfort.local/shop/product/32/dzhessika-alba-3
+---
+2013/09/02 11:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/product/thumb/5131efbd38d8204-04-06_1557.jpg".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/pr...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/product/thumb/5131efbd38d8204-04-06_1557.jpg
+HTTP_REFERER=http://comfort.local/shop/product/32/dzhessika-alba-3
+---
+2013/09/02 11:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "uploads/shop/product/thumb/5134650feb1538d31b779e3dc27748fbab31df16cef06.png".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/shop/pr...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/shop/product/thumb/5134650feb1538d31b779e3dc27748fbab31df16cef06.png
+HTTP_REFERER=http://comfort.local/shop/product/32/dzhessika-alba-3
+---
+2013/09/02 11:08:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop
+---
+2013/09/02 11:08:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/events
+---
+2013/09/02 11:12:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 11:13:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop
+---
+2013/09/02 11:14:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 11:14:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\yiilite.php:1750
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\yiilite.php(1666): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\yiilite.php(1191): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/shop
+---
+2013/09/02 11:14:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\yiilite.php:1750
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\yiilite.php(1666): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\yiilite.php(1191): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/about
+---
+2013/09/02 11:14:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\yiilite.php:1750
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\yiilite.php(1666): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\yiilite.php(1191): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/lunch
+---
+2013/09/02 11:15:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/lunch
+---
+2013/09/02 11:15:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/gallery
+---
+2013/09/02 11:15:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/02 11:51:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "search/create".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('search/create')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/search/create
+---
+2013/09/02 11:51:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/search/create
+---
+2013/09/03 05:15:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/03 07:41:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/03 07:51:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/user/profile?0=%2Fuser%2Fprofile
+---
+2013/09/03 07:53:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/favicon.ico".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/favicon.i...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/favicon.ico
+---
+2013/09/04 11:36:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/
+---
+2013/09/04 11:36:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/04 11:36:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "favicon.ico".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/09/04 11:37:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "events/admin/favicon.ico".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('events/admin/fa...')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/events/admin/favicon.ico
+---
+2013/09/04 11:37:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "favicon.ico".' in D:\Dropbox\yii\comfort\framework\web\CController.php:483
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/news/favi...')
+#3 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/favicon.ico
+---

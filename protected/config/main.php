@@ -130,11 +130,11 @@ return array(
                 'news/<id:\d+>/<alias:.*?>'=>'news/view',
                 'news/<alias_url:.*?>'=>'news/view',
                 'news/'=>'news/index',
-                '<alias_url:.*>'=>'page/view',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                '<alias_url:[\w\-]>'=>'page/view',
 			),
 		),
 

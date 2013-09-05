@@ -3438,3 +3438,1264 @@ Stack trace:
 REQUEST_URI=/admin/news/savecontent
 HTTP_REFERER=http://comfort.local/vsem-privet
 ---
+2013/09/05 06:12:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:12:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/52280494bf12e
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:15:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/news/save...')
+#1 [internal function]: PageController->actionView(false, 'admin/news/save...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/news/savecontent
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:15:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/news/save...')
+#1 [internal function]: PageController->actionView(false, 'admin/news/save...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/news/savecontent
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:16:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/page/inde...')
+#1 [internal function]: PageController->actionView(false, 'admin/page/inde...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/page/index
+HTTP_REFERER=http://comfort.local/admin/news
+---
+2013/09/05 06:16:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/admin/page/index
+---
+2013/09/05 06:16:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/52280582a363d
+HTTP_REFERER=http://comfort.local/admin/page/index
+---
+2013/09/05 06:16:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228058bea138
+HTTP_REFERER=http://comfort.local/admin/
+---
+2013/09/05 06:16:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/news/inde...')
+#1 [internal function]: PageController->actionView(false, 'admin/news/inde...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/news/index
+HTTP_REFERER=http://comfort.local/admin/
+---
+2013/09/05 06:16:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/admin/news/index
+---
+2013/09/05 06:16:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522805926a3ca
+HTTP_REFERER=http://comfort.local/admin/news/index
+---
+2013/09/05 06:16:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/news/inde...')
+#1 [internal function]: PageController->actionView(false, 'admin/news/inde...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/news/index
+HTTP_REFERER=http://comfort.local/admin/
+---
+2013/09/05 06:16:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/admin/news/index
+---
+2013/09/05 06:16:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522805a9b7b60
+HTTP_REFERER=http://comfort.local/admin/news/index
+---
+2013/09/05 06:17:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522805d22ed31
+HTTP_REFERER=http://comfort.local/admin/news/
+---
+2013/09/05 06:17:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/news/crea...')
+#1 [internal function]: PageController->actionView(false, 'admin/news/crea...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/news/create
+HTTP_REFERER=http://comfort.local/admin/news/
+---
+2013/09/05 06:17:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/admin/news/create
+---
+2013/09/05 06:17:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522805d92bbf9
+HTTP_REFERER=http://comfort.local/admin/news/create
+---
+2013/09/05 06:17:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522805df4dc50
+HTTP_REFERER=http://comfort.local/admin/news/
+---
+2013/09/05 06:18:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/news')
+#1 [internal function]: PageController->actionView(false, 'admin/news')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/news/
+---
+2013/09/05 06:18:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/admin/news/
+---
+2013/09/05 06:18:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228061331af8
+HTTP_REFERER=http://comfort.local/admin/news/
+---
+2013/09/05 06:18:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/about
+---
+2013/09/05 06:19:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228065c93a26
+HTTP_REFERER=http://comfort.local/shop/admin
+---
+2013/09/05 06:19:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/news/inde...')
+#1 [internal function]: PageController->actionView(false, 'admin/news/inde...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/news/index
+HTTP_REFERER=http://comfort.local/admin/page/index
+---
+2013/09/05 06:19:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/admin/news/index
+---
+2013/09/05 06:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228066d4d112
+HTTP_REFERER=http://comfort.local/admin/news/index
+---
+2013/09/05 06:20:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/news/inde...')
+#1 [internal function]: PageController->actionView(false, 'admin/news/inde...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/news/index
+HTTP_REFERER=http://comfort.local/admin/page/index
+---
+2013/09/05 06:20:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/admin/news/index
+---
+2013/09/05 06:20:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228068ae6500
+HTTP_REFERER=http://comfort.local/admin/news/index
+---
+2013/09/05 06:20:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228069c43f50
+HTTP_REFERER=http://comfort.local/admin/news/index
+---
+2013/09/05 06:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522806a1ac47e
+HTTP_REFERER=http://comfort.local/admin/news/create
+---
+2013/09/05 06:20:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/news/vapv-vapvap6
+---
+2013/09/05 06:20:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522806a6ae0f5
+HTTP_REFERER=http://comfort.local/news/vapv-vapvap6
+---
+2013/09/05 06:21:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522806bd7ffdd
+HTTP_REFERER=http://comfort.local/admin/news/create
+---
+2013/09/05 06:21:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522806c228e5f
+HTTP_REFERER=http://comfort.local/gallery/admin
+---
+2013/09/05 06:21:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('gallery/favicon...')
+#1 [internal function]: PageController->actionView(false, 'gallery/favicon...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/gallery/favicon.ico
+---
+2013/09/05 06:21:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('gallery/admin/c...')
+#1 [internal function]: PageController->actionView(false, 'gallery/admin/c...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/gallery/admin/create
+HTTP_REFERER=http://comfort.local/gallery/admin
+---
+2013/09/05 06:21:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/gallery/admin/create
+---
+2013/09/05 06:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522806c62e535
+HTTP_REFERER=http://comfort.local/gallery/admin/create
+---
+2013/09/05 06:22:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522806efa2df1
+HTTP_REFERER=http://comfort.local/gallery/admin/create
+---
+2013/09/05 06:22:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('gallery/admin/f...')
+#1 [internal function]: PageController->actionView(false, 'gallery/admin/f...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/gallery/admin/favicon.ico
+---
+2013/09/05 06:22:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522806f3a6587
+HTTP_REFERER=http://comfort.local/gallery/admin/create
+---
+2013/09/05 06:22:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522806f8d7bc0
+HTTP_REFERER=http://comfort.local/gallery/admin/create
+---
+2013/09/05 06:22:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228070a52ad7
+HTTP_REFERER=http://comfort.local/gallery/admin/create
+---
+2013/09/05 06:22:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228070dc4bd5
+HTTP_REFERER=http://comfort.local/gallery/admin
+---
+2013/09/05 06:22:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/52280710e9e49
+HTTP_REFERER=http://comfort.local/gallery/admin/create
+---
+2013/09/05 06:22:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228071f8cd5e
+HTTP_REFERER=http://comfort.local/admin/page/index
+---
+2013/09/05 06:23:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/52280723f3312
+HTTP_REFERER=http://comfort.local/admin/page/create
+---
+2013/09/05 06:23:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522807278948e
+HTTP_REFERER=http://comfort.local/admin/page/create
+---
+2013/09/05 06:23:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/52280731648ea
+HTTP_REFERER=http://comfort.local/admin/news/create
+---
+2013/09/05 06:23:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/522807360cbb3
+HTTP_REFERER=http://comfort.local/admin/page/index
+---
+2013/09/05 06:23:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228073a0efc0
+HTTP_REFERER=http://comfort.local/admin/page/create
+---
+2013/09/05 06:23:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('admin/page/crea...')
+#1 [internal function]: PageController->actionView(false, 'admin/page/crea...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/page/create
+HTTP_REFERER=http://comfort.local/admin/page/index
+---
+2013/09/05 06:23:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('css/shop.css')
+#1 [internal function]: PageController->actionView(false, 'css/shop.css')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/admin/page/create
+---
+2013/09/05 06:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('debug/default/t...')
+#1 [internal function]: PageController->actionView(false, 'debug/default/t...')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/debug/default/toolbar/tag/5228074e48656
+HTTP_REFERER=http://comfort.local/admin/page/create
+---
+2013/09/05 06:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/tulula_tulula
+---
+2013/09/05 06:29:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/vsem-privet
+---
+2013/09/05 06:29:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/news
+---
+2013/09/05 06:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/news/privet-vsem
+---
+2013/09/05 06:29:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/news/vapv-vapvap6
+---

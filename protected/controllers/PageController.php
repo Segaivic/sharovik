@@ -55,6 +55,8 @@ class PageController extends Controller
         elseif($alias_url !== false) {
             $model = $this->loadModelByAlias($alias_url);
         }
+
+
         $this->render('view',array(
             'model'=>$model,
         ));

@@ -116,6 +116,9 @@ class News extends CActiveRecord
 
             if($this->isNewRecord)
             {
+                if($this->alias_url === null){
+                    $this->alias_url = CTranslit::translit($this->title);
+                }
                 $this->created=$this->modified=date( "Y-m-d H:i:s" );
                 $this->user_id=Yii::app()->getModule('user')->user()->id;
             }

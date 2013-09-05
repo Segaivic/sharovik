@@ -97,6 +97,11 @@ class NewsController extends Controller
         elseif($alias_url !== false) {
             $model = $this->loadModelByAlias($alias_url);
         }
+
+        if(Yii::app()->createAbsoluteUrl(Yii::app()->request->url) !== $model->url){
+            $this->redirect($model->url);
+        }
+
         $this->render('view',array(
             'model'=>$model,
             'blogs'=>$this->getActiveBlogs(),

@@ -109,6 +109,12 @@ class Page extends CActiveRecord
             else {
                 $this->alias_url = null;
             }
+            if($this->isNewRecord)
+            {
+                if($this->alias_url === null){
+                    $this->alias_url = CTranslit::translit($this->title);
+                }
+            }
             return true;
         }
         else

@@ -109,7 +109,7 @@ class NewsController extends Controller
 
            $model->attributes=$_POST['News'];
             if($model->save())
-                $this->redirect(array($model->url));
+                $this->redirect($model->url);
         }
 
         $this->render('create',array(

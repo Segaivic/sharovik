@@ -8,4 +8,5 @@ class CParams {
         return $params;
     }
 
+
 }

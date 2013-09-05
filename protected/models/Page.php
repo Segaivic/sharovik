@@ -41,6 +41,7 @@ class Page extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title', 'required'),
+			array('alias_url', 'checkReservedNames'),
 			array('title, metakey, metadesc, alias_url', 'length', 'max'=>300),
 			array('is_published', 'length', 'max'=>1),
 			array('content, updated_at', 'safe'),
@@ -49,6 +50,17 @@ class Page extends CActiveRecord
 			array('id, title, content, metakey, metadesc, updated_at, is_published', 'safe', 'on'=>'search'),
 		);
 	}
+
+    public function checkReservedNames($attribute,$params){
+        $modules = array();
+        foreach(Yii::app()->getModules() as $key => $value){
+            array_push($modules , $key);
+        }
+            array_push($modules , 'news');
+            array_push($modules , 'page');
+        if (in_array($this->$attribute , $modules))
+            $this->addError($attribute, 'Такое название зарезервировано модулем');
+    }
 
 	/**
 	 * @return array relational rules.

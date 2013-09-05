@@ -4699,3 +4699,392 @@ Stack trace:
 REQUEST_URI=/css/shop.css
 HTTP_REFERER=http://comfort.local/news/vapv-vapvap6
 ---
+2013/09/05 06:30:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/news
+---
+2013/09/05 06:30:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/about
+---
+2013/09/05 06:30:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "about".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('about')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/about
+---
+2013/09/05 06:30:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/about
+---
+2013/09/05 06:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/vsem-privet
+---
+2013/09/05 06:31:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "vsem-privet".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('vsem-privet')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vsem-privet
+---
+2013/09/05 06:31:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "vsem-privet".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('vsem-privet')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vsem-privet
+---
+2013/09/05 06:31:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:31:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:31:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "vsem-privet".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('vsem-privet')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vsem-privet
+---
+2013/09/05 06:31:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:31:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "vsem-privet".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('vsem-privet')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vsem-privet
+---
+2013/09/05 06:31:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:31:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "vsem-privet".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('vsem-privet')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vsem-privet
+---
+2013/09/05 06:31:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:34:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "vsem-privet".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('vsem-privet')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vsem-privet
+---
+2013/09/05 06:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:34:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/about
+---
+2013/09/05 06:35:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/about
+---
+2013/09/05 06:35:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "vsem-privet".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('vsem-privet')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vsem-privet
+---
+2013/09/05 06:35:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:40:09 [error] [exception.CException] exception 'CException' with message 'URL-шаблон "<alias_url:/^((?!.*[\d]{3}.*)(?!.*?(.)\2{2}.*)[-a-z0-9]+)$/>" для пути "page/view" не является верным регулярным выражением.' in D:\Dropbox\yii\comfort\framework\web\CUrlManager.php:701
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CUrlManager.php(270): CUrlRule->__construct('page/view', '<alias_url:/^((...')
+#1 D:\Dropbox\yii\comfort\framework\web\CUrlManager.php(226): CUrlManager->createUrlRule('page/view', '<alias_url:/^((...')
+#2 D:\Dropbox\yii\comfort\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#3 D:\Dropbox\yii\comfort\framework\base\CModule.php(387): CUrlManager->init()
+#4 D:\Dropbox\yii\comfort\framework\base\CApplication.php(522): CModule->getComponent('urlManager')
+#5 D:\Dropbox\yii\comfort\framework\base\CApplication.php(543): CApplication->getUrlManager()
+#6 D:\Dropbox\yii\comfort\www\protected\extensions\yii2-debug\Yii2Debug.php(129): CApplication->createUrl('debug/default/t...', Array)
+#7 D:\Dropbox\yii\comfort\www\protected\extensions\yii2-debug\Yii2Debug.php(83): Yii2Debug->initToolbar()
+#8 D:\Dropbox\yii\comfort\framework\base\CModule.php(387): Yii2Debug->init()
+#9 D:\Dropbox\yii\comfort\framework\base\CModule.php(523): CModule->getComponent('debug')
+#10 D:\Dropbox\yii\comfort\framework\base\CApplication.php(163): CModule->preloadComponents()
+#11 D:\Dropbox\yii\comfort\framework\YiiBase.php(125): CApplication->__construct('D:\Dropbox\yii\...')
+#12 D:\Dropbox\yii\comfort\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'D:\Dropbox\yii\...')
+#13 D:\Dropbox\yii\comfort\www\index.php(13): YiiBase::createWebApplication('D:\Dropbox\yii\...')
+#14 {main}
+REQUEST_URI=/page/about
+HTTP_REFERER=http://comfort.local/admin/page/index
+---
+2013/09/05 06:40:22 [error] [exception.CException] exception 'CException' with message 'URL-шаблон "<alias_url:"/^((?!.*[\d]{3}.*)(?!.*?(.)\2{2}.*)[-a-z0-9]+)$/">" для пути "page/view" не является верным регулярным выражением.' in D:\Dropbox\yii\comfort\framework\web\CUrlManager.php:701
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CUrlManager.php(270): CUrlRule->__construct('page/view', '<alias_url:"/^(...')
+#1 D:\Dropbox\yii\comfort\framework\web\CUrlManager.php(226): CUrlManager->createUrlRule('page/view', '<alias_url:"/^(...')
+#2 D:\Dropbox\yii\comfort\framework\web\CUrlManager.php(206): CUrlManager->processRules()
+#3 D:\Dropbox\yii\comfort\framework\base\CModule.php(387): CUrlManager->init()
+#4 D:\Dropbox\yii\comfort\framework\base\CApplication.php(522): CModule->getComponent('urlManager')
+#5 D:\Dropbox\yii\comfort\framework\base\CApplication.php(543): CApplication->getUrlManager()
+#6 D:\Dropbox\yii\comfort\www\protected\extensions\yii2-debug\Yii2Debug.php(129): CApplication->createUrl('debug/default/t...', Array)
+#7 D:\Dropbox\yii\comfort\www\protected\extensions\yii2-debug\Yii2Debug.php(83): Yii2Debug->initToolbar()
+#8 D:\Dropbox\yii\comfort\framework\base\CModule.php(387): Yii2Debug->init()
+#9 D:\Dropbox\yii\comfort\framework\base\CModule.php(523): CModule->getComponent('debug')
+#10 D:\Dropbox\yii\comfort\framework\base\CApplication.php(163): CModule->preloadComponents()
+#11 D:\Dropbox\yii\comfort\framework\YiiBase.php(125): CApplication->__construct('D:\Dropbox\yii\...')
+#12 D:\Dropbox\yii\comfort\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'D:\Dropbox\yii\...')
+#13 D:\Dropbox\yii\comfort\www\index.php(13): YiiBase::createWebApplication('D:\Dropbox\yii\...')
+#14 {main}
+REQUEST_URI=/page/about
+HTTP_REFERER=http://comfort.local/admin/page/index
+---
+2013/09/05 06:40:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/about
+---
+2013/09/05 06:41:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/about
+---
+2013/09/05 06:41:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:41:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:42:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/tulula_tulula
+---
+2013/09/05 06:42:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tulula_tulula".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('tulula_tulula')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tulula_tulula
+---
+2013/09/05 06:42:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/tulula_tulula
+---
+2013/09/05 06:42:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('tulula-tulula')
+#1 [internal function]: PageController->actionView(false, 'tulula-tulula')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/tulula-tulula
+---
+2013/09/05 06:42:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/tulula-tulula
+---
+2013/09/05 06:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/vsem-privet
+---
+2013/09/05 06:43:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Такой страницы не существует' in D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php:86
+Stack trace:
+#0 D:\Dropbox\yii\comfort\www\protected\controllers\PageController.php(56): PageController->loadModelByAlias('tulula-tulula')
+#1 [internal function]: PageController->actionView(false, 'tulula-tulula')
+#2 D:\Dropbox\yii\comfort\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PageController), Array)
+#3 D:\Dropbox\yii\comfort\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PageController), Object(ReflectionMethod), Array)
+#4 D:\Dropbox\yii\comfort\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\Dropbox\yii\comfort\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\Dropbox\yii\comfort\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\Dropbox\yii\comfort\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\Dropbox\yii\comfort\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\Dropbox\yii\comfort\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\Dropbox\yii\comfort\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('view')
+#13 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('page/view')
+#14 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/tulula-tulula
+---
+2013/09/05 06:43:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/tulula-tulula
+---
+2013/09/05 06:43:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/-vsem-privet
+---
+2013/09/05 06:43:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/shop.css".' in D:\Dropbox\yii\comfort\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('css/shop.css')
+#1 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/shop.css
+HTTP_REFERER=http://comfort.local/page/tulula_tulula
+---
+2013/09/05 06:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "favicon.ico".' in D:\Dropbox\yii\comfort\framework\web\CController.php:483
+Stack trace:
+#0 D:\Dropbox\yii\comfort\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 D:\Dropbox\yii\comfort\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/menu/favi...')
+#3 D:\Dropbox\yii\comfort\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\Dropbox\yii\comfort\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/menu/favicon.ico
+---

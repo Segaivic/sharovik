@@ -105,6 +105,7 @@ return array(
 
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+            'showScriptName'=>false,
             'baseUrl' => 'http://comfort.local',
 			'rules'=>array(
                 '<controller:\w+>/index'=>'<controller>/index',
@@ -134,7 +135,7 @@ return array(
                 '<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-                '<alias_url:[\w\-]>'=>'page/view',
+                '<alias_url:[a-zA-Z0-9-_]+>'=>'page/view',
 			),
 		),
 

@@ -32,8 +32,7 @@ class PageController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			'rights'
 		);
 	}
 
@@ -49,6 +48,7 @@ class PageController extends Controller
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('index','delete','create','update','fileUpload','imageUpload','imageList'),
                 'users'=>Yii::app()->getModule('user')->getAdmins(),
+                'roles'=>array('moder'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),

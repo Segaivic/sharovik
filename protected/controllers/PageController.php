@@ -56,7 +56,6 @@ class PageController extends Controller
             $model = $this->loadModelByAlias($alias_url);
         }
 
-
         $this->render('view',array(
             'model'=>$model,
         ));

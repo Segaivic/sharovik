@@ -3,13 +3,86 @@
 # Server version:               5.5.32
 # Server OS:                    Win32
 # HeidiSQL version:             6.0.0.3603
-# Date/time:                    2013-09-02 11:18:03
+# Date/time:                    2013-09-13 14:10:50
 # --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+# Dumping structure for table comfort.authassignment
+CREATE TABLE IF NOT EXISTS `authassignment` (
+  `itemname` varchar(64) NOT NULL,
+  `userid` varchar(64) NOT NULL,
+  `bizrule` text,
+  `data` text,
+  PRIMARY KEY (`itemname`,`userid`),
+  CONSTRAINT `authassignment_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# Dumping data for table comfort.authassignment: ~3 rows (approximately)
+/*!40000 ALTER TABLE `authassignment` DISABLE KEYS */;
+INSERT INTO `authassignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES
+	('Admin', '1', NULL, 'N;'),
+	('Authenticated', '2', NULL, 'N;'),
+	('Moder', '2', NULL, 'N;');
+/*!40000 ALTER TABLE `authassignment` ENABLE KEYS */;
+
+
+# Dumping structure for table comfort.authitem
+CREATE TABLE IF NOT EXISTS `authitem` (
+  `name` varchar(64) NOT NULL,
+  `type` int(11) NOT NULL,
+  `description` text,
+  `bizrule` text,
+  `data` text,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# Dumping data for table comfort.authitem: ~6 rows (approximately)
+/*!40000 ALTER TABLE `authitem` DISABLE KEYS */;
+INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
+	('Admin', 2, 'Администратор', NULL, 'N;'),
+	('Admin.News.*', 1, NULL, NULL, 'N;'),
+	('Admin.Page.*', 1, NULL, NULL, 'N;'),
+	('Authenticated', 2, 'Зарегистрированный пользователь', NULL, 'N;'),
+	('Guest', 2, 'Гость', NULL, 'N;'),
+	('Moder', 2, 'модератор новостей', NULL, 'N;');
+/*!40000 ALTER TABLE `authitem` ENABLE KEYS */;
+
+
+# Dumping structure for table comfort.authitemchild
+CREATE TABLE IF NOT EXISTS `authitemchild` (
+  `parent` varchar(64) NOT NULL,
+  `child` varchar(64) NOT NULL,
+  PRIMARY KEY (`parent`,`child`),
+  KEY `child` (`child`),
+  CONSTRAINT `authitemchild_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# Dumping data for table comfort.authitemchild: ~2 rows (approximately)
+/*!40000 ALTER TABLE `authitemchild` DISABLE KEYS */;
+INSERT INTO `authitemchild` (`parent`, `child`) VALUES
+	('Moder', 'Admin.News.*'),
+	('Moder', 'Admin.Page.*');
+/*!40000 ALTER TABLE `authitemchild` ENABLE KEYS */;
+
+
+# Dumping structure for table comfort.rights
+CREATE TABLE IF NOT EXISTS `rights` (
+  `itemname` varchar(64) NOT NULL,
+  `type` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  PRIMARY KEY (`itemname`),
+  CONSTRAINT `rights_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# Dumping data for table comfort.rights: ~0 rows (approximately)
+/*!40000 ALTER TABLE `rights` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rights` ENABLE KEYS */;
+
 
 # Dumping structure for table comfort.tbl_categories
 CREATE TABLE IF NOT EXISTS `tbl_categories` (
@@ -215,10 +288,14 @@ CREATE TABLE IF NOT EXISTS `tbl_news` (
   `alias_url` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `title` (`title`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_news: ~0 rows (approximately)
+# Dumping data for table comfort.tbl_news: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_news` DISABLE KEYS */;
+INSERT INTO `tbl_news` (`id`, `title`, `alias`, `introtext`, `fulltext`, `is_published`, `is_onfrontpage`, `user_id`, `catid`, `created`, `modified`, `metakey`, `metadesc`, `alias_url`) VALUES
+	(3, 'вапв вапвап', '', '<p>\r\n	 546456\r\n</p>', '<p>\r\n	 rtrtyery\r\n</p>', '1', '1', 1, 1, '2013-09-05 05:48:17', '2013-09-05 05:48:56', '', '', 'vapv-vapvap6'),
+	(4, 'yyui', '', '<p>\r\n	trut\r\n</p>', '<p>\r\n	tyurtu\r\n</p>', '1', '1', 1, 1, '2013-09-05 05:49:41', '2013-09-05 05:49:41', '', '', 'privet-vsem'),
+	(5, 'енкгенг', '', '<p>\r\n	ег\r\n</p>', '<p>\r\n	енгег\r\n</p>', '1', '1', 1, 1, '2013-09-05 07:13:51', '2013-09-05 07:13:51', '', '', 'user');
 /*!40000 ALTER TABLE `tbl_news` ENABLE KEYS */;
 
 
@@ -234,15 +311,18 @@ CREATE TABLE IF NOT EXISTS `tbl_page` (
   `alias_url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `title` (`title`(255))
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_page: ~4 rows (approximately)
+# Dumping data for table comfort.tbl_page: ~7 rows (approximately)
 /*!40000 ALTER TABLE `tbl_page` DISABLE KEYS */;
 INSERT INTO `tbl_page` (`id`, `title`, `content`, `metakey`, `metadesc`, `updated_at`, `is_published`, `alias_url`) VALUES
-	(1, 'О компании', '<p>Текст о компании</p>', '', '', '2013-02-11 10:05:05', '1', 'about'),
+	(1, 'О компании', '<p>\n	Текст о компании\n</p>', '', '', '2013-02-11 10:05:05', '1', 'about'),
 	(2, 'Новая страница6', '<p>yi</p>', 'tyi', 'tyi', '2013-03-26 15:30:43', '1', 'sdf'),
 	(4, 'fghfgh', '<p>fghfgh</p>', '', '', '2013-03-26 15:46:22', '1', '4-about'),
-	(5, 'Просто новая страница', '<h2 style="text-align: center;">Заголовок</h2><div>Салют</div>', '', '', '2013-04-17 15:36:25', '1', 'newpage');
+	(5, 'Просто новая страница', '<h2 style="text-align: center;">Заголовок</h2><div>Салют</div>', '', '', '2013-04-17 15:36:25', '1', 'newpage'),
+	(6, 'Всем Привет', '<p>\r\n	Привет\r\n</p>', '', '', '2013-09-05 09:51:28', '1', 'vsem-privet'),
+	(7, 'Еще раз привет', '<p>\r\n	выаыва\r\n</p>', '', '', '2013-09-05 09:52:04', '1', '-vsem-privet'),
+	(8, 'Ветром в голову надуло', '', '', '', '2013-09-05 09:52:57', '1', 'tulula_tulula');
 /*!40000 ALTER TABLE `tbl_page` ENABLE KEYS */;
 
 
@@ -254,12 +334,13 @@ CREATE TABLE IF NOT EXISTS `tbl_profiles` (
   `aboutme` text NOT NULL,
   PRIMARY KEY (`user_id`),
   CONSTRAINT `user_profile_id` FOREIGN KEY (`user_id`) REFERENCES `tbl_users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_profiles: ~4 rows (approximately)
+# Dumping data for table comfort.tbl_profiles: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_profiles` DISABLE KEYS */;
 INSERT INTO `tbl_profiles` (`user_id`, `first_name`, `last_name`, `aboutme`) VALUES
-	(1, 'Administrator', 'Admin', 'Администратор');
+	(1, 'Administrator', 'Admin', 'Администратор'),
+	(2, '', '', '');
 /*!40000 ALTER TABLE `tbl_profiles` ENABLE KEYS */;
 
 
@@ -814,7 +895,7 @@ INSERT INTO `tbl_shop_products` (`id`, `title`, `description`, `characters`, `pr
 	(24, 'пропр', 'опронро', '', 0, '2013-03-05 14:13:54', '2013-03-05 09:14:11', 1, 0, '1', '', '', NULL),
 	(25, 'нке', '', '', 0, '2013-03-05 14:14:35', NULL, 1, 0, '1', 'нукн', '', NULL),
 	(31, 'Джессика Альба 2', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim!</span></p>', 1800, '2013-04-29 05:13:13', '2013-05-17 04:32:50', 3, 0, '1', '', '', '31-albanochka'),
-	(32, 'Джессика Альба 3', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim.</span></p>', 1600, '2013-04-29 05:15:14', '2013-05-16 07:38:57', 3, 0, '1', '', '', NULL),
+	(32, 'Джессика Альба 3', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim.</span></p>', 1600, '2013-04-29 05:15:14', '2013-09-02 11:07:55', 3, 0, '1', '', '', NULL),
 	(33, 'Samsung Galaxy S III i9300 16Gb Black', 'GSM, 3G, смартфон, Android 4.0, вес 133 г, ШхВхТ 70.6x136.6x8.6 мм, экран 4.8", 720x1280, FM-радио, Bluetooth, NFC, Wi-Fi, GPS, ГЛОНАСС, фотокамера 8 МП, память 16 Гб,', '<p><b style="line-height: 1.45em;">Достоинства:&nbsp;</b><span style="line-height: 1.45em;">Экран,самый качественный корые я когда то видел!!!!Большое разрешение, фотографии получаются естественными,яркими!!! Процессор: шустрый,ни где не тормозит, не зависал еще ни разу!!!Аккумулятор держит очень долго, зарядил утром на 68%, продержался 2 дня!!!... Все писать не буду, выделил главное т.к все ни раз упоминалось!!!</span></p><p><b style="line-height: 1.45em;">Недостатки:&nbsp;</b><span style="line-height: 1.45em;">Пока не заметил!!!</span></p><p><b>Комментарий:&nbsp;</b>Ребята, если кто то затрудняется в выборе, то скажу,пока нет ничего лучшего, кроме Note 2!!</p><p></p>', 17680, '2013-05-07 06:23:47', '2013-07-17 10:38:35', 18, 0, '1', 'Samsung Galaxy S III i9300 16Gb Black', 'Samsung', 'samsung-galaxy-s3'),
 	(34, 'Самсунг', '', '', 234, '2013-05-14 04:32:27', NULL, 18, 0, '1', '', '', '-samsung-galaxy-s3'),
 	(35, 'HTC ONE X', 'GSM, 3G, смартфон, Android 4.0, вес 130 г, ШхВхТ 69.9x134.36x8.9 мм, экран 4.7", 720x1280, FM-радио, Bluetooth, NFC, Wi-Fi, GPS, фотокамера 8 МП, память 32 Гб, аккумулятор ...', '<p>yr</p>', 123324, '2013-05-14 04:35:03', '2013-05-15 10:37:18', 18, 0, '1', '', '', '3578-samsung-galaxy-s3'),
@@ -917,12 +998,13 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_username` (`username`),
   UNIQUE KEY `user_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_users: ~5 rows (approximately)
+# Dumping data for table comfort.tbl_users: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_users` DISABLE KEYS */;
 INSERT INTO `tbl_users` (`id`, `username`, `password`, `email`, `activkey`, `superuser`, `status`, `create_at`, `lastvisit_at`, `userpic`) VALUES
-	(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'webmaster@example.com', '9b94c7be573c22b9d4f7f8caccd5043d', 1, 1, '2013-02-06 10:47:38', '2013-08-29 10:23:39', '/uploads/user/52241ea4d3b37cristiano_ronaldo.jpg');
+	(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'webmaster@example.com', '9b94c7be573c22b9d4f7f8caccd5043d', 1, 1, '2013-02-06 10:47:38', '2013-09-12 11:54:13', '/uploads/user/52241ea4d3b37cristiano_ronaldo.jpg'),
+	(2, 'valera', 'b51e8dbebd4ba8a8f342190a4b9f08d7', 'valera@verim.ru', '04bce2865b33ed1306b671b70747c5ec', 0, 1, '2013-09-13 04:38:56', '2013-09-13 04:41:06', NULL);
 /*!40000 ALTER TABLE `tbl_users` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

@@ -24,6 +24,9 @@ return array(
         'application.vendors.*',
         'application.modules.user.models.*',
         'application.modules.user.components.*',
+        'application.modules.rights.*',
+        'application.modules.rights.models.*',
+        'application.modules.rights.components.*',
         'application.modules.admin.*',
         'application.modules.shop.extensions.shoppingCart.*',
         'ext.YiiMailer.YiiMailer',
@@ -63,6 +66,9 @@ return array(
         ),
         #...
 
+        'rights'=>array(
+        ),
+
 		// uncomment the following to enable the Gii tool
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
@@ -87,9 +93,14 @@ return array(
         ),
         'user'=>array(
             // enable cookie-based authentication
-            'class' => 'WebUser',
+            'class' => 'RWebUser',
             'allowAutoLogin'=>true,
             'loginUrl' => array('/user/login'),
+        ),
+
+        'authManager'=>array(
+            'class'=>'RDbAuthManager',
+            'defaultRoles' => array('Guest') // дефолтная роль
         ),
 
         'shoppingCart' =>
@@ -131,6 +142,7 @@ return array(
                 'news/<id:\d+>/<alias:.*?>'=>'news/view',
                 'news/<alias_url:.*?>'=>'news/view',
                 'news/'=>'news/index',
+                'rights'=>'rights/assignment',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<module>/<controller>/<action>',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

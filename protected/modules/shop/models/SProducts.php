@@ -199,6 +199,7 @@ class SProducts extends CActiveRecord implements IECartPosition
     {
         if(parent::beforeSave())
         {
+
             if ($this->alias_url){
                 if($this->hasDuplicated($this->alias_url) === true){
                     $this->alias_url = uniqid().'-'.CTranslit::translit(CHtml::encode($this->alias_url));
@@ -213,6 +214,12 @@ class SProducts extends CActiveRecord implements IECartPosition
 
             if($this->isNewRecord)
             {
+                if($this->alias_url === null){
+                    $this->alias_url = CTranslit::translit($this->title);
+                    if($this->hasDuplicated($this->alias_url) === true){
+                        $this->alias_url = uniqid().'-'.$this->alias_url;
+                    }
+                }
                 $this->created_at=date( "Y-m-d H:i:s" );
             }
             else

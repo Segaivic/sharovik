@@ -7,7 +7,7 @@ class ProductController extends Controller
     public function filters()
     {
         return array(
-            'accessControl', // perform access control for CRUD operations
+            'rights', // perform access control for CRUD operations
             'ajaxOnly + UpdatePrice',
         );
     }

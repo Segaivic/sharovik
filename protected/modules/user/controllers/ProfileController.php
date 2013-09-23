@@ -3,7 +3,7 @@
 class ProfileController extends Controller
 {
 	public $defaultAction = 'profile';
-	public $layout='application.modules.admin.layouts.admin';
+	public $layout='//layouts/news';
 
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.

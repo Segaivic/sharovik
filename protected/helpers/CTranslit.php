@@ -22,6 +22,7 @@ class CTranslit {
             'O' => 'o', 'P' => 'p', 'Q' => 'q', 'R' => 'r', 'S' => 's', 'T' => 't', 'U' => 'u', 'V' => 'v', 'W' => 'w', 'X' => 'x', 'Y' => 'y', 'Z' => 'z',
             '"' => ''
         );
-        return strtr($str, $translit);
+
+        return preg_replace("/[^a-zA-Z0-9]+/", "", strtr($str, $translit));
     }
 }

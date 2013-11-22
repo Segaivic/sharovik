@@ -762,3 +762,8 @@ th, td {
 .ordForm td{
     text-align: left;
 }
+
+.options_desc{
+    padding-top: 3px;
+    font-size: 8px;
+}

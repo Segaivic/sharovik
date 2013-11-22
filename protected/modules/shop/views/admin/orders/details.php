@@ -14,7 +14,7 @@ $this->header = "Заказ № &laquo; ".CHtml::encode($model->id)." &raquo; о
                 Заказчик:
             </td>
             <td>
-                <? if($model->user_id !== 0) {
+                <? if($model->user_id !== null) {
                 echo CHtml::link(CHtml::encode($model->name),array('/user/admin/view/','id' => $model->user_id));
             }
             else {

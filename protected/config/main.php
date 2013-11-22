@@ -91,6 +91,12 @@ return array(
             'class' => 'ext.yii2-debug.Yii2Debug',
             'enabled' => YII_DEBUG ? true : false,
         ),
+
+        'session' => array(
+            'class' => 'system.web.CDbHttpSession',
+            'connectionID' => 'db'
+        ),
+
         'user'=>array(
             // enable cookie-based authentication
             'class' => 'RWebUser',
@@ -165,6 +171,8 @@ return array(
                             'schemaCachingDuration' => YII_DEBUG ? 0 : 3600,
                     ),
 
+
+
         'cache'=>array(
             'class'=>'CFileCache',
             //'class'=>'CApcCache',
@@ -210,6 +218,6 @@ return array(
                 'convertDivs' => false
 
         ),
-        'nophoto' => '/images/nophoto.png',
+        '' => '/images/nophoto.png',
 	),
 );

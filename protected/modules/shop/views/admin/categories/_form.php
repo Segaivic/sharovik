@@ -31,15 +31,11 @@
                         'allowedTags' => Yii::app()->params['redactor']['allowedTags'],
                         'convertDivs' => Yii::app()->params['redactor']['convertDivs'],
                         'lang'=>'ru',
-                        'fileUpload'=>Yii::app()->createUrl('/shop/admin/index/fileUpload',array(
-                            'attr'=>$model->description
-                        )),
+                        'fileUpload'=>Yii::app()->createUrl('/shop/admin/index/fileUpload/attr'),
                         'fileUploadErrorCallback'=>new CJavaScriptExpression(
                             'function(obj,json) { alert(json.error); }'
                         ),
-                        'imageUpload'=>Yii::app()->createUrl('/shop/admin/index/imageUpload',array(
-                            'attr'=>$model->description
-                        )),
+                        'imageUpload'=>Yii::app()->createUrl('/shop/admin/index/imageUpload/attr'),
                         'imageGetJson'=>Yii::app()->createUrl('/shop/admin/index/imageList',array(
                             'attr'=>$model->description
                         )),

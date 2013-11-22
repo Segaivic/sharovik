@@ -29,20 +29,15 @@ class OrdersController extends Controller
 
     public function actionDetails($id)
 	{
-
         $model = $this->loadModel($id);
-
         if ($model->visited = SOrders::STATUS_DISABLED) {
             $model->visited = SOrders::STATUS_ACTIVE;
             $model->save();
         }
-
         $this->render('details' , array(
                 'model' => $model,
-
             )
         );
-
     }
 
     public function actionCloseOrder($id) {
@@ -93,7 +88,7 @@ class OrdersController extends Controller
         $model= SOrders::model()
             ->with('items','items.product')
             ->findByPk($id);
-        if($model===null)
+        if($model === null)
             throw new CHttpException(404,'Извините, такой страницы не существует');
         return $model;
     }

@@ -186,7 +186,7 @@ class SOrders extends CActiveRecord
     protected function beforeSave() {
         if(parent::beforeSave()) {
             $this->shipping_date = date('Y-m-d', strtotime($this->shipping_date));
-            if(!Yii::app()->user->isGuest){
+            if(!Yii::app()->user->isGuest && !Yii::app()->getModule('user')->isAdmin()){
                $this->user_id = Yii::app()->getModule('user')->user()->id;
             }
             return true;

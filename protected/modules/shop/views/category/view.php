@@ -66,7 +66,7 @@ $this->header = $model->title;
                 <div class="product-box">
 <!--                    <span class="sale_tag"></span>-->
                         <a href="<?php echo $product->url ?>" class="top-link"><img alt="" src="
-                            <?php echo isset($product->image->thumbnail) ? $product->image->thumbnail : Yii::app()->params->nophoto; ?>
+                            <?php echo isset($product->image->thumbnail) ? $product->image->thumbnail : Yii::app()->params['nophoto']; ?>
                             " />
                         </a><br/>
                     <div class="pr_title">

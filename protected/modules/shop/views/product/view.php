@@ -4,6 +4,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/r
 Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/redactor/ru.js' , CClientScript::POS_HEAD);
 Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/clickedit.js' , CClientScript::POS_HEAD);
 
+
 if(Yii::app()->getModule('user')->isAdmin()){
 Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/bootstrap-tooltip.js' , CClientScript::POS_END);
 Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/bootstrap-popover.js' , CClientScript::POS_END);
@@ -33,46 +34,64 @@ unset($this->breadcrumbs);
 
 
 
+<?php if(Yii::app()->user->hasFlash('success_cart_add')): ?>
+
+    <?php Yii::app()->clientScript->registerScript("modal","
+    $(document).ready(function(){
+         $('#myModal').modal({
+              keyboard: false
+            });
+    })",
+        CClientScript::POS_END);
+    ?>
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h2 id="myModalLabel"><b>Товар добавлен в корзину</b></h2>
+        </div>
+        <div class="modal-body">
+            <p>Товары в корзине:</p>
+            <p>
+                <?php $this->renderPartial('_cartitems'); ?>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Продолжить покупки</button>
+            <a class="btn btn-primary" href="/shop/cart">Оформить заказ</a>
+        </div>
+    </div>
+
+<?php endif; ?>
+
+
+
 <div class="row">
     <div class="span2">
             <?php echo CHtml::link(CHtml::image(
-                    isset($model->image->thumbnail) ? $model->image->thumbnail : Yii::app()->params->nophoto),
-                    isset($model->image->image) ? $model->image->image : Yii::app()->params->nophoto,
+                    isset($model->image->thumbnail) ? $model->image->thumbnail : Yii::app()->params['nophoto']),
+                    isset($model->image->image) ? $model->image->image : Yii::app()->params['nophoto'],
                     array('rel'=>'fbox')); ?>
-            <div class="pr_rating">
-                <?php $this->widget('CStarRating',array(
-                    'id' => 'rating'.$model->id,
-                    'name'=>'rate'.$model->id,
-                    'value'=>SProductRating::avgValue($model->id),
-                    'allowEmpty'=>false,
-                    'callback'=>'
-                                    function(){
-                                    $.ajax({
-                                        type: "POST",
-                                        url: "'.Yii::app()->createUrl('shop/rating').'",
-                                        data: "id='.$model->id.'&rating=" + $(this).val(),
-                                        success: function(msg){
-                                              alert(msg
-                                            )
-                                    }})}',
-                ));?>
-            </div>
     </div>
 
     <div class="span7">
+
+
         <p class="description">
             <?php echo $model->description; ?>
         </p>
     </div>
     <div class="span3">
         <div class="price_block">
+            <?php echo CHtml::beginForm('/shop/cart/add' , 'post') ?>
+            <?php echo CHtml::hiddenField('product_id' , $model->id); ?>
             <div class="price">
                 <?php if(Yii::app()->getModule('user')->isAdmin()){ ?>
                     <div class="popover-markup">
                         <a href="javascript:" class="trigger" id="<?php echo $model->id; ?>"><?php echo $model->price; ?></a></span><span class="rur">p<span>уб.</span></span>
                         <div class="head hide">Смена цены</div>
                         <div class="content hide">
-                            <input type="text" id="pricetag" value="<?php echo $model->price; ?>">
+                            <input type="text" id="pricetag" name="price" value="<?php echo $model->price; ?>">
                             <button type="submit" class="btn" onclick="savePrice()">ОК</button>
                         </div>
                         <div class="footer hide"></div>
@@ -88,36 +107,13 @@ unset($this->breadcrumbs);
                     <span class="not_in_stock">под заказ</span>
                 <?php } ?>
             </div>
-            <div class="add-btn">
-                <?php if(!Yii::app()->shoppingCart->itemAt($model->id))  { ?>
-                    <div id="addtocart<?php echo $model->id?>" class="addtocart">
-                        <?  echo
-                        CHtml::ajaxLink(
-                            '<i class="icon-shopping-cart icon-white"></i> Добавить в корзину',
-                            CController::createUrl('/shop/cart/add', array('id'=>$model->id)),
-                                array('update' => '#cart',
-                                    'complete' => 'function(){
-                                             $("#addtocart'.$model['id'].'").html("<a href=\"/shop/cart\" class = \"btn btn-success\"><i class=\"icon-ok-circle icon-white\"></i> Перейти в корзину</a>");
-                                             }',
-                                ),
-                                array('class' =>'btn btn-info',
-                                    'id' => $model->id
-                                )); ?>
-
-                    </div>
-                <?php } else { ?>
-
-                    <div id="addtocart<?php echo $model->id?>" class="addtocart">
-                        <?  echo
-                        CHtml::link('<i class="icon-ok-circle icon-white"></i> Перейти в корзину',
-                            CController::createUrl('/shop/cart'),
-                            array('class' =>'btn btn-success',
-                                'id' => $model->id
-                            ));
-                        ?>
-                    </div>
-                <?php } ?>
+            <div>
+                <?php $this->widget('options' , array('product_id' => $model->id)); ?>
             </div>
+            <div class="add-btn">
+                <?php echo CHtml::submitButton('Добавить в корзину' , array('class' => 'btn btn-info')); ?>
+            </div>
+            <?php echo CHtml::endForm(); ?>
         </div>
     </div>
 </div>
@@ -153,7 +149,6 @@ unset($this->breadcrumbs);
         <?php endif; ?>
     </div>
 </div>
-
 
 <div class="row" style="margin-top: 50px">
     <div class="span6">
@@ -238,6 +233,9 @@ unset($this->breadcrumbs);
 </div>
 <?php  if (Yii::app()->getModule('user')->isAdmin()) : ?>
     <div class="row">
+        <div class="span3">
+            <?php echo CHtml::link('<i class="icon-plus"></i> Добавить фотографии',Yii::app()->createUrl('/shop/admin/product/gallery/', array('id' => $model->id)),array('class' => 'btn btn-primary')); ?>
+        </div>
         <div class="span3">
            <?php echo CHtml::link('Продублировать',Yii::app()->createUrl('/shop/admin/product/duplicate/', array('id' => $model->id)),array('confirm' => 'Подтвердите копирование','class' => 'btn btn-primary')); ?>
         </div>

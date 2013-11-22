@@ -43,11 +43,11 @@ class SOrderItems extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('order_id, product_id, quantity, price', 'required'),
-			array('quantity, price, sum', 'numerical', 'integerOnly'=>true),
+			array('quantity, optionkit_id, price, sum', 'numerical', 'integerOnly'=>true),
 			array('order_id, product_id', 'length', 'max'=>25),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, order_id, product_id, quantity, price', 'safe', 'on'=>'search'),
+			array('id, order_id, optionkit_id ,product_id, quantity, price', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,6 +61,7 @@ class SOrderItems extends CActiveRecord
 		return array(
 			'product' => array(self::BELONGS_TO, 'SProducts', 'product_id'),
 			'order' => array(self::BELONGS_TO, 'SOrders', 'order_id'),
+            'optionskit'=>array(self::BELONGS_TO, 'SOptionkits', 'optionkit_id'),
 		);
 	}
 
@@ -75,7 +76,8 @@ class SOrderItems extends CActiveRecord
 			'product_id' => 'Product',
 			'quantity' => 'Количество',
 			'price' => 'Цена',
-            'sum' => 'Сумма'
+            'sum' => 'Сумма',
+            'optionkit_id' => 'optionkit_id'
 		);
 	}
 

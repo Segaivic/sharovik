@@ -6,6 +6,7 @@ $this->header = 'Корзина';
 if(Yii::app()->user->hasFlash('success_shopping')): ?>
 <div class="success">
     <?php echo Yii::app()->user->getFlash('success_shopping'); ?>
+    <?php Yii::app()->session->destroy(); ?>
 </div>
 <?php
 return; endif; ?>

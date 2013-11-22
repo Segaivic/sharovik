@@ -8,8 +8,14 @@
         $product->title => '/shop/admin/product/update/id/'.$product->id
     );
 ?>
-
-<h1><?php echo $product->title; ?> - изображения</h1>
+<div class="row-fluid">
+    <div class="span9">
+        <h1><?php echo $product->title; ?> - изображения</h1>
+    </div>
+    <div class="span3" style="margin-top: 10px">
+        <?php $this->widget('ProductActions', array('product_id' => $product->id)); ?>
+    </div>
+</div>
 <div class="row-fluid">
     <div class="span12">
         <?php $this->renderPartial('_upload' , array('model'=>$model)); ?>

@@ -134,7 +134,7 @@ $('#SProducts_in_stock').numberMask({beforePoint:4});
         </tr>
         </tbody>
     </table>
-<div class="row buttons">
+<div class="buttons">
     <?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить'); ?>
 </div>
 

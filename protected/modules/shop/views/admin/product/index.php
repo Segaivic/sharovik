@@ -34,7 +34,7 @@ $this->header = "Товары";
 
             array(
                 'class'=>'CButtonColumn',
-                'template'=>'{attributes}{gallery}{view}{update}{delete}',
+                'template'=>'{attributes}{gallery}{adds}{view}{update}{delete}',
                 'buttons'=> array(
                     'view' => array
                     (
@@ -53,8 +53,14 @@ $this->header = "Товары";
                         'imageUrl'=>'/images/icons/add16x16.png',
                         'url'=>'Yii::app()->createUrl("shop/admin/attributes/", array("id"=>$data->id))',
                     ),
+                    'adds' => array
+                    (
+                        'label'=>'Модификации',
+                        'imageUrl'=>'/images/icons/adds16x16.png',
+                        'url'=>'Yii::app()->createUrl("shop/admin/adds/index", array("id"=>$data->id))',
+                    ),
                 ),
-                'htmlOptions'=>array('width'=>'80px'),
+                'htmlOptions'=>array('width'=>'110px'),
             ),
         ),
     )); ?>

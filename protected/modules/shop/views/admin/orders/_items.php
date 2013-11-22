@@ -20,7 +20,20 @@
 
                <tr>
                    <td><?php echo CHtml::encode($m->product['id']) ?></td>
-                   <td><?php echo CHtml::link($m->product['title'],$m->product['url']); ?></td>
+                   <td>
+                       <?php echo CHtml::link($m->product['title'],$m->product['url']); ?>
+                       <br />
+                       <?php $options = SOptionkits::getOptionsByOptionsKitId($m->optionkit_id); ?>
+                       <?php foreach ($options as $option): ?>
+                           <span style="display: block">
+                        <?php if($option['withprice'] == 0){ ?>
+                                   <?php echo $option['group'].': '.$option['title'] ?>
+                               <?php } else { ?>
+                                   <?php echo $option['group'].': '.$option['title'].' + '.$option['price'].' руб.'; ?>
+                               <?php } ?>
+                    </span>
+                       <?php endforeach; ?>
+                   </td>
                    <td><?php echo CHtml::encode($m->quantity);  ?></td>
                    <td><?php echo CHtml::encode($m->price); ?></td>
                    <td><?php echo CHtml::encode($m->sum); ?></td>

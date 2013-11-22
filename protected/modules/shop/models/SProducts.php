@@ -13,7 +13,7 @@
  * @property string $updated_at
  * @property integer $category_id
  */
-class SProducts extends CActiveRecord implements IECartPosition
+class SProducts extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -23,23 +23,25 @@ class SProducts extends CActiveRecord implements IECartPosition
     const STATUS_ACTIVE = 1;
     const STATUS_DISABLED = 2;
     const TITLE_LENGTH_LIMIT = 27;
+
+
+
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
 
-    function getId(){
-        return $this->id;
-    }
 
-    function getPrice(){
-        return $this->price;
-    }
 
-    function getTitle(){
-        return $this->title;
-    }
 
+    protected function getOptions(){
+        $model = SAddsSessions::model()->with('item','item.group')->findAll(array(
+            'condition' => 'session_id = :sessionID AND t.product_id = :product_id',
+            'params' => array(':sessionID' => Yii::app()->session->sessionID , ':product_id' => $this->id)
+        ));
+
+        return $model;
+    }
     public function scopes(){
         return array(
             'activeOnly' => array(
@@ -92,6 +94,7 @@ class SProducts extends CActiveRecord implements IECartPosition
             'gallery'=>array(self::HAS_MANY, 'SGallery', 'product_id'),
             'accessories'=>array(self::HAS_MANY, 'SAccessories', 'product_id'),
             'rating'=>array(self::HAS_MANY, 'SProductRating', 'product_id'),
+            'adds'=>array(self::HAS_MANY, 'ShopAddsGroups', 'product_id'),
 		);
 	}
 
@@ -193,6 +196,7 @@ class SProducts extends CActiveRecord implements IECartPosition
             )
 		));
 	}
+
 
 
     protected function beforeSave()

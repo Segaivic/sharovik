@@ -11,11 +11,17 @@ $this->breadcrumbs = array(
 //breadcrumbs
 ?>
 
-<h2><?php echo CHtml::link($product->title , $product->url);
-    echo CHtml::link(CHtml::image('/images/icons/edit.png'),Yii::app()->createUrl('/shop/admin/product/update',array('id' => $product->id)));
-?>  - характеристики
-</h2>
-<p></p>
+<div class="row-fluid">
+    <div class="span9">
+        <h2><?php echo CHtml::link($product->title , $product->url);
+            echo CHtml::link(CHtml::image('/images/icons/edit.png'),Yii::app()->createUrl('/shop/admin/product/update',array('id' => $product->id)));
+            ?>  - характеристики
+        </h2>
+    </div>
+    <div class="span3" style="margin-top: 10px">
+        <?php $this->widget('ProductActions', array('product_id' => $product->id)); ?>
+    </div>
+</div>
     <!--Фильтр для числовых полей-->
 <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/jquery.numberMask.js' , CClientScript::POS_END);
 Yii::app()->clientScript->registerScript("d_field_filter","

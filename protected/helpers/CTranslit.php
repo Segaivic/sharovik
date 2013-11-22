@@ -23,6 +23,6 @@ class CTranslit {
             '"' => ''
         );
 
-        return preg_replace("/[^a-zA-Z0-9]+/", "", strtr($str, $translit));
+        return preg_replace("/[^a-zA-Z0-9-.]+/", "", strtr($str, $translit));
     }
 }

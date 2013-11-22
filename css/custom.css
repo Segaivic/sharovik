@@ -1637,10 +1637,7 @@ ul.icons {
     border: none;
     padding: 8px 10px 11px;
 }
-input.btn {
-    float: left;
-    margin-left: 20px;
-}
+
 .grey-box {
     background-color: #fbfbfb;    
     border-bottom: 1px solid #dfdfdf;
@@ -3692,4 +3689,10 @@ div.news h2 {
 
 .star-rating-control {
     text-align: center;
+}
+
+.options_desc{
+    padding: 8px 0 0 8px;
+    font-size: 12px;
+    line-height: 13px;
 }

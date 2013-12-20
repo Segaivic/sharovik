@@ -3,7 +3,7 @@
 # Server version:               5.5.32
 # Server OS:                    Win32
 # HeidiSQL version:             6.0.0.3603
-# Date/time:                    2013-09-13 14:10:50
+# Date/time:                    2013-12-20 09:25:13
 # --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -132,14 +132,10 @@ CREATE TABLE IF NOT EXISTS `tbl_events_reserve` (
   `description` text,
   `visited` enum('1','0') NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_events_reserve: ~3 rows (approximately)
+# Dumping data for table comfort.tbl_events_reserve: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_events_reserve` DISABLE KEYS */;
-INSERT INTO `tbl_events_reserve` (`id`, `name`, `contacts`, `date_start`, `date_end`, `description`, `visited`) VALUES
-	(4, 'Шпак Антон Семёнович', 'ewf', '2013-07-19', '2013-07-16', 'fergferg', '1'),
-	(5, 'Шпак Антон Семёнович', 'ewf', '2013-07-19', '2013-07-16', 'fergferg', '0'),
-	(6, 'Шпак Антон Семёнович', 'ewf', '2013-07-19', '2013-07-16', 'fergferg', '1');
 /*!40000 ALTER TABLE `tbl_events_reserve` ENABLE KEYS */;
 
 
@@ -288,14 +284,14 @@ CREATE TABLE IF NOT EXISTS `tbl_news` (
   `alias_url` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `title` (`title`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 # Dumping data for table comfort.tbl_news: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_news` DISABLE KEYS */;
 INSERT INTO `tbl_news` (`id`, `title`, `alias`, `introtext`, `fulltext`, `is_published`, `is_onfrontpage`, `user_id`, `catid`, `created`, `modified`, `metakey`, `metadesc`, `alias_url`) VALUES
 	(3, 'вапв вапвап', '', '<p>\r\n	 546456\r\n</p>', '<p>\r\n	 rtrtyery\r\n</p>', '1', '1', 1, 1, '2013-09-05 05:48:17', '2013-09-05 05:48:56', '', '', 'vapv-vapvap6'),
 	(4, 'yyui', '', '<p>\r\n	trut\r\n</p>', '<p>\r\n	tyurtu\r\n</p>', '1', '1', 1, 1, '2013-09-05 05:49:41', '2013-09-05 05:49:41', '', '', 'privet-vsem'),
-	(5, 'енкгенг', '', '<p>\r\n	ег\r\n</p>', '<p>\r\n	енгег\r\n</p>', '1', '1', 1, 1, '2013-09-05 07:13:51', '2013-09-05 07:13:51', '', '', 'user');
+	(5, 'j', '', '<p>\r\n	ghj\r\n</p>', '', '1', '1', 1, 1, '2013-10-16 10:45:01', '2013-10-16 10:45:01', '', '', 'j');
 /*!40000 ALTER TABLE `tbl_news` ENABLE KEYS */;
 
 
@@ -316,7 +312,7 @@ CREATE TABLE IF NOT EXISTS `tbl_page` (
 # Dumping data for table comfort.tbl_page: ~7 rows (approximately)
 /*!40000 ALTER TABLE `tbl_page` DISABLE KEYS */;
 INSERT INTO `tbl_page` (`id`, `title`, `content`, `metakey`, `metadesc`, `updated_at`, `is_published`, `alias_url`) VALUES
-	(1, 'О компании', '<p>\n	Текст о компании\n</p>', '', '', '2013-02-11 10:05:05', '1', 'about'),
+	(1, 'О компании', '<p>\n	  Текст о компании!\n</p>', '', '', '2013-02-11 10:05:05', '1', 'about'),
 	(2, 'Новая страница6', '<p>yi</p>', 'tyi', 'tyi', '2013-03-26 15:30:43', '1', 'sdf'),
 	(4, 'fghfgh', '<p>fghfgh</p>', '', '', '2013-03-26 15:46:22', '1', '4-about'),
 	(5, 'Просто новая страница', '<h2 style="text-align: center;">Заголовок</h2><div>Салют</div>', '', '', '2013-04-17 15:36:25', '1', 'newpage'),
@@ -415,6 +411,71 @@ INSERT INTO `tbl_shop_accessories` (`id`, `product_id`, `acc_id`) VALUES
 	(116, 38, 35),
 	(117, 33, 21);
 /*!40000 ALTER TABLE `tbl_shop_accessories` ENABLE KEYS */;
+
+
+# Dumping structure for table comfort.tbl_shop_adds_groups
+CREATE TABLE IF NOT EXISTS `tbl_shop_adds_groups` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` char(200) NOT NULL,
+  `active` enum('1','0') DEFAULT '1',
+  `multichoice` enum('1','0') NOT NULL DEFAULT '0',
+  `withprice` enum('1','0') NOT NULL DEFAULT '0',
+  `withstock` enum('1','0') NOT NULL DEFAULT '0',
+  `product_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_tbl_shop_adds_groups_tbl_shop_products` (`product_id`),
+  CONSTRAINT `FK_tbl_shop_adds_groups_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+# Dumping data for table comfort.tbl_shop_adds_groups: ~4 rows (approximately)
+/*!40000 ALTER TABLE `tbl_shop_adds_groups` DISABLE KEYS */;
+INSERT INTO `tbl_shop_adds_groups` (`id`, `title`, `active`, `multichoice`, `withprice`, `withstock`, `product_id`) VALUES
+	(3, 'хз', '1', '0', '0', '0', 5),
+	(11, 'Опция 1', '1', '0', '1', '1', 31),
+	(12, 'Цвет', '1', '0', '0', '1', 35),
+	(13, 'Доп. услуги', '1', '1', '1', '0', 35);
+/*!40000 ALTER TABLE `tbl_shop_adds_groups` ENABLE KEYS */;
+
+
+# Dumping structure for table comfort.tbl_shop_adds_items
+CREATE TABLE IF NOT EXISTS `tbl_shop_adds_items` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `group_id` int(10) unsigned NOT NULL,
+  `in_stock` int(10) NOT NULL DEFAULT '0',
+  `title` char(100) NOT NULL,
+  `price` tinyint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `FK_tbl_shop_adds_items_tbl_shop_adds_groups` (`group_id`),
+  CONSTRAINT `FK_tbl_shop_adds_items_tbl_shop_adds_groups` FOREIGN KEY (`group_id`) REFERENCES `tbl_shop_adds_groups` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+# Dumping data for table comfort.tbl_shop_adds_items: ~7 rows (approximately)
+/*!40000 ALTER TABLE `tbl_shop_adds_items` DISABLE KEYS */;
+INSERT INTO `tbl_shop_adds_items` (`id`, `group_id`, `in_stock`, `title`, `price`) VALUES
+	(1, 11, 21, 'Пункт 1', 10),
+	(2, 13, 10, 'Настроить интернет', 100),
+	(3, 13, 0, 'Наклеить плёнку', 50),
+	(4, 12, 120, 'Синий', 0),
+	(5, 12, 50, 'Зелёный', 0),
+	(7, 3, 0, 'Опция 1', 0),
+	(8, 13, 0, 'Надежная упаковка', 20);
+/*!40000 ALTER TABLE `tbl_shop_adds_items` ENABLE KEYS */;
+
+
+# Dumping structure for table comfort.tbl_shop_adds_sessions
+CREATE TABLE IF NOT EXISTS `tbl_shop_adds_sessions` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `session_id` char(32) NOT NULL,
+  `product_id` int(10) DEFAULT NULL,
+  `optionkit_id` int(10) unsigned DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `FK_tbl_shop_adds_sessions_yiisession` (`session_id`),
+  CONSTRAINT `FK_tbl_shop_adds_sessions_yiisession` FOREIGN KEY (`session_id`) REFERENCES `yiisession` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# Dumping data for table comfort.tbl_shop_adds_sessions: ~0 rows (approximately)
+/*!40000 ALTER TABLE `tbl_shop_adds_sessions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_shop_adds_sessions` ENABLE KEYS */;
 
 
 # Dumping structure for table comfort.tbl_shop_attribute_titles
@@ -758,9 +819,9 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_gallery` (
   `thumbnail` varchar(500) DEFAULT NULL,
   `image` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_gallery: ~38 rows (approximately)
+# Dumping data for table comfort.tbl_shop_gallery: ~30 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_gallery` DISABLE KEYS */;
 INSERT INTO `tbl_shop_gallery` (`id`, `product_id`, `thumbnail`, `image`) VALUES
 	(17, 17, '/uploads/shop/gallery/thumb/512cb32394847916500537.jpg', '/uploads/shop/gallery/title/512cb32394847916500537.jpg'),
@@ -785,23 +846,43 @@ INSERT INTO `tbl_shop_gallery` (`id`, `product_id`, `thumbnail`, `image`) VALUES
 	(43, 19, '/uploads/shop/gallery/thumb/513838aceac7d1t.jpg', '/uploads/shop/gallery/title/513838aceac7d1t.jpg'),
 	(44, 19, '/uploads/shop/gallery/thumb/513838aceac7d1325451683_222701728_1----.jpg', '/uploads/shop/gallery/title/513838aceac7d1325451683_222701728_1----.jpg'),
 	(45, 19, '/uploads/shop/gallery/thumb/513838aceac7d410-2.jpg', '/uploads/shop/gallery/title/513838aceac7d410-2.jpg'),
-	(46, 35, '/uploads/shop/gallery/thumb/5131e0e7a1d81Jessica_Alba_Main.jpg', '/uploads/shop/gallery/title/5131e0e7a1d81Jessica_Alba_Main.jpg'),
-	(47, 35, '/uploads/shop/gallery/thumb/5131e0e7a1d81jessica-alba-011-1920x1200.jpg', '/uploads/shop/gallery/title/5131e0e7a1d81jessica-alba-011-1920x1200.jpg'),
-	(48, 35, '/uploads/shop/gallery/thumb/513340e07bdceXr_YKG8KTBel.jpg', '/uploads/shop/gallery/title/513340e07bdceXr_YKG8KTBel.jpg'),
-	(49, 35, '/uploads/shop/gallery/thumb/513340e07bdcejessica-alba-im-alltags-look-600x900-615109.jpg', '/uploads/shop/gallery/title/513340e07bdcejessica-alba-im-alltags-look-600x900-615109.jpg'),
-	(50, 35, '/uploads/shop/gallery/thumb/513340e07bdceJessica-Alba11.jpg', '/uploads/shop/gallery/title/513340e07bdceJessica-Alba11.jpg'),
-	(51, 35, '/uploads/shop/gallery/thumb/513340e07bdcejessica-alba-011-1920x1200.jpg', '/uploads/shop/gallery/title/513340e07bdcejessica-alba-011-1920x1200.jpg'),
-	(52, 35, '/uploads/shop/gallery/thumb/513340e07bdceJessica-Alba-4.jpg', '/uploads/shop/gallery/title/513340e07bdceJessica-Alba-4.jpg'),
-	(53, 35, '/uploads/shop/gallery/thumb/513340e07bdce77026088_large_1279638508_jessicaalba_by_reactor_net_064.jpg', '/uploads/shop/gallery/title/513340e07bdce77026088_large_1279638508_jessicaalba_by_reactor_net_064.jpg'),
 	(54, 33, '/uploads/shop/gallery/thumb/519333edf10b1150px-Stephan_El_Shaarawy.jpg', '/uploads/shop/gallery/title/519333edf10b1150px-Stephan_El_Shaarawy.jpg'),
 	(55, 33, '/uploads/shop/gallery/thumb/519333edf10b1753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg', '/uploads/shop/gallery/title/519333edf10b1753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg'),
-	(56, 1, '/uploads/shop/gallery/thumb/51a2ca5c1002871052.jpg', '/uploads/shop/gallery/title/51a2ca5c1002871052.jpg'),
-	(57, 1, '/uploads/shop/gallery/thumb/51a2ca5c10028046c67f24bfb3b4ca352a4a93c90ef5b.jpg', '/uploads/shop/gallery/title/51a2ca5c10028046c67f24bfb3b4ca352a4a93c90ef5b.jpg'),
-	(58, 1, '/uploads/shop/gallery/thumb/51a2ca5c10028150px-Stephan_El_Shaarawy.jpg', '/uploads/shop/gallery/title/51a2ca5c10028150px-Stephan_El_Shaarawy.jpg'),
 	(59, 38, '/uploads/shop/gallery/thumb/51a2ca5c1002871052.jpg', '/uploads/shop/gallery/title/51a2ca5c1002871052.jpg'),
 	(60, 38, '/uploads/shop/gallery/thumb/51a2ca5c10028046c67f24bfb3b4ca352a4a93c90ef5b.jpg', '/uploads/shop/gallery/title/51a2ca5c10028046c67f24bfb3b4ca352a4a93c90ef5b.jpg'),
-	(61, 38, '/uploads/shop/gallery/thumb/51a2ca5c10028150px-Stephan_El_Shaarawy.jpg', '/uploads/shop/gallery/title/51a2ca5c10028150px-Stephan_El_Shaarawy.jpg');
+	(61, 38, '/uploads/shop/gallery/thumb/51a2ca5c10028150px-Stephan_El_Shaarawy.jpg', '/uploads/shop/gallery/title/51a2ca5c10028150px-Stephan_El_Shaarawy.jpg'),
+	(62, 34, '/uploads/shop/gallery/thumb/52522090e1888Selena-Gomez-2013-Shirts-Collections.jpg', '/uploads/shop/gallery/title/52522090e1888Selena-Gomez-2013-Shirts-Collections.jpg'),
+	(63, 34, '/uploads/shop/gallery/thumb/52522090e1888150px-Stephan_El_Shaarawy.jpg', '/uploads/shop/gallery/title/52522090e1888150px-Stephan_El_Shaarawy.jpg'),
+	(64, 34, '/uploads/shop/gallery/thumb/52522090e1888yu.jpg', '/uploads/shop/gallery/title/52522090e1888yu.jpg');
 /*!40000 ALTER TABLE `tbl_shop_gallery` ENABLE KEYS */;
+
+
+# Dumping structure for table comfort.tbl_shop_optionkits
+CREATE TABLE IF NOT EXISTS `tbl_shop_optionkits` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `options` char(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+
+# Dumping data for table comfort.tbl_shop_optionkits: ~15 rows (approximately)
+/*!40000 ALTER TABLE `tbl_shop_optionkits` DISABLE KEYS */;
+INSERT INTO `tbl_shop_optionkits` (`id`, `options`) VALUES
+	(11, '5, 2, 3'),
+	(12, '4, 2'),
+	(13, '0, 2, 3'),
+	(14, '0, 2'),
+	(15, '5, 3'),
+	(16, '6, 3'),
+	(17, '4, 2, 3'),
+	(18, '5, 2'),
+	(19, '0, 3'),
+	(20, '4, 3'),
+	(21, '0'),
+	(22, '1'),
+	(23, '4'),
+	(24, '7'),
+	(25, '5, 8');
+/*!40000 ALTER TABLE `tbl_shop_optionkits` ENABLE KEYS */;
 
 
 # Dumping structure for table comfort.tbl_shop_orders
@@ -818,19 +899,24 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_orders` (
   `shipping_date` date DEFAULT NULL,
   `phone` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_orders: ~8 rows (approximately)
+# Dumping data for table comfort.tbl_shop_orders: ~13 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_orders` DISABLE KEYS */;
 INSERT INTO `tbl_shop_orders` (`id`, `user_id`, `name`, `address`, `comments`, `created`, `active`, `visited`, `email`, `shipping_date`, `phone`) VALUES
-	(8, 1, '547', '5647', '', '2013-05-06 11:24:01', '1', '1', '546', '2013-05-28', NULL),
-	(9, 1, '5674', 'WERWER', '', '2013-05-06 11:24:58', '1', '1', 'werwer@POKFE.ER', '1970-01-01', NULL),
-	(10, 1, 'Василий', 'Ул. Лермонтова 17-7', '', '2013-05-06 15:34:54', '0', '1', 'Пупкин', '1970-01-01', 32767),
-	(11, 1, 'Серёга', 'wdfsdf', '', '2013-05-27 09:38:53', '1', '1', 'sovremenny@live.ru', '1970-01-01', 32767),
-	(12, 1, 'Василий', 'PODKSPDFOK', 'SDF', '2013-05-27 10:22:11', '1', '1', 'lkjf@kjlf.rt', '2013-05-10', NULL),
-	(13, 1, 'Анатолий', '984984984', '', '2013-05-27 10:23:34', '1', '1', 'vasserman@mail.ru', '1970-01-01', 32767),
-	(14, 1, 'Алексей', 'fsdfsdf', '', '2013-05-27 10:43:33', '1', '0', 'kpk@pokd.er', '1970-01-01', 32767),
-	(15, 1, 'Лёха', 'зщвалпзвапщ', '', '2013-05-27 15:10:10', '1', '1', 'вапвап', '1970-01-01', 32767);
+	(20, NULL, 'Олег', 'wer', '', '2013-10-22 09:03:40', '1', '1', 'kjhkJ@sdf.ru', '1970-01-01', NULL),
+	(24, 1, 'Брэдли Купер', 'asd', '', '2013-10-22 09:25:11', '1', '1', 'iuhi@ewr.rt', '1970-01-01', NULL),
+	(27, 1, 'rtyu', 'wertwer', '', '2013-10-22 11:15:22', '1', '1', 'dfss@dfg.er', '1970-01-01', 32767),
+	(28, 1, 'tyu', 'fghdfh', '', '2013-10-22 11:17:26', '1', '1', 'tyu@gfg.ru', '1970-01-01', NULL),
+	(29, 1, '111111111', '345345', '', '2013-10-22 11:20:37', '1', '1', 'qwe@wer.rt', '1970-01-01', NULL),
+	(30, 0, 'hfgdh', 'sdfasdf', '', '2013-10-22 11:22:34', '1', '1', 'sdf@sdf.rt', '1970-01-01', NULL),
+	(31, NULL, '456', 'rtey', '', '2013-10-22 11:45:52', '1', '1', 're@dfg.ru', '1970-01-01', NULL),
+	(32, NULL, 'ert', '345345', '', '2013-10-22 11:51:27', '1', '1', 'dfss@dfg.er', '1970-01-01', NULL),
+	(33, NULL, 'Селена Гомес', 'LA', '', '2013-10-22 11:52:49', '1', '1', 'dfss@dfg.er', '1970-01-01', NULL),
+	(34, NULL, 'Селена Гомес', '345345', '', '2013-10-22 11:57:36', '1', '1', 'dfss@dfg.er', '1970-01-01', 567),
+	(35, NULL, 'Селена Гомес', 'LA', '', '2013-10-22 12:58:30', '1', '1', 'selena@gomez.com', '1970-01-01', 567),
+	(36, NULL, 'try', 'LA', '', '2013-10-22 13:03:31', '1', '1', 'tryr@hfgh.ru', '1970-01-01', NULL),
+	(38, 1, 'wer', 'ул. Мира, д. 45, кв. 4', '', '2013-12-05 10:31:09', '1', '0', 'flintmesh@gmail.com', '1970-01-01', NULL);
 /*!40000 ALTER TABLE `tbl_shop_orders` ENABLE KEYS */;
 
 
@@ -842,27 +928,36 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_orders_items` (
   `quantity` int(25) NOT NULL,
   `price` int(25) NOT NULL,
   `sum` int(25) NOT NULL,
+  `optionkit_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `order_id` (`order_id`),
   KEY `product_id` (`product_id`),
   CONSTRAINT `FK_tbl_shop_orders_items_tbl_shop_orders` FOREIGN KEY (`order_id`) REFERENCES `tbl_shop_orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_orders_items: ~12 rows (approximately)
+# Dumping data for table comfort.tbl_shop_orders_items: ~20 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_orders_items` DISABLE KEYS */;
-INSERT INTO `tbl_shop_orders_items` (`id`, `order_id`, `product_id`, `quantity`, `price`, `sum`) VALUES
-	(4, 8, 1, 1, 100, 100),
-	(5, 9, 2, 8, 1608, 12864),
-	(6, 9, 5, 7, 1800, 12600),
-	(7, 9, 1, 5, 100, 500),
-	(8, 10, 31, 1, 1800, 1800),
-	(9, 10, 5, 11, 1800, 19800),
-	(10, 11, 1, 1, 100, 100),
-	(11, 12, 33, 1, 17680, 17680),
-	(12, 13, 34, 13, 234, 3042),
-	(13, 13, 36, 14, 234, 3276),
-	(14, 14, 1, 4, 100, 400),
-	(15, 15, 33, 1, 17680, 17680);
+INSERT INTO `tbl_shop_orders_items` (`id`, `order_id`, `product_id`, `quantity`, `price`, `sum`, `optionkit_id`) VALUES
+	(20, 20, 34, 1, 234, 234, NULL),
+	(26, 24, 35, 2, 200, 400, 14),
+	(27, 24, 35, 1, 150, 150, 15),
+	(34, 27, 34, 5, 234, 1170, 0),
+	(35, 27, 35, 1, 200, 200, 12),
+	(36, 28, 34, 1, 234, 234, 0),
+	(37, 28, 35, 1, 200, 200, 14),
+	(38, 29, 34, 1, 234, 234, 0),
+	(39, 29, 35, 1, 200, 200, 12),
+	(40, 30, 34, 4, 234, 936, 0),
+	(41, 30, 35, 1, 150, 150, 16),
+	(42, 31, 34, 1, 234, 234, 0),
+	(43, 31, 35, 1, 200, 200, 14),
+	(44, 32, 34, 1, 234, 234, 0),
+	(45, 33, 34, 1, 234, 234, 0),
+	(46, 34, 34, 1, 234, 234, 0),
+	(47, 35, 34, 1, 234, 234, 0),
+	(48, 36, 35, 1, 250, 250, 17),
+	(49, 36, 34, 1, 234, 234, 0),
+	(51, 38, 35, 400, 100, 40000, 21);
 /*!40000 ALTER TABLE `tbl_shop_orders_items` ENABLE KEYS */;
 
 
@@ -884,23 +979,22 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_products` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_products: ~15 rows (approximately)
+# Dumping data for table comfort.tbl_shop_products: ~14 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_products` DISABLE KEYS */;
 INSERT INTO `tbl_shop_products` (`id`, `title`, `description`, `characters`, `price`, `created_at`, `updated_at`, `category_id`, `in_stock`, `active`, `meta_description`, `meta_keywords`, `alias_url`) VALUES
 	(1, 'Товар 1', 'Описание!!!', 'Хрень какаято\r\n<div><p><p><img src="/uploads/admin/index//9ddf11e264d8ac56e9d9fdc9c4e00164.jpg" style="width: 250px; height: 250px; float: left; margin: 0px 10px 10px 0px;" alt=""></p><br></p></div>\r\n', 100, '2013-02-25 20:18:36', '2013-06-25 09:51:51', 14, 0, '1', '', '', 'tovarchik'),
 	(2, 'Товар 2', '', '<p><br></p>', 1608, '2013-02-25 23:59:27', '2013-05-15 07:43:32', 2, 0, '1', '', '', NULL),
-	(5, 'Джессика Альба', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim.</span></p>', 1800, '2013-02-26 00:01:23', '2013-05-06 06:25:18', 3, 0, '1', '', '', '5-5-albanochka'),
+	(5, 'Джессика Альба', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p>\r\n	<span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim.</span>\r\n</p>', 1800, '2013-02-26 00:01:23', '2013-10-24 06:56:02', 3, 0, '1', '', '', '5-5-albanochka'),
 	(19, 'Шкаф 2!', ' Шкафчик Шкафчик', '<p>яч сч</p>', 23435, '2013-02-26 20:44:15', '2013-05-16 10:16:29', 2, 0, '1', '', '', NULL),
 	(21, 'Шкаф 3', 'Шкаф 3 суперский 4 дверцы', '', 4560, '2013-03-02 18:25:33', '2013-05-03 11:04:15', 2, 0, '1', '', '', NULL),
 	(24, 'пропр', 'опронро', '', 0, '2013-03-05 14:13:54', '2013-03-05 09:14:11', 1, 0, '1', '', '', NULL),
 	(25, 'нке', '', '', 0, '2013-03-05 14:14:35', NULL, 1, 0, '1', 'нукн', '', NULL),
-	(31, 'Джессика Альба 2', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim!</span></p>', 1800, '2013-04-29 05:13:13', '2013-05-17 04:32:50', 3, 0, '1', '', '', '31-albanochka'),
+	(31, 'Джессика Альба 2', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim!</span></p>', 1800, '2013-04-29 05:13:13', '2013-10-08 10:38:19', 3, 0, '1', '', '', '31-albanochka'),
 	(32, 'Джессика Альба 3', 'Джессика Альба родилась 28 апреля 1981 года в городе Помона, штат Калифорния, США в семье Кэтрин (урождённой Йенсен) и Марка Альба.', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim.</span></p>', 1600, '2013-04-29 05:15:14', '2013-09-02 11:07:55', 3, 0, '1', '', '', NULL),
 	(33, 'Samsung Galaxy S III i9300 16Gb Black', 'GSM, 3G, смартфон, Android 4.0, вес 133 г, ШхВхТ 70.6x136.6x8.6 мм, экран 4.8", 720x1280, FM-радио, Bluetooth, NFC, Wi-Fi, GPS, ГЛОНАСС, фотокамера 8 МП, память 16 Гб,', '<p><b style="line-height: 1.45em;">Достоинства:&nbsp;</b><span style="line-height: 1.45em;">Экран,самый качественный корые я когда то видел!!!!Большое разрешение, фотографии получаются естественными,яркими!!! Процессор: шустрый,ни где не тормозит, не зависал еще ни разу!!!Аккумулятор держит очень долго, зарядил утром на 68%, продержался 2 дня!!!... Все писать не буду, выделил главное т.к все ни раз упоминалось!!!</span></p><p><b style="line-height: 1.45em;">Недостатки:&nbsp;</b><span style="line-height: 1.45em;">Пока не заметил!!!</span></p><p><b>Комментарий:&nbsp;</b>Ребята, если кто то затрудняется в выборе, то скажу,пока нет ничего лучшего, кроме Note 2!!</p><p></p>', 17680, '2013-05-07 06:23:47', '2013-07-17 10:38:35', 18, 0, '1', 'Samsung Galaxy S III i9300 16Gb Black', 'Samsung', 'samsung-galaxy-s3'),
-	(34, 'Самсунг', '', '', 234, '2013-05-14 04:32:27', NULL, 18, 0, '1', '', '', '-samsung-galaxy-s3'),
-	(35, 'HTC ONE X', 'GSM, 3G, смартфон, Android 4.0, вес 130 г, ШхВхТ 69.9x134.36x8.9 мм, экран 4.7", 720x1280, FM-радио, Bluetooth, NFC, Wi-Fi, GPS, фотокамера 8 МП, память 32 Гб, аккумулятор ...', '<p>yr</p>', 123324, '2013-05-14 04:35:03', '2013-05-15 10:37:18', 18, 0, '1', '', '', '3578-samsung-galaxy-s3'),
+	(34, 'Самсунг', '', '', 234, '2013-05-14 04:32:27', '2013-10-07 05:10:39', 18, 0, '1', '', '', 'samsung'),
+	(35, 'HTC ONE X', 'GSM, 3G, смартфон, Android 4.0, вес 130 г, ШхВхТ 69.9x134.36x8.9 мм, экран 4.7", 720x1280, FM-радио, Bluetooth, NFC, Wi-Fi, GPS, фотокамера 8 МП, память 32 Гб, аккумулятор ...', '<p>\r\n	       Отличный аппарат!\r\n</p>', 100, '2013-05-14 04:35:03', '2013-12-05 05:46:42', 18, 460, '1', '', '', 'htc-one-x'),
 	(36, 'Ещё Уан икс', 'цуацуа', '<p>фывапвыап</p>', 234, '2013-05-14 06:34:47', '2013-05-20 09:24:10', 18, 0, '1', '', '', '36--samsung-galaxy-s3'),
-	(37, 'Джессика Альба 4', 'Джессика Альба', '<p><span style="line-height: 1.45em;">В 2001 году Джессика заняла первое место в Hot 100 журнала Maxim. В 2005 году она была названа одной из 50 самых красивых людей планеты по версии журнала People, а в 2007 году попала в список 100 самых красивых людей. В 2002 году Альба заняла пятое место в рейтинге самых сексуальных актрис по результатам опроса портала Hollywood.com, шестое по версии журнала FHM и двенадцатое в списке «102 самых сексуальных женщин планеты» по версии журнала Stuff. В 2005 году она заняла пятое место в Hot 100 журнала Maxim.</span></p>', 1600, '2013-04-29 05:15:14', '2013-05-16 10:17:32', 3, 0, '1', '', '', NULL),
 	(38, 'Товар 1', 'Описание!', 'Хрень какаято', 100678, '2013-05-30 04:43:28', '2013-05-30 05:10:38', 14, 10, '1', '', '', 'tovarchik2');
 /*!40000 ALTER TABLE `tbl_shop_products` ENABLE KEYS */;
 
@@ -920,7 +1014,7 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_productsimg` (
 /*!40000 ALTER TABLE `tbl_shop_productsimg` DISABLE KEYS */;
 INSERT INTO `tbl_shop_productsimg` (`id`, `product_id`, `thumbnail`, `image`) VALUES
 	(6, 19, '/uploads/shop/product/thumb/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg', '/uploads/shop/product/title/5170ecc9e6425753E5AFA-C3A0-4DF0-9BA0-51E604E8C97B.jpg'),
-	(7, 5, '/uploads/shop/product/thumb/5134650feb1538d31b779e3dc27748fbab31df16cef06.png', '/uploads/shop/product/title/5134650feb1538d31b779e3dc27748fbab31df16cef06.png'),
+	(7, 5, '/uploads/shop/product/thumb/5268a867292ddtambov.jpg', '/uploads/shop/product/title/5268a867292ddtambov.jpg'),
 	(9, 21, '/uploads/shop/product/thumb/5131efbd38d8204-04-06_1557.jpg', '/uploads/shop/product/title/5131efbd38d8204-04-06_1557.jpg'),
 	(10, 1, '/uploads/shop/product/thumb/5135a88a842beTravel.png', '/uploads/shop/product/title/5135a88a842beTravel.png'),
 	(13, 24, '/uploads/shop/product/thumb/5135a9536cd521266239971_74379928_1---.jpg', '/uploads/shop/product/title/5135a9536cd521266239971_74379928_1---.jpg'),
@@ -929,8 +1023,8 @@ INSERT INTO `tbl_shop_productsimg` (`id`, `product_id`, `thumbnail`, `image`) VA
 	(21, 31, '/uploads/shop/product/thumb/5134650feb1538d31b779e3dc27748fbab31df16cef06.png', '/uploads/shop/product/title/5134650feb1538d31b779e3dc27748fbab31df16cef06.png'),
 	(22, 32, '/uploads/shop/product/thumb/5134650feb1538d31b779e3dc27748fbab31df16cef06.png', '/uploads/shop/product/title/5134650feb1538d31b779e3dc27748fbab31df16cef06.png'),
 	(23, 33, '/uploads/shop/product/thumb/518881d3e598e71052.jpg', '/uploads/shop/product/title/518881d3e598e71052.jpg'),
-	(24, 34, '/uploads/shop/product/thumb/5191a23badb649104697shop_items_catalog_image273.jpg', '/uploads/shop/product/title/5191a23badb649104697shop_items_catalog_image273.jpg'),
-	(25, 35, '/uploads/shop/product/thumb/5191a2d71f2d4onex.jpg', '/uploads/shop/product/title/5191a2d71f2d4onex.jpg'),
+	(24, 34, '/uploads/shop/product/thumb/52521f56d3235onex.jpg', '/uploads/shop/product/title/52521f56d3235onex.jpg'),
+	(25, 35, '/uploads/shop/product/thumb/5254e87110b0fonex.jpg', '/uploads/shop/product/title/5254e87110b0fonex.jpg'),
 	(26, 36, '/uploads/shop/product/thumb/5191bee78f1bc150px-Stephan_El_Shaarawy.jpg', '/uploads/shop/product/title/5191bee78f1bc150px-Stephan_El_Shaarawy.jpg'),
 	(27, 38, '/uploads/shop/product/thumb/5135a88a842beTravel.png', '/uploads/shop/product/title/5135a88a842beTravel.png');
 /*!40000 ALTER TABLE `tbl_shop_productsimg` ENABLE KEYS */;
@@ -944,9 +1038,9 @@ CREATE TABLE IF NOT EXISTS `tbl_shop_products_rating` (
   PRIMARY KEY (`id`),
   KEY `FK_tbl_shop_products_rating_tbl_shop_products` (`product_id`),
   CONSTRAINT `FK_tbl_shop_products_rating_tbl_shop_products` FOREIGN KEY (`product_id`) REFERENCES `tbl_shop_products` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
-# Dumping data for table comfort.tbl_shop_products_rating: ~31 rows (approximately)
+# Dumping data for table comfort.tbl_shop_products_rating: ~30 rows (approximately)
 /*!40000 ALTER TABLE `tbl_shop_products_rating` DISABLE KEYS */;
 INSERT INTO `tbl_shop_products_rating` (`id`, `product_id`, `rating`) VALUES
 	(1, 33, 10),
@@ -978,8 +1072,7 @@ INSERT INTO `tbl_shop_products_rating` (`id`, `product_id`, `rating`) VALUES
 	(46, 38, 9),
 	(47, 38, 10),
 	(48, 36, 10),
-	(49, 36, 10),
-	(50, 37, 10);
+	(49, 36, 10);
 /*!40000 ALTER TABLE `tbl_shop_products_rating` ENABLE KEYS */;
 
 
@@ -1003,9 +1096,24 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 # Dumping data for table comfort.tbl_users: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_users` DISABLE KEYS */;
 INSERT INTO `tbl_users` (`id`, `username`, `password`, `email`, `activkey`, `superuser`, `status`, `create_at`, `lastvisit_at`, `userpic`) VALUES
-	(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'webmaster@example.com', '9b94c7be573c22b9d4f7f8caccd5043d', 1, 1, '2013-02-06 10:47:38', '2013-09-12 11:54:13', '/uploads/user/52241ea4d3b37cristiano_ronaldo.jpg'),
+	(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'webmaster@example.com', '9b94c7be573c22b9d4f7f8caccd5043d', 1, 1, '2013-02-06 10:47:38', '2013-12-04 04:50:03', '/uploads/user/52241ea4d3b37cristiano_ronaldo.jpg'),
 	(2, 'valera', 'b51e8dbebd4ba8a8f342190a4b9f08d7', 'valera@verim.ru', '04bce2865b33ed1306b671b70747c5ec', 0, 1, '2013-09-13 04:38:56', '2013-09-13 04:41:06', NULL);
 /*!40000 ALTER TABLE `tbl_users` ENABLE KEYS */;
+
+
+# Dumping structure for table comfort.yiisession
+CREATE TABLE IF NOT EXISTS `yiisession` (
+  `id` char(32) NOT NULL,
+  `expire` int(11) DEFAULT NULL,
+  `data` longblob,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# Dumping data for table comfort.yiisession: ~1 rows (approximately)
+/*!40000 ALTER TABLE `yiisession` DISABLE KEYS */;
+INSERT INTO `yiisession` (`id`, `expire`, `data`) VALUES
+	('q8dtcjvh7dbviuk1bm5g7lv924', 1386824861, _binary 0x38626662656566373663343733323166366264326463333966316338616434305F5F69647C733A313A2231223B38626662656566373663343733323166366264326463333966316338616434305F5F6E616D657C733A353A2261646D696E223B38626662656566373663343733323166366264326463333966316338616434305F5F7374617465737C613A303A7B7D38626662656566373663343733323166366264326463333966316338616434305269676874735F69735375706572757365727C623A313B);
+/*!40000 ALTER TABLE `yiisession` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

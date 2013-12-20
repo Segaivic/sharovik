@@ -50,6 +50,9 @@ class SProducts extends CActiveRecord
             'showByAdded' => array(
               'order' => 't.created_at DESC'
             ),
+            'activeCategoryOnly' => array(
+                'condition' => 'category.active ='.SCategories::STATUS_ACTIVE
+            ),
         );
     }
 	/**
@@ -229,7 +232,6 @@ class SProducts extends CActiveRecord
             else
                 $this->updated_at=date( "Y-m-d H:i:s" );
 
-            Yii::app()->runController('/shop/search/create');
             return true;
         }
         else
@@ -295,5 +297,32 @@ class SProducts extends CActiveRecord
         ));
 
         return $model;
+    }
+
+    /**
+     * Удаляет и добавляет товары
+     * @param $id Id Товара
+     * @param $count Количество
+     * @param $action действие plus или minus
+     */
+    public static function StockCount($id , $count , $action){
+        $model = self::model()->findByPk($id);
+        if($model === null)
+            return;
+
+        switch($action){
+                case 'plus':
+                    $model->in_stock = $model->in_stock + $count;
+                    break;
+                case 'minus':
+                    if ($model->in_stock >= $count){
+                        $model->in_stock = $model->in_stock - $count;
+                    }
+                    else {
+                        $model->in_stock = 0;
+                    }
+                    break;
+            }
+        $model->save();
     }
 }

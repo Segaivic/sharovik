@@ -32,6 +32,9 @@ class SCategories extends CActiveRecord
 
     public function scopes(){
         return array(
+            'activeOnly' => array(
+                'condition' => 'active = 1',
+            ),
             'activeProductsOnly'=> array(
                 'condition' => 'products.active = '.SProducts::STATUS_ACTIVE,
         ));
@@ -272,4 +275,6 @@ class SCategories extends CActiveRecord
 
         return $order;
     }
+
+
 }

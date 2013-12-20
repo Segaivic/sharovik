@@ -67,7 +67,9 @@ class CartController extends Controller
                     $items->price = $position->getPrice();
                     $items->optionkit_id = $position->getOptionkit_id();
                     $items->sum = $items->quantity * $items->price;
-                    $items->save();
+                    if($items->save()){
+                        SProducts::StockCount($position->getProductId() , $position->getQuantity() , 'minus'); //изменение количества товара на складе
+                    }
                 }
 
                 //Очистка корзину!

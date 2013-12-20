@@ -62,7 +62,11 @@ class OrdersController extends Controller
 
     public function actionDeleteorder($id)
     {
-        SOrders::model()->deleteByPk($id);
+        $model = SOrders::model()->with('items')->findByPk($id);
+        foreach ($model->items as $m){
+            SProducts::StockCount($m->product_id , $m->quantity , 'plus');
+        }
+        $model->delete();
         Yii::app()->user->setFlash('order_success_deleted', "Заказ был успешно удален");
         $this->redirect('/shop/admin/');
     }

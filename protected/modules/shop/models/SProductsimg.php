@@ -37,7 +37,7 @@ class SProductsimg extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-            array('image', 'file', 'types'=>'jpg, gif, png' , 'allowEmpty' => true),
+            array('image', 'file', 'types'=>'jpg, jpeg, gif, png' , 'allowEmpty' => true),
 			array('product_id', 'numerical', 'integerOnly'=>true),
 			array('thumbnail, image', 'length', 'max'=>500),
 			// The following rule is used by search().
@@ -67,7 +67,7 @@ class SProductsimg extends CActiveRecord
 			'id' => 'ID',
 			'product_id' => 'Product',
 			'thumbnail' => 'Thumbnail',
-			'image' => 'Изображение',
+			'image' => 'Изображение (jpg, jpeg, gif, png)',
 		);
 	}
 

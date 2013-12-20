@@ -67,27 +67,27 @@ jQuery(document).ready(function($) {
  * docs: http://twitter.github.com/bootstrap/
  */                         
                             
-    /**                     
-	 * Dropdown menu        
+    /**
+	 * Dropdown menu
 	 * more information: http://twitter.github.com/bootstrap/javascript.html#dropdowns
-	 */                     
+	 */
     $('.dropdown-toggle').dropdown();
     $('.dropdown-toggle_').dropdown();
-	                        
+
     // make menu open on hover
-    $(".dropdown").hover(   
-        function () {       
+    $(".dropdown").hover(
+        function () {
             $(this).addClass("open");
-        },                  
-        function () {       
+        },
+        function () {
             $(this).removeClass("open");
-        }                   
+        }
     );
-	
+
 	// make bootstrap fix for ipad
 	$('body')
 		.on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); })
-	
+
 	
     /**                     
 	 * Toggle Boxes         

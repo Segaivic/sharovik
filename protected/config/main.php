@@ -94,7 +94,8 @@ return array(
 
         'session' => array(
             'class' => 'system.web.CDbHttpSession',
-            'connectionID' => 'db'
+            'connectionID' => 'db',
+            'sessionTableName' => 'yiisession',
         ),
 
         'user'=>array(
@@ -106,7 +107,11 @@ return array(
 
         'authManager'=>array(
             'class'=>'RDbAuthManager',
-            'defaultRoles' => array('Guest') // дефолтная роль
+            'defaultRoles' => array('Guest'), // дефолтная роль
+            'assignmentTable' => 'authassignment',
+            'itemTable' => 'authitem',
+            'itemChildTable' => 'authitemchild',
+            'rightsTable' => 'rights',
         ),
 
         'shoppingCart' =>

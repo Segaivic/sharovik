@@ -26,7 +26,6 @@ class CategoryController extends Controller
          );
     }
 
-
     public function actionIndex()
 	{
         $this->render('index');
@@ -73,6 +72,7 @@ class CategoryController extends Controller
     public function loadModel($id)
     {
         $model=SCategories::model()
+            ->activeOnly()
             ->findByPk($id);
         if($model===null)
             throw new CHttpException(404,'Извините, такой страницы не существует');
@@ -81,7 +81,7 @@ class CategoryController extends Controller
 
     public function loadModelByAlias($alias)
     {
-        $model=SCategories::model()->find(
+        $model=SCategories::model()->activeOnly()->find(
             'alias_url = :alias', array(
             'alias' => $alias,
         ));

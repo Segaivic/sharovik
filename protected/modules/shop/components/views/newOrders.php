@@ -16,7 +16,7 @@
 								<span class="desc"><?php echo SOrderItems::getSum($m->id); ?> руб.</span>
 								<span class="percent"></span>
 								</span>
-								<span class="progress <?php echo CHtml::encode($bar['class']); ?> ">
+								<span class="progress <?php echo isset($bar['class']) ? CHtml::encode($bar['class']) : 'progress-success'; ?> ">
 								<span style="width: <?php echo CHtml::encode($bar['price']); ?>%;" class="bar"></span>
 								</span>
             </a>

@@ -69,6 +69,7 @@ class ProductController extends Controller
     {
         $model=SProducts::model()
             ->activeOnly()
+            ->activeCategoryOnly()
             ->with(array('category','image','gallery'))
             ->findByPk($id);
         if($model===null)
@@ -80,6 +81,7 @@ class ProductController extends Controller
     {
         $model=SProducts::model()
             ->activeOnly()
+            ->activeCategoryOnly()
             ->with(array('category','image','gallery'))
             ->find(
             't.alias_url = :alias', array(

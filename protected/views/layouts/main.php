@@ -27,7 +27,6 @@
         span.rur span:before { content: '\2013'; }
     </style>
     <?php Yii::app()->clientScript->registerCssFile('/css/gallery.css', 'screen' , CClientScript::POS_HEAD); ?>
-    <?php Yii::app()->clientScript->registerCssFile('/css/shop.css', 'screen' , CClientScript::POS_HEAD); ?>
     <?php $this->widget('application.extensions.fancybox.EFancyBox', array(
             'target'=>'a[rel=fbox]',
             'config'=>array(),
@@ -172,13 +171,14 @@
 <!-- END FOOTER -->
 <!-- Placed at the end of the document so the pages load faster -->
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/bootstrap.js' , CClientScript::POS_END); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/jquery.flexslider-min.js' , CClientScript::POS_END); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/jquery.isotope.js' , CClientScript::POS_END); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/jquery.imagesloaded.min.js' , CClientScript::POS_END); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/rs-plugin/js/jquery.themepunch.plugins.min.js' , CClientScript::POS_END); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/rs-plugin/js/jquery.themepunch.revolution.min.js' , CClientScript::POS_END); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/revolution.custom.js' , CClientScript::POS_END); ?>
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/custom.js' , CClientScript::POS_END); ?>
+<!---->
+<?php //Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/jquery.flexslider-min.js' , CClientScript::POS_END); ?>
+<?php //Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/jquery.isotope.js' , CClientScript::POS_END); ?>
+<?php //Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/jquery.imagesloaded.min.js' , CClientScript::POS_END); ?>
+<?php //Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/rs-plugin/js/jquery.themepunch.plugins.min.js' , CClientScript::POS_END); ?>
+<?php //Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/rs-plugin/js/jquery.themepunch.revolution.min.js' , CClientScript::POS_END); ?>
+<?php //Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/revolution.custom.js' , CClientScript::POS_END); ?>
+<?php //Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/custom.js' , CClientScript::POS_END); ?>
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl.'/js/bootstrap-modal.js' , CClientScript::POS_END); ?>
 </body>
 </html>
